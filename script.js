@@ -7,7 +7,8 @@ $(document).ready(function () {
         // Populate Accordion
         sessions.forEach((session, index) => {
             let isActive = index === 0 ? "show" : ""; // Expand only Session 1
-            let isButtonActive = index === 0 ? "" : "collapsed"; // Remove collapsed for Session 1
+            let isButtonActive = index === 0 ? "active" : "collapsed"; // Highlight only Session 1 button
+
             let sessionHtml = `
                 <div class="accordion-item">
                     <h2 class="accordion-header">
@@ -19,12 +20,12 @@ $(document).ready(function () {
                         <div class="accordion-body">
                             <ul>
                                 ${session.topics ? session.topics.map(topic => `
-                                    <li>
+                                    <li class="topic-item">
                                         <a href="#" class="session-link" data-session="${session.id}" data-topic="${topic.title}" data-infographic="${topic.infographic || ''}">${topic.title}</a>
                                     </li>
                                 `).join('') : ''}
-                                <li><a href="#" class="session-link" data-session="${session.id}" data-topic="Quiz">Quiz</a></li>
-                                <li><a href="#" class="session-link" data-session="${session.id}" data-topic="Case Study">Case Study</a></li>
+                                <li class="topic-item"><a href="#" class="session-link" data-session="${session.id}" data-topic="Quiz">Quiz</a></li>
+                                <li class="topic-item"><a href="#" class="session-link" data-session="${session.id}" data-topic="Case Study">Case Study</a></li>
                             </ul>
                         </div>
                     </div>
@@ -32,29 +33,41 @@ $(document).ready(function () {
             $accordion.append(sessionHtml);
         });
 
-        // 🔹 Force-expand Session 1 when page loads
+        // 🔹 Force-expand Session 1 and show its overview on first load
         setTimeout(() => {
             let firstSession = $("#session1");
-            firstSession.addClass("show"); // Ensure it's expanded
-            $(".session-button[data-session='1']").removeClass("collapsed").attr("aria-expanded", "true");
+            firstSession.addClass("show");
+            $(".session-button[data-session='1']").removeClass("collapsed").addClass("active").attr("aria-expanded", "true");
+
+            // Show overview of first session by default
+            let firstSessionData = sessions.find(s => s.id == 1);
+            if (firstSessionData) {
+                $("#contentDisplay").html(`
+                    <h3>${firstSessionData.title}</h3>
+                    <p>${firstSessionData.overview}</p>
+                `);
+                $("#sessionImage").attr("src", firstSessionData.infographic || "img/default-infographic.png");
+                let recHtml = firstSessionData.recommendations.map(rec => `
+                    <a href="${rec.link}" target="_blank" class="recommendation-link">${rec.title}</a>
+                `).join('');
+                $("#recommendations").html(recHtml);
+            }
         }, 500);
 
-        // Handle Click Events for Sessions (Show Overview in Content Area)
-        $(".session-button").click(function () {
+        // 🔹 Handle Click Events for Sessions (Highlight Active Session Title)
+        $(document).on("click", ".session-button", function () {
             $(".session-button").removeClass("active"); // Remove active class from all
-            $(this).addClass("active"); // Add active class to clicked session
+            $(this).addClass("active"); // Highlight the clicked session
 
             const sessionId = $(this).data("session");
             const session = sessions.find(s => s.id == sessionId);
 
             if (session) {
-                $("#sessionImage").attr("src", session.infographic || "img/default-infographic.png");
-
-                // Update content area with session overview
                 $("#contentDisplay").html(`
                     <h3>${session.title}</h3>
                     <p>${session.overview}</p>
                 `);
+                $("#sessionImage").attr("src", session.infographic || "img/default-infographic.png");
 
                 // Update recommendations for the session
                 let recHtml = session.recommendations.map(rec => `
@@ -64,10 +77,10 @@ $(document).ready(function () {
             }
         });
 
-        // Handle Click Events for Topics
-        $(".session-link").click(function () {
-            $(".session-link").removeClass("active-topic"); // Remove active class from all
-            $(this).addClass("active-topic"); // Highlight the clicked topic
+        // 🔹 Handle Click Events for Topics (Highlight Selected Topic)
+        $(document).on("click", ".session-link", function () {
+            $(".topic-item").removeClass("active-topic"); // Remove active class from all <li>
+            $(this).parent().addClass("active-topic"); // Add active class to the clicked <li>
 
             const sessionId = $(this).data("session");
             const topicTitle = $(this).data("topic");
@@ -100,14 +113,14 @@ $(document).ready(function () {
             }
         });
 
-        // Handle Click Events for Recommendations
+        // 🔹 Handle Click Events for Recommendations
         $(document).on("click", ".recommendation-link", function () {
-            $(".recommendation-link").removeClass("active-recommendation"); // Remove active class
-            $(this).addClass("active-recommendation"); // Highlight clicked recommendation
+            $(".recommendation-link").removeClass("active-recommendation");
+            $(this).addClass("active-recommendation");
         });
     });
 
-    // Function to Display Current Date
+    // 🔹 Function to Display Current Date
     function updateCurrentDate() {
         const today = new Date();
         const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
@@ -115,45 +128,41 @@ $(document).ready(function () {
     }
     updateCurrentDate();
 
-    // Hide modal on page load
+    // 🔹 Hide modal on page load
     $("#imageModal").hide();
 
-    // Click to enlarge image
+    // 🔹 Click to enlarge image
     $("#sessionImage").click(function () {
         const src = $(this).attr("src");
-
-        // Prevent showing modal if no valid image is selected
         if (src && src !== "img/default-infographic.png") {
             $("#modalImage").attr("src", src);
             $("#imageModal").fadeIn();
         }
     });
 
-    // Close modal when clicking 'X' or outside
+    // 🔹 Close modal when clicking 'X' or outside
     $("#closeModal, #imageModal").click(function () {
         $("#imageModal").fadeOut();
     });
 
-    // Prevent modal from closing when clicking inside modal content
+    // 🔹 Prevent modal from closing when clicking inside modal content
     $(".modal-content").click(function (e) {
         e.stopPropagation();
     });
 
-    // Load saved notes from localStorage
+    // 🔹 Load saved notes from localStorage
     if (localStorage.getItem("userNotes")) {
         $("#notesEditor").val(localStorage.getItem("userNotes"));
     }
 
-    // Auto-save Notes every 60 seconds
+    // 🔹 Auto-save Notes every 60 seconds
     setInterval(() => {
         localStorage.setItem("userNotes", $("#notesEditor").val());
     }, 60000);
 
-    // Save Notes on Button Click
+    // 🔹 Save Notes on Button Click
     $("#saveNotesBtn").click(function () {
         localStorage.setItem("userNotes", $("#notesEditor").val());
-
-        // Show confirmation message
         $("#saveMessage").fadeIn().delay(2000).fadeOut();
     });
 });

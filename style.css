@@ -1,14 +1,15 @@
 /* Updated Color Palette */
 :root {
-    --primary-color: #4E43D8;    /* Soft Teal */
-    --primary-dark: #4E43D8;     /* Deep Purple */
-    --primary-light: #8F8FFF;    /* Bright Teal */
-    --accent-color: #FFC806;     /* Vibrant Yellow */
-    --dark-text: #2D2D5F;        /* Deep Navy (Better Contrast) */
-    --light-bg: #F7F2EA;         /* Light Cream */
-    --hover-color: #6359FF;      /* Soft Blue */
+    --primary-color: #4E43D8;
+    --primary-dark: #4E43D8;
+    --primary-light: #8F8FFF;
+    --accent-color: #FFC806;
+    --dark-text: #2D2D5F;
+    --light-bg: #F7F2EA;
+    --hover-color: #6359FF;
     --shadow-color: rgba(0, 0, 0, 0.15);
     --border-radius: 8px;
+    --highlight-color: #FFB000;
 }
 
 /* General Styling */
@@ -23,12 +24,11 @@ body {
     background-color: var(--primary-dark);
     padding: 12px;
     display: flex;
-    align-items: center; /* Center content vertically */
+    align-items: center;
     justify-content: space-between;
     color: white;
 }
 
-/* Navbar Logo */
 .navbar-brand img {
     height: 40px;
     display: block;
@@ -41,7 +41,7 @@ body {
     color: white;
     text-align: left;
     flex-grow: 1;
-    margin: 0 15px; /* Add spacing */
+    margin: 0 15px;
 }
 
 /* Current Date Styling */
@@ -51,27 +51,13 @@ body {
     font-weight: 500;
 }
 
-
-/* Banner */
-.banner {
-    text-align: center;
-    padding: 25px;
-    background: linear-gradient(to right, var(--primary-light), var(--primary-color));
-    font-size: 26px;
-    font-weight: 700;
-    color: white;
-    border-radius: var(--border-radius);
-    box-shadow: 0px 4px 8px var(--shadow-color);
-    margin-bottom: 20px;
-}
-
 /* Accordion Styling */
 .accordion-item {
     border: none;
 }
 
 .accordion-button {
-    background-color: var(--primary-color);
+    background-color: var(--primary-light);
     color: white;
     font-weight: bold;
     border-radius: var(--border-radius);
@@ -80,15 +66,16 @@ body {
 }
 
 .accordion-button:hover {
-    background-color: var(--hover-color);
+    background-color: var(--highlight-color);
     transform: scale(1.02);
 }
 
-/* Active Session Styling */
+/* Active Session Title */
 .accordion-button.active {
-    background-color: var(--primary-dark) !important;
+    background-color: var(--hover-color) !important;
     color: white;
     font-size: 18px;
+    box-shadow: 0px 4px 8px var(--shadow-color);
 }
 
 /* Content Layout */
@@ -100,69 +87,57 @@ body {
     box-shadow: 0px 2px 10px var(--shadow-color);
 }
 
-/* Menu List Styling */
-
+/* Normal Topics */
 .accordion-body ul {
     padding: 0;
     list-style: none;
     margin: 0;
 }
 
-
 .accordion-body ul li {
-    padding: 5px 8px;
-    font-size: 14px; /* Make text slightly smaller */
-    border-bottom: 1px solid #ddd; /* Light separator */
-    transition: background 0.3s ease-in-out;
-}
-
-.accordion-body ul li:last-child {
-    border-bottom: none; /* Remove border for last item */
-}
-
-/* Active Session Title */
-.accordion-button.active {
-    background-color: var(--hover-color) !important;
-    color: white;
-    font-size: 18px;
-    box-shadow: 0px 4px 8px var(--shadow-color);
-}
-
-/* Active Topic Under Section */
-.accordion-body ul li a.active-topic {
-    background-color: var(--primary-light);
-    color: white;
-    font-weight: bold;
+    padding: 8px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    transition: background 0.3s ease-in-out, color 0.2s ease-in-out;
+    background-color: white;
+    color: var(--dark-text);
     border-radius: 5px;
 }
 
-/* Active Recommendation Clicked */
-#recommendations a.active-recommendation {
-    background-color: var(--primary-dark);
+/* Hover Effect for Topics */
+.accordion-body ul li:hover {
+    background-color: var(--primary-light);
     color: white;
-    font-weight: bold;
-    transform: scale(1.05);
 }
 
+/* Active Topic - Fully Highlighted */
+.accordion-body ul li.active-topic {
+    background-color: var(--highlight-color);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px var(--shadow-color);
+}
 
-/* Hover effect for better UI */
+/* Remove link styles inside active topic */
+.accordion-body ul li.active-topic a {
+    text-decoration: none !important; /* Removes underline */
+    color: white !important; /* Ensures white text color */
+}
+
+.accordion-body ul li a:hover {
+    color: white;
+}
+
 .accordion-body ul li a {
     text-decoration: none;
     color: var(--primary-dark);
     display: block;
     padding: 5px;
-    transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-
-/* Right Sidebar (Infographic, Recommendations, Notes) */
-#sessionImage {
-    border-radius: var(--border-radius);
-    box-shadow: 2px 2px 10px var(--shadow-color);
-    margin-bottom: 10px;
-}
-
-/* Recommendations List */
+/* Recommendations */
 #recommendations {
     padding: 0;
     margin: 0;
@@ -183,13 +158,20 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+/* Active Recommendation */
+#recommendations a.active-recommendation {
+    background-color: var(--highlight-color);
+    color: white;
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
 /* Hover effect for recommendations */
 #recommendations a:hover {
     background-color: var(--primary-color);
     color: white;
     transform: scale(1.03);
 }
-
 
 /* Notes Section */
 .note-editor {
@@ -202,7 +184,8 @@ body {
     border: 1px solid var(--primary-dark);
     box-shadow: 2px 2px 8px var(--shadow-color);
 }
-/* Content Section Enhancements */
+
+/* Content Enhancements */
 .content-section h3 {
     font-size: 22px;
     font-weight: bold;
@@ -216,19 +199,7 @@ body {
     color: var(--accent-color);
 }
 
-/* Notes Styling */
-.content-section ul {
-    margin-left: 20px;
-    padding: 0;
-    list-style-type: square;
-}
-
-.content-section ul li {
-    padding: 6px;
-    font-size: 14px;
-}
-
-/* Clickable image */
+/* Clickable Image */
 .clickable-img {
     cursor: pointer;
     transition: transform 0.2s;
@@ -250,7 +221,7 @@ body {
     z-index: 1000;
     display: flex;
     justify-content: center;
-    align-items: center; /* Ensures perfect vertical alignment */
+    align-items: center;
 }
 
 /* Modal Content */
@@ -289,5 +260,3 @@ body {
 .close-btn:hover {
     color: red;
 }
-
-
