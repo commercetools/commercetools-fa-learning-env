@@ -1,0 +1,293 @@
+/* Updated Color Palette */
+:root {
+    --primary-color: #4E43D8;    /* Soft Teal */
+    --primary-dark: #4E43D8;     /* Deep Purple */
+    --primary-light: #8F8FFF;    /* Bright Teal */
+    --accent-color: #FFC806;     /* Vibrant Yellow */
+    --dark-text: #2D2D5F;        /* Deep Navy (Better Contrast) */
+    --light-bg: #F7F2EA;         /* Light Cream */
+    --hover-color: #6359FF;      /* Soft Blue */
+    --shadow-color: rgba(0, 0, 0, 0.15);
+    --border-radius: 8px;
+}
+
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-dark);
+    padding: 12px;
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: space-between;
+    color: white;
+}
+
+/* Navbar Logo */
+.navbar-brand img {
+    height: 40px;
+    display: block;
+}
+
+/* Centered Course Title */
+.navbar-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    flex-grow: 1;
+    margin: 0 15px; /* Add spacing */
+}
+
+/* Current Date Styling */
+.navbar-date {
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+}
+
+
+/* Banner */
+.banner {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(to right, var(--primary-light), var(--primary-color));
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 4px 8px var(--shadow-color);
+    margin-bottom: 20px;
+}
+
+/* Accordion Styling */
+.accordion-item {
+    border: none;
+}
+
+.accordion-button {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 8px var(--shadow-color);
+}
+
+.accordion-button:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.02);
+}
+
+/* Active Session Styling */
+.accordion-button.active {
+    background-color: var(--primary-dark) !important;
+    color: white;
+    font-size: 18px;
+}
+
+/* Content Layout */
+.content-section {
+    min-height: 400px;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    background-color: white;
+    box-shadow: 0px 2px 10px var(--shadow-color);
+}
+
+/* Menu List Styling */
+
+.accordion-body ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+
+.accordion-body ul li {
+    padding: 5px 8px;
+    font-size: 14px; /* Make text slightly smaller */
+    border-bottom: 1px solid #ddd; /* Light separator */
+    transition: background 0.3s ease-in-out;
+}
+
+.accordion-body ul li:last-child {
+    border-bottom: none; /* Remove border for last item */
+}
+
+/* Active Session Title */
+.accordion-button.active {
+    background-color: var(--hover-color) !important;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0px 4px 8px var(--shadow-color);
+}
+
+/* Active Topic Under Section */
+.accordion-body ul li a.active-topic {
+    background-color: var(--primary-light);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Active Recommendation Clicked */
+#recommendations a.active-recommendation {
+    background-color: var(--primary-dark);
+    color: white;
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+
+/* Hover effect for better UI */
+.accordion-body ul li a {
+    text-decoration: none;
+    color: var(--primary-dark);
+    display: block;
+    padding: 5px;
+    transition: background 0.2s ease-in-out;
+}
+
+
+/* Right Sidebar (Infographic, Recommendations, Notes) */
+#sessionImage {
+    border-radius: var(--border-radius);
+    box-shadow: 2px 2px 10px var(--shadow-color);
+    margin-bottom: 10px;
+}
+
+/* Recommendations List */
+#recommendations {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#recommendations a {
+    display: block;
+    text-decoration: none;
+    color: var(--primary-dark);
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background 0.2s ease-in-out;
+    background-color: var(--light-bg);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for recommendations */
+#recommendations a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.03);
+}
+
+
+/* Notes Section */
+.note-editor {
+    width: 100%;
+    height: 200px;
+    border-radius: var(--border-radius);
+    padding: 10px;
+    font-size: 14px;
+    background: white;
+    border: 1px solid var(--primary-dark);
+    box-shadow: 2px 2px 8px var(--shadow-color);
+}
+/* Content Section Enhancements */
+.content-section h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+
+.content-section h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--accent-color);
+}
+
+/* Notes Styling */
+.content-section ul {
+    margin-left: 20px;
+    padding: 0;
+    list-style-type: square;
+}
+
+.content-section ul li {
+    padding: 6px;
+    font-size: 14px;
+}
+
+/* Clickable image */
+.clickable-img {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.clickable-img:hover {
+    transform: scale(1.05);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ensures perfect vertical alignment */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 80%;
+    max-height: 80%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Large Image */
+.large-image {
+    max-width: 90%;
+    max-height: 75vh;
+    border-radius: 8px;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+

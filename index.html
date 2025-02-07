@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Commercetools Functional Architect Course</title>
+    
+    <link rel="icon" type="image/png" href="img/commercetools-symbol-mono.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+<nav class="navbar">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+        <!-- commercetools Logo -->
+        <a class="navbar-brand">
+            <img src="img/commercetools-logo-white.png" alt="commercetools">
+        </a>
+
+        <!-- Course Title -->
+        <h1 class="navbar-title">Composable Commerce Functional Architect</h1>
+
+        <!-- Current Date -->
+        <span id="currentDate" class="navbar-date"></span>
+    </div>
+</nav>
+
+<br />
+   
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Left Column: Accordion -->
+            <div class="col-md-3">
+                <div class="accordion" id="sessionAccordion"></div>
+            </div>
+
+            <!-- Middle Column: Dynamic Content -->
+            <div class="col-md-6">
+                <div class="content-section" id="contentDisplay">
+                    <h3>Welcome!</h3>
+                    <p>Select a session from the left panel to view details.</p>
+                </div>
+            </div>
+
+            <!-- Right Column: Infographic, Recommendations, Notes -->
+            <div class="col-md-3">
+                <!-- Infographic Section -->
+                <div>
+                    <img id="sessionImage" src="img/default-infographic.png" class="img-fluid clickable-img" alt="Session Info">
+                </div>
+
+                <!-- Image Modal -->
+                <div id="imageModal" class="modal-overlay">
+                    <div class="modal-content">
+                        <span id="closeModal" class="close-btn">&times;</span>
+                        <img id="modalImage" src="" class="large-image">
+                    </div>
+                </div>
+
+
+                <hr>
+                <div>
+                    <h5>Recommendations</h5>
+                    <ul id="recommendations"></ul>
+                </div>
+                <hr>
+                <div>
+                    <h5>Notes</h5>
+                    <textarea id="notesEditor" class="note-editor" placeholder="Write your notes here..."></textarea>
+                    <button id="saveNotesBtn" class="btn btn-primary">💾 Save Notes</button>
+                    <div><small><i>Notes are auto-saved every 1 minute.</i></small></div>
+                    <small id="saveMessage" style="display:none; color: green;">✅ Notes saved!</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
