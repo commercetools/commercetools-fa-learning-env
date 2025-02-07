@@ -32,9 +32,11 @@ $(document).ready(function () {
             $accordion.append(sessionHtml);
         });
 
-        // Auto-Click Session 1 on First Load
+        // 🔹 Force-expand Session 1 when page loads
         setTimeout(() => {
-            $(".session-button[data-session='1']").trigger("click");
+            let firstSession = $("#session1");
+            firstSession.addClass("show"); // Ensure it's expanded
+            $(".session-button[data-session='1']").removeClass("collapsed").attr("aria-expanded", "true");
         }, 500);
 
         // Handle Click Events for Sessions (Show Overview in Content Area)
