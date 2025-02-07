@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // Load session data from JSON
-    $.getJSON("sessions.json", function (data) {
+    $.getJSON("./sessions.json", function (data) {
         const sessions = data.sessions;
         const $accordion = $("#sessionAccordion");
 
