@@ -112,7 +112,7 @@ body {
 
 /* Active Topic - Fully Highlighted */
 .accordion-body ul li.active-topic {
-    background-color: var(--highlight-color);
+    background-color: var(--primary-light);
     color: white;
     font-weight: bold;
     border-radius: 5px;
