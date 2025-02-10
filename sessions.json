@@ -3,54 +3,39 @@
     {
       "id": 1,
       "title": "Introduction to commercetools and Merchant Center",
-      "overview": "This session provides a comprehensive introduction to commercetools and its API-first, headless commerce architecture. You'll learn about the company's vision, products, and services such as Composable Commerce, Frontend, Connect, and Checkout. Additionally, the session covers key concepts of commercetools' documentation, including JSON representations and update patterns. You’ll also explore the Merchant Center interface and set up your first organization and project.",
+      "overview": "This session introduces commercetools’ platform, the Composable Commerce, covering its capabilities, components and essential documentation concepts. You'll get started with Composable Commerce API's and also explore the Merchant Center to set up your first organization and project",
       "infographic": "img/session1-infographic.png",
-      "topics": [
+      "tasks": [
         {
-          "title": "Commercetools Platform Overview",
-          "description": "commercetools provides a cloud-native, composable commerce platform with three independent layers: the Presentation Layer for frontend flexibility, the Application Layer with modular commerce services, and the Platform Layer for scalable infrastructure. This architecture enables rapid deployment, omnichannel experiences, and lower operational costs.",
-          "infographic": "img/platform-overview.png",
+          "taskNumber": 1,
+          "taskTitle": "Get Started with Docs",
+          "description": "Learn to nagivate in the documentation, explore release notes, limits, and learn about common patterns i.e. Draft Representaions and Update Actions.",
+          "infographic": "",
           "notes": [
-            "<b>Composable Architecture</b>: Decoupled presentation, application, and platform layers for flexibility.",
-            "<b>Scalability & Performance</b>: Cloud-native foundation ensures high availability and rapid scaling.",
-            "<b>Omnichannel Support</b>: Solutions like InStore unify online and offline shopping experiences."
-          ]
+            "<a href='https://docs.commercetools.com/docs'>Commercetools Docs</a>",
+            "<a href='https://docs.commercetools.com/api/'>HTTP API Guide</a>"
+          ],
+          "solutionTitle": "",
+          "solutionDescription": "",
+          "solutionRefLink": ""
         },
         {
-          "title": "Compatibility, Release Notes and Limits",
-          "description": "commercetools continuously deploys updates multiple times daily without requiring manual upgrades. API evolution is designed for minimal disruption, with backward compatibility and advance notice for breaking changes for beta features. The platform also enforces a few resource limits to ensure stability.",
-          "infographic": "img/compatibility.png",
+          "taskNumber": 2,
+          "taskTitle": "Ensure appropriate accounts",
+          "description": "Ensure you have access to the <a href='https://learn.commercetools.com/'>Learning Management System</a> and you have an account to access <a href='https://mc.europe-west1.gcp.commercetools.com/login'>Merchant Center</a>",
+          "infographic": "",
           "notes": [
-            "<b>Versionless API</b>: No forced upgrades; APIs evolve seamlessly.",
-            "<b>Release Life Cycle</b>: Updates move from Early Access → Public Beta → General Availability with clear deprecation timelines.",
-            "<b>Platform Limits</b>: Ensure optimal system performance and scalability."
-          ]
-        },
-        {
-          "title": "Touchpoints",
-          "description": "commercetools offers extensive documentation, learning resources, and support for developers, ensuring seamless integration and implementation. The commercetools ecosystem includes developer guides, API references, a learning portal, and a marketplace for extensions.",
-          "infographic": "img/touchpoints.png",
-          "notes": [
-            "<b>Documentation & Guides</b>: commercetools Documentation.",
-            "<b>Developer Community & Code Samples</b>: GitHub Repository.",
-            "<b>Learning Portal</b>: Learn commercetools.",
-            "<b>Support & Help Desk</b>: commercetools Support.",
-            "<b>Marketplace for Integrations</b>: commercetools Marketplace."
-          ]
-        },
-        {
-          "title": "Merchant Center Overview",
-          "description": "The Merchant Center is commercetools' web-based interface that enables businesses to manage their e-commerce operations efficiently. It provides tools for configuring products, orders, customers, pricing, and permissions, offering full control over commercetools projects with an intuitive UI.",
-          "infographic": "img/merchant-center.png",
-          "notes": [
-            "<b>Centralized Management</b>: Configure products, orders, customers, and pricing in a single interface.",
-            "<b>Role-Based Access</b>: Assign user roles and permissions to control access.",
-            "<b>Seamless API Integration</b>: Changes in the Merchant Center reflect instantly in the commercetools platform."
-          ]
+            "Setup <a href='https://docs.commercetools.com/learning-model-your-business-structure/organizations-and-projects/overview'>Organizations, Project/s and Teams</a> in Merchant Center"
+          ],
+          "solutionTitle": "",
+          "solutionDescription": "",
+          "solutionRefLink": ""
         }
       ],
       "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1384",
-      "case_study": null,
+      "case_studies": [
+        
+      ],
       "recommendations": [
         {
           "title": "Overview of Commercetools Products",
@@ -68,41 +53,46 @@
     },
     {
       "id": 2,
-      "title": "Dummy Session for Testing",
+      "title": "Product Setup and Basic Product Modeling",
       "overview": "This session is a placeholder to test the functionality of the learning environment. Replace this with actual content later.",
       "infographic": "img/session2-infographic.png",
-      "topics": [
+      "tasks": [
         {
-          "title": "Topic 1 - Placeholder",
-          "description": "This is a dummy topic description for testing. Replace this with real content.",
-          "infographic": "img/session2-topic1.png",
+          "taskNumber": 3,
+          "taskTitle": "Set Up Organizations & Projects",
+          "description": "Learn to manage products, teams, and permissions in the Merchant Center.",
+          "infographic": "",
           "notes": [
-            "Dummy note 1.",
-            "Dummy note 2.",
-            "Dummy note 3."
-          ]
+            "<a href='https://docs.commercetools.com/learning-model-your-business-structure/organizations-and-projects/overview'>Organizations, Teams, and Projects</a>"
+          ],
+          "solutionTitle": "Merchant Center Guide",
+          "solutionDescription": "Step-by-step guide to quickly set up and use the Merchant Center.",
+          "solutionRefLink": "https://docs.commercetools.com/merchant-center/"
         },
         {
-          "title": "Topic 2 - Placeholder",
-          "description": "Another dummy topic description. Ensure this is updated later with real content.",
-          "infographic": "img/session2-topic2.png",
+          "taskNumber": 4,
+          "taskTitle": "Create Product Type & Product",
+          "description": "Create a new Product Type with appropriate attributes, create a Product and Product Variants.",
+          "infographic": "",
           "notes": [
-            "Sample point A.",
-            "Sample point B.",
-            "Sample point C."
-          ]
+            
+          ],
+          "solutionTitle": "",
+          "solutionDescription": "",
+          "solutionRefLink": ""
         }
       ],
-      "quiz": "https://moodle.example.com/quiz2",
-      "case_study": null,
+      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1386",
+      "case_studies": [
+        {
+          "title": "Case Study 1",
+          "link": "https://learn.commercetools.com/mod/resource/view.php?id=756"
+        }
+      ],
       "recommendations": [
         {
-          "title": "Dummy Recommendation 1",
-          "link": "https://example.com/recommendation1"
-        },
-        {
-          "title": "Dummy Recommendation 2",
-          "link": "https://example.com/recommendation2"
+          "title": "Product data modeling",
+          "link": "https://docs.commercetools.com/learning-model-your-product-catalog/product-modeling/overview"
         }
       ]
     }

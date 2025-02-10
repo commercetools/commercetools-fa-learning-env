@@ -10,91 +10,91 @@
     --shadow-color: rgba(0, 0, 0, 0.15);
     --border-radius: 8px;
     --highlight-color: #FFB000;
-}
-
-/* General Styling */
-body {
+  }
+  
+  /* General Styling */
+  body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--light-bg);
     color: var(--dark-text);
-}
-
-/* Navbar */
-.navbar {
+  }
+  
+  /* Navbar */
+  .navbar {
     background-color: var(--primary-dark);
     padding: 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: white;
-}
-
-.navbar-brand img {
+  }
+  
+  .navbar-brand img {
     height: 40px;
     display: block;
-}
-
-/* Centered Course Title */
-.navbar-title {
+  }
+  
+  /* Centered Course Title */
+  .navbar-title {
     font-size: 18px;
     font-weight: bold;
     color: white;
     text-align: left;
     flex-grow: 1;
     margin: 0 15px;
-}
-
-/* Current Date Styling */
-.navbar-date {
+  }
+  
+  /* Current Date Styling */
+  .navbar-date {
     font-size: 14px;
     color: white;
     font-weight: 500;
-}
-
-/* Accordion Styling */
-.accordion-item {
+  }
+  
+  /* Accordion Styling */
+  .accordion-item {
     border: none;
-}
-
-.accordion-button {
+  }
+  
+  .accordion-button {
     background-color: var(--primary-light);
     color: white;
     font-weight: bold;
     border-radius: var(--border-radius);
     transition: all 0.3s ease-in-out;
     box-shadow: 2px 2px 8px var(--shadow-color);
-}
-
-.accordion-button:hover {
+  }
+  
+  .accordion-button:hover {
     background-color: var(--highlight-color);
     transform: scale(1.02);
-}
-
-/* Active Session Title */
-.accordion-button.active {
+  }
+  
+  /* Active Session Title */
+  .accordion-button.active {
     background-color: var(--hover-color) !important;
     color: white;
     font-size: 18px;
     box-shadow: 0px 4px 8px var(--shadow-color);
-}
-
-/* Content Layout */
-.content-section {
+  }
+  
+  /* Content Layout */
+  .content-section {
     min-height: 400px;
     padding: 20px;
     border-radius: var(--border-radius);
     background-color: white;
     box-shadow: 0px 2px 10px var(--shadow-color);
-}
-
-/* Normal Topics */
-.accordion-body ul {
+  }
+  
+  /* Accordion Body & List Items */
+  .accordion-body ul {
     padding: 0;
     list-style: none;
     margin: 0;
-}
-
-.accordion-body ul li {
+  }
+  
+  .accordion-body ul li {
     padding: 8px;
     font-size: 14px;
     border-bottom: 1px solid #ddd;
@@ -102,51 +102,52 @@ body {
     background-color: white;
     color: var(--dark-text);
     border-radius: 5px;
-}
-
-/* Hover Effect for Topics */
-.accordion-body ul li:hover {
+  }
+  
+  /* Hover Effect for Items */
+  .accordion-body ul li:hover {
     background-color: var(--primary-light);
     color: white;
-}
-
-/* Active Topic - Fully Highlighted */
+  }
+  
+  /* Active Task (Clicked) - Fully Highlighted */
+  .accordion-body ul li.active,
 .accordion-body ul li.active-topic {
-    background-color: var(--primary-light);
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    box-shadow: 2px 2px 8px var(--shadow-color);
+  background-color: var(--primary-light);
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
 }
-
-/* Remove link styles inside active topic */
+  
+/* Ensure the anchor text inside active items is white */
+.accordion-body ul li.active a,
 .accordion-body ul li.active-topic a {
-    text-decoration: none !important; /* Removes underline */
-    color: white !important; /* Ensures white text color */
+  color: white !important;
 }
-
-.accordion-body ul li a:hover {
-    color: white;
-}
-
-.accordion-body ul li a {
+  
+  
+  .accordion-body ul li a {
     text-decoration: none;
     color: var(--primary-dark);
     display: block;
     padding: 5px;
     transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
-}
-
-/* Recommendations */
-#recommendations {
+  }
+  
+  .accordion-body ul li a:hover {
+    color: white;
+  }
+  
+  /* Recommendations */
+  #recommendations {
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
     gap: 5px;
-}
-
-#recommendations a {
+  }
+  
+  #recommendations a {
     display: block;
     text-decoration: none;
     color: var(--primary-dark);
@@ -156,25 +157,23 @@ body {
     transition: background 0.2s ease-in-out;
     background-color: var(--light-bg);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-/* Active Recommendation */
-#recommendations a.active-recommendation {
+  }
+  
+  #recommendations a.active-recommendation {
     background-color: var(--highlight-color);
     color: white;
     font-weight: bold;
     transform: scale(1.05);
-}
-
-/* Hover effect for recommendations */
-#recommendations a:hover {
+  }
+  
+  #recommendations a:hover {
     background-color: var(--primary-color);
     color: white;
     transform: scale(1.03);
-}
-
-/* Notes Section */
-.note-editor {
+  }
+  
+  /* Notes Section */
+  .note-editor {
     width: 100%;
     height: 200px;
     border-radius: var(--border-radius);
@@ -183,80 +182,30 @@ body {
     background: white;
     border: 1px solid var(--primary-dark);
     box-shadow: 2px 2px 8px var(--shadow-color);
-}
-
-/* Content Enhancements */
-.content-section h3 {
+    overflow-y: auto; /* Adds a vertical scroll bar when content exceeds the height */
+  }
+  
+  /* Content Enhancements */
+  .content-section h3 {
     font-size: 22px;
     font-weight: bold;
     color: var(--primary-dark);
-}
-
-.content-section h4 {
+  }
+  
+  .content-section h4 {
     font-size: 18px;
     font-weight: bold;
     margin-top: 10px;
     color: var(--accent-color);
-}
-
-/* Clickable Image */
-.clickable-img {
+  }
+  
+  /* Clickable Image */
+  .clickable-img {
     cursor: pointer;
     transition: transform 0.2s;
-}
-
-.clickable-img:hover {
+  }
+  
+  .clickable-img:hover {
     transform: scale(1.05);
-}
-
-/* Modal Overlay */
-.modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Modal Content */
-.modal-content {
-    position: relative;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    max-width: 80%;
-    max-height: 80%;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Large Image */
-.large-image {
-    max-width: 90%;
-    max-height: 75vh;
-    border-radius: 8px;
-}
-
-/* Close Button */
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    cursor: pointer;
-    color: black;
-}
-
-.close-btn:hover {
-    color: red;
-}
+  }
+  
