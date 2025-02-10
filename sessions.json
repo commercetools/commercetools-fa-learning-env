@@ -25,7 +25,6 @@
           "description": "Ensure you have access to the <a href='https://learn.commercetools.com/'>Learning Management System</a> and you have an account to access <a href='https://mc.europe-west1.gcp.commercetools.com/login'>Merchant Center</a>",
           "infographic": "",
           "notes": [
-            "Setup <a href='https://docs.commercetools.com/learning-model-your-business-structure/organizations-and-projects/overview'>Organizations, Project/s and Teams</a> in Merchant Center"
           ],
           "solutionTitle": "",
           "solutionDescription": "",
