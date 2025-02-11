@@ -98,6 +98,47 @@
           "link": "https://docs.commercetools.com/learning-model-your-product-catalog/product-modeling/overview"
         }
       ]
+    },
+    {
+      "id": 3,
+      "title": "Advanced Product Modeling",
+      "overview": "",
+      "infographic": "",
+      "tasks": [
+        {
+          "taskNumber": 5,
+          "taskTitle": "Product Bundling",
+          "description": "",
+          "infographic": "",
+          "notes": [
+            "Refer to the 'Reference' attribute type"
+          ],
+          "solutionTitle": "",
+          "solutionDescription": "",
+          "solutionRefLink": ""
+        }
+      ],
+      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1388",
+      "case_studies": [
+        {
+          "title": "Case Study 2",
+          "link": "https://learn.commercetools.com/mod/resource/view.php?id=793"
+        }
+      ],
+      "recommendations": [
+        {
+          "title" : "Reference Type",
+          "link" : "https://docs.commercetools.com/merchant-center/"
+        },
+        {
+          "title": "Product Bundling Tutorial",
+          "link": "https://docs.commercetools.com/tutorials/product-bundle-api"
+        },
+        {
+          "title": "Nested and Tabular Data",
+          "link": "https://docs.commercetools.com/tutorials/nested-types"
+        }
+      ]
     }
   ]
 }
