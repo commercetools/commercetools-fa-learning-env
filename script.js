@@ -85,7 +85,7 @@ $(document).ready(function () {
   
           let recHtml = "";
           if (firstSession.recommendations && firstSession.recommendations.length > 0) {
-            recHtml += `<h5>Recommendations</h5>`;
+            recHtml += `<h5></h5>`;
             recHtml += firstSession.recommendations.map(rec => `
               <a href="${rec.link}" target="_blank" class="recommendation-link d-block">${rec.title}</a>
             `).join('');
@@ -112,7 +112,7 @@ $(document).ready(function () {
   
           let recHtml = "";
           if (session.recommendations && session.recommendations.length > 0) {
-            recHtml += `<h5>Recommendations</h5>`;
+            recHtml += `<h5></h5>`;
             recHtml += session.recommendations.map(rec => `
               <a href="${rec.link}" target="_blank" class="recommendation-link d-block">${rec.title}</a>
             `).join('');
@@ -162,7 +162,7 @@ $(document).ready(function () {
               mainContentHtml += `<img src="${task.infographic}" class="img-fluid" alt="Task Infographic">`;
             }
             if (task.notes && task.notes.length > 0) {
-              mainContentHtml += `<h4>Key Points:</h4>
+              mainContentHtml += `<h4></h4>
                                   <ul>${task.notes.map(note => `<li>${note}</li>`).join('')}</ul>`;
             }
             $("#mainContent").html(mainContentHtml);
@@ -182,7 +182,7 @@ $(document).ready(function () {
               }
             }
             if (session.recommendations && session.recommendations.length > 0) {
-              solutionHtml += `<hr /><h5>Recommendations</h5>`;
+              solutionHtml += `<hr /><h5></h5>`;
               solutionHtml += session.recommendations.map(rec => `
                 <a href="${rec.link}" target="_blank" class="recommendation-link d-block">${rec.title}</a>
               `).join('');

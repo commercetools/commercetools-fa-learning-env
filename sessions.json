@@ -3,15 +3,16 @@
     {
       "id": 1,
       "title": "Introduction to commercetools and Merchant Center",
-      "overview": "This session introduces commercetools’ platform, the Composable Commerce, covering its capabilities, components and essential documentation concepts. You'll get started with Composable Commerce API's and also explore the Merchant Center to set up your first organization and project",
-      "infographic": "img/session1-infographic.png",
+      "overview": "",
+      "infographic": "",
       "tasks": [
         {
           "taskNumber": 1,
           "taskTitle": "Get Started with Docs",
-          "description": "Learn to nagivate in the documentation, explore release notes, limits, and learn about common patterns i.e. Draft Representaions and Update Actions.",
+          "description": "",
           "infographic": "",
           "notes": [
+            "Get started with navigating the documentation, explore release notes, limits, and learn about common patterns i.e. Draft Representaions and Update Actions.",
             "<a href='https://docs.commercetools.com/docs'>Commercetools Docs</a>",
             "<a href='https://docs.commercetools.com/api/'>HTTP API Guide</a>"
           ],
@@ -21,10 +22,12 @@
         },
         {
           "taskNumber": 2,
-          "taskTitle": "Ensure appropriate accounts",
-          "description": "Ensure you have access to the <a href='https://learn.commercetools.com/'>Learning Management System</a> and you have an account to access <a href='https://mc.europe-west1.gcp.commercetools.com/login'>Merchant Center</a>",
+          "taskTitle": "Check Accounts",
+          "description": "",
           "infographic": "",
           "notes": [
+            "Ensure you have access to the <a href='https://learn.commercetools.com/'>Learning Management System</a>",
+            "Ensure you have an account to access <a href='https://mc.europe-west1.gcp.commercetools.com/login'>Merchant Center</a>"
           ],
           "solutionTitle": "",
           "solutionDescription": "",
@@ -41,10 +44,6 @@
           "link": "https://docs.commercetools.com/offering/products-overview"
         },
         {
-          "title": "Documentation",
-          "link": "https://docs.commercetools.com/docs/composable-commerce"
-        },
-        {
           "title": "AI Assistant",
           "link": "https://docs.commercetools.com/docs/chat"
         }
@@ -53,28 +52,29 @@
     {
       "id": 2,
       "title": "Product Setup and Basic Product Modeling",
-      "overview": "This session is a placeholder to test the functionality of the learning environment. Replace this with actual content later.",
-      "infographic": "img/session2-infographic.png",
+      "overview": "",
+      "infographic": "",
       "tasks": [
         {
           "taskNumber": 3,
           "taskTitle": "Set Up Organizations & Projects",
-          "description": "Learn to manage products, teams, and permissions in the Merchant Center.",
+          "description": "",
           "infographic": "",
           "notes": [
+            "Create Organization, Project, Teams and Configuration Permissions in the Merchant Center.",
             "<a href='https://docs.commercetools.com/learning-model-your-business-structure/organizations-and-projects/overview'>Organizations, Teams, and Projects</a>"
           ],
-          "solutionTitle": "Merchant Center Guide",
-          "solutionDescription": "Step-by-step guide to quickly set up and use the Merchant Center.",
-          "solutionRefLink": "https://docs.commercetools.com/merchant-center/"
+          "solutionTitle": "",
+          "solutionDescription": "",
+          "solutionRefLink": ""
         },
         {
           "taskNumber": 4,
           "taskTitle": "Create Product Type & Product",
-          "description": "Create a new Product Type with appropriate attributes, create a Product and Product Variants.",
+          "description": "",
           "infographic": "",
           "notes": [
-            
+            "Create a new Product Type with appropriate attributes, create a Product and Product Variants."
           ],
           "solutionTitle": "",
           "solutionDescription": "",
@@ -89,6 +89,10 @@
         }
       ],
       "recommendations": [
+        {
+          "title" : "Merchant Center Guide",
+          "link" : "https://docs.commercetools.com/merchant-center/"
+        },
         {
           "title": "Product data modeling",
           "link": "https://docs.commercetools.com/learning-model-your-product-catalog/product-modeling/overview"

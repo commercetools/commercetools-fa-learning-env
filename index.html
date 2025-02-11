@@ -56,26 +56,29 @@
         
         <hr />
         
-        <!-- Bottom Row: Notes Section with Formatting Toolbar -->
-        <div class="row" id="notesRow">
-          <div class="col-12">
-            <h5>Notes</h5>
-            <!-- Simple Formatting Toolbar -->
-            <div id="notesToolbar" class="mb-2">
-              <button type="button" class="btn btn-secondary btn-sm" onclick="formatText('bold')"><b>B</b></button>
-              <button type="button" class="btn btn-secondary btn-sm" onclick="formatText('italic')"><i>I</i></button>
-              <button type="button" class="btn btn-secondary btn-sm" onclick="formatText('insertUnorderedList')">&bull; List</button>
-            </div>
-            <!-- Editable Notes Area -->
-            <div id="notesEditor" contenteditable="true" class="note-editor" style="border: 1px solid #ccc; min-height: 150px; padding: 10px;">
+        <!-- Bottom Row: Notes Section with Vertical Formatting Toolbar -->
+<div class="row" id="notesRow">
+  <div class="col-12">
+      <h5></h5>
+      <div class="notes-container">
+          <!-- Editable Notes Area -->
+          <div id="notesEditor" contenteditable="true" class="note-editor">
               <!-- Saved notes will load here -->
-            </div>
-            <button id="saveNotesBtn" class="btn btn-primary mt-2">💾 Save Notes</button>
-            <small id="saveMessage" style="display:none; color: green;">✅ Notes saved!</small>
-            <div><small><i>Notes are auto-saved every 1 minute.</i></small></div>
-            
           </div>
-        </div>
+
+          <!-- Vertical Notes Toolbar -->
+          <div id="notesToolbar">
+              <button type="button" class="btn btn-outline-secondary btn-sm" onclick="formatText('bold')"><b>B</b></button>
+              <button type="button" class="btn btn-outline-secondary btn-sm" onclick="formatText('italic')"><i>I</i></button>
+              <button type="button" class="btn btn-outline-secondary btn-sm" onclick="formatText('insertUnorderedList')">&bull; List</button>
+          </div>
+      </div>
+
+      <button id="saveNotesBtn" class="btn btn-primary mt-2">💾 Save Notes</button>
+      <small id="saveMessage" style="display:none; color: green;">✅ Notes saved!</small>
+      <div><small><i>Notes are auto-saved every 1 minute.</i></small></div>
+  </div>
+</div>
       </div>
     </div>
   </div>
