@@ -12,7 +12,7 @@
           "description": "",
           "infographic": "",
           "notes": [
-            "Get started with navigating the documentation, explore release notes, limits, and learn about common patterns i.e. Draft Representaions and Update Actions.",
+            "Get started by navigating the documentation, exploring release notes and limits, and learning about common patterns, such as Draft Representations and Update Actions.",
             "<a href='https://docs.commercetools.com/docs'>Commercetools Docs</a>",
             "<a href='https://docs.commercetools.com/api/'>HTTP API Guide</a>"
           ],
@@ -62,7 +62,7 @@
           "infographic": "",
           "notes": [
             "Create Organization, Project, Teams and Configuration Permissions in the Merchant Center.",
-            "<a href='https://docs.commercetools.com/learning-model-your-business-structure/organizations-and-projects/overview'>Organizations, Teams, and Projects</a>"
+            "<a href='https://docs.commercetools.com/learning-model-your-business-structure/organizations-and-projects/overview'>Organizations, Teams and Projects</a>"
           ],
           "solutionTitle": "",
           "solutionDescription": "",
@@ -74,7 +74,7 @@
           "description": "",
           "infographic": "",
           "notes": [
-            "Create a new Product Type with appropriate attributes, create a Product and Product Variants."
+            "Create a new Product Type with attributes", "create a Product", "create Product Variants."
           ],
           "solutionTitle": "",
           "solutionDescription": "",
@@ -128,7 +128,7 @@
       "recommendations": [
         {
           "title" : "Reference Type",
-          "link" : "https://docs.commercetools.com/merchant-center/"
+          "link" : "https://docs.commercetools.com/api/general-concepts#referencetype-attributes-on-a-product"
         },
         {
           "title": "Product Bundling Tutorial",
