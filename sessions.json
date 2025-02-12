@@ -84,7 +84,7 @@
       "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1386",
       "case_studies": [
         {
-          "title": "Case Study 1",
+          "title": "Case Study 1: Product Modeling",
           "link": "https://learn.commercetools.com/mod/resource/view.php?id=756"
         }
       ],
@@ -94,7 +94,7 @@
           "link" : "https://docs.commercetools.com/merchant-center/"
         },
         {
-          "title": "Product data modeling",
+          "title": "Product Modeling",
           "link": "https://docs.commercetools.com/learning-model-your-product-catalog/product-modeling/overview"
         }
       ]
@@ -121,7 +121,7 @@
       "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1388",
       "case_studies": [
         {
-          "title": "Case Study 2",
+          "title": "Case Study 3: Product Modeling: Intermediate",
           "link": "https://learn.commercetools.com/mod/resource/view.php?id=793"
         }
       ],
@@ -232,6 +232,53 @@
         {
           "title": "Data model extensibility with Cutom Objects",
           "link": "https://docs.commercetools.com/learning-model-your-business-structure/extensibility/data-model-extensions#custom-objects"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Price Modeling",
+      "overview": "",
+      "infographic": "",
+      "tasks": [
+        {
+          "taskNumber": 11,
+          "taskTitle": "Set Prices",
+          "description": "",
+          "infographic": "",
+          "notes": [
+            "Set Embedded prices for the products you created, consider different dimensions like Country, Currency, Channels, Customer Groups etc.",
+            "Explore setting up a few Standalone Prices for the products you created"
+          ],
+          "solutionTitle": "",
+          "solutionDescription": "",
+          "solutionRefLink": ""
+        },
+        {
+          "taskNumber": 12,
+          "taskTitle": "Understand Price Selection",
+          "description": "",
+          "infographic": "",
+          "notes": [
+            "Explore /product-projection api and observe how price is selected based on the given price context i.e. provided currency, country, channel etc.",
+            "Switch the 'Price Mode' value of the Product and observe price selection"
+          ],
+          "solutionTitle": "",
+          "solutionDescription": "",
+          "solutionRefLink": ""
+        }
+      ],
+      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1390",
+      "case_studies": [
+        {
+          "title": "Case Study 4: Pricing",
+          "link": "https://learn.commercetools.com/mod/resource/view.php?id=847"
+        }
+      ],
+      "recommendations": [
+        {
+          "title" : "Price Selection",
+          "link" : "https://docs.commercetools.com/learning-price-and-discount-your-products/price-calculation/price-selection"
         }
       ]
     }

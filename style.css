@@ -10,6 +10,7 @@
     --shadow-color: rgba(0, 0, 0, 0.15);
     --border-radius: 8px;
     --highlight-color: #FFB000;
+    --grey-background: #DEDAD4;
   }
   
   /* General Styling */
@@ -57,7 +58,7 @@
   }
   
   .accordion-button {
-    background-color: var(--light-bg);
+    background-color: var(--grey-background);
     color: var(--dark-text);
     border: 1px solid #ccc;
     /* background-color: var(--primary-light);
