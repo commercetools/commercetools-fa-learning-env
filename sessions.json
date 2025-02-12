@@ -139,6 +139,101 @@
           "link": "https://docs.commercetools.com/tutorials/nested-types"
         }
       ]
+    },
+    {
+      "id": 4,
+      "title": "Data Extension and Context",
+      "overview": "Custom Types, Custom Objects, Channels and Store",
+      "infographic": "",
+      "tasks": [
+        {
+          "taskNumber": 6,
+          "taskTitle": "Create Custom Type for Customer",
+          "description": "",
+          "infographic": "",
+          "notes": [
+            "Create a Custom Type for customer to store food-preferences, cuisine-preferences",
+            "Update an existing customer to store the 'Custom Fields'"
+          ],
+          "solutionTitle": "",
+          "solutionDescription": "",
+          "solutionRefLink": ""
+        },
+        {
+          "taskNumber": 7,
+          "taskTitle": "Create Custom Objects",
+          "description": "",
+          "infographic": "",
+          "notes": [
+            "Create a Custom Object to store external prices",
+            "Query Custom Objects",
+            "Reference the Custom Objects using 'reference' attribute in Product or 'reference' attribute in custom fields"
+          ],
+          "solutionTitle": "",
+          "solutionDescription": "",
+          "solutionRefLink": ""
+        },
+        {
+          "taskNumber": 8,
+          "taskTitle": "Create Store",
+          "description": "",
+          "infographic": "",
+          "notes": [
+            "Create a Store - 'berlin-store' and configure languages"
+          ],
+          "solutionTitle": "",
+          "solutionDescription": "",
+          "solutionRefLink": ""
+        },
+        {
+          "taskNumber": 9,
+          "taskTitle": "Create Channel",
+          "description": "",
+          "infographic": "",
+          "notes": [
+            "Create a Supply channel and configure inventory for the product variants",
+            "Create a Product Distribution channel and configure prices for the product variants",
+            "Update the 'store' settings and configure the channels to the store"
+          ],
+          "solutionTitle": "",
+          "solutionDescription": "",
+          "solutionRefLink": ""
+        },
+        {
+          "taskNumber": 10,
+          "taskTitle": "Create Product Selection",
+          "description": "",
+          "infographic": "",
+          "notes": [
+            "Create a Product Selection for 'berlin-store' and add products / product variants",
+            "Update the store settings for 'berlin-store', configure the product selection and enable it"
+          ],
+          "solutionTitle": "",
+          "solutionDescription": "",
+          "solutionRefLink": ""
+        }
+      ],
+      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1390",
+      "case_studies": [
+        {
+          "title": "",
+          "link": ""
+        }
+      ],
+      "recommendations": [
+        {
+          "title" : "Adding Custom Fields on Resources",
+          "link" : "https://docs.commercetools.com/tutorials/custom-types"
+        },
+        {
+          "title": "Extending Prices with Custom Fields",
+          "link": "https://docs.commercetools.com/tutorials/custom-fields-prices"
+        },
+        {
+          "title": "Data model extensibility with Cutom Objects",
+          "link": "https://docs.commercetools.com/learning-model-your-business-structure/extensibility/data-model-extensions#custom-objects"
+        }
+      ]
     }
   ]
 }

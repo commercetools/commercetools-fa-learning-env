@@ -57,8 +57,11 @@
   }
   
   .accordion-button {
-    background-color: var(--primary-light);
-    color: white;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    border: 1px solid #ccc;
+    /* background-color: var(--primary-light);
+    color: white; */
     font-weight: bold;
     border-radius: var(--border-radius);
     transition: all 0.3s ease-in-out;
