@@ -12,7 +12,7 @@
           "description": "",
           "infographic": "",
           "notes": [
-            "Get started with navigating the documentation, explore release notes, limits, and learn about common patterns i.e. Draft Representaions and Update Actions.",
+            "Get started by navigating the documentation, exploring release notes and limits, and learning about common patterns, such as Draft Representations and Update Actions.",
             "<a href='https://docs.commercetools.com/docs'>Commercetools Docs</a>",
             "<a href='https://docs.commercetools.com/api/'>HTTP API Guide</a>"
           ],
@@ -27,7 +27,7 @@
           "infographic": "",
           "notes": [
             "Ensure you have access to the <a href='https://learn.commercetools.com/'>Learning Management System</a>",
-            "Ensure you have an account to access <a href='https://mc.europe-west1.gcp.commercetools.com/login'>Merchant Center</a>"
+            "Gain access to <a href='https://mc.europe-west1.gcp.commercetools.com/login'>Merchant Center</a>"
           ],
           "solutionTitle": "",
           "solutionDescription": "",
@@ -111,7 +111,7 @@
           "description": "",
           "infographic": "",
           "notes": [
-            "Refer to the 'Reference' attribute type"
+            "Explore the documentation about the “Reference” attribute and formulate a use case for this feature "
           ],
           "solutionTitle": "",
           "solutionDescription": "",
@@ -127,8 +127,8 @@
       ],
       "recommendations": [
         {
-          "title" : "Reference Type",
-          "link" : "https://docs.commercetools.com/merchant-center/"
+          "title" : "Attribute Types",
+          "link" : "https://docs.commercetools.com/learning-model-your-product-catalog/attribute-types-and-attribute-groups/attribute-types#the-spectrum-of-attribute-types"
         },
         {
           "title": "Product Bundling Tutorial",
