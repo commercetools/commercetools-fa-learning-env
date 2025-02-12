@@ -266,3 +266,19 @@
     transform: scale(1.05);
   }
   
+  /* Make the modal wider */
+.modal-lg {
+  max-width: 600px; /* Adjust width */
+}
+
+/* Ensure form labels are left-aligned */
+.modal-body label {
+  font-weight: bold;
+  color: var(--dark-text);
+}
+
+/* Adjust spacing for better visual appearance */
+.modal-body input {
+  padding: 10px;
+  font-size: 16px;
+}

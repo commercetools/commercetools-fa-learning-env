@@ -57,7 +57,7 @@
       "tasks": [
         {
           "taskNumber": 3,
-          "taskTitle": "Set Up Organizations & Projects",
+          "taskTitle": "Project Setup",
           "description": "",
           "infographic": "",
           "notes": [
@@ -74,7 +74,8 @@
           "description": "",
           "infographic": "",
           "notes": [
-            "Create a new Product Type with appropriate attributes, create a Product and Product Variants."
+            "Create a new Product Type with necessary attributes", 
+            "Create a new Product with required Product Variants (Note: A Product must have at least one Master Variant)"
           ],
           "solutionTitle": "",
           "solutionDescription": "",
@@ -121,7 +122,7 @@
       "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1388",
       "case_studies": [
         {
-          "title": "Case Study 3: Product Modeling: Intermediate",
+          "title": "Case Study 2: Product Modeling: Intermediate",
           "link": "https://learn.commercetools.com/mod/resource/view.php?id=793"
         }
       ],
@@ -271,7 +272,7 @@
       "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1390",
       "case_studies": [
         {
-          "title": "Case Study 4: Pricing",
+          "title": "Case Study 3: Pricing",
           "link": "https://learn.commercetools.com/mod/resource/view.php?id=847"
         }
       ],

@@ -1,4 +1,50 @@
 $(document).ready(function () {
+
+
+  // Function to update the navbar with user's name
+  function updateUserGreeting() {
+    const firstName = localStorage.getItem("userFirstName");
+    const lastName = localStorage.getItem("userLastName");
+
+    if (firstName && lastName) {
+        $("#userGreeting").html(`👋 Hello, <strong>${firstName} ${lastName}</strong>`);
+    }
+}
+
+// Function to check if user details exist in localStorage
+function checkUserInfo() {
+    if (!localStorage.getItem("userFirstName") || !localStorage.getItem("userLastName") || !localStorage.getItem("userEmail")) {
+        $("#userInfoModal").modal("show"); // Show modal if user info is missing
+    } else {
+        updateUserGreeting(); // Update navbar if data exists
+    }
+}
+
+// Handle form submission in modal
+$("#userInfoForm").submit(function (event) {
+    event.preventDefault(); // Prevent form submission from reloading page
+
+    // Get user input
+    const firstName = $("#firstName").val().trim();
+    const lastName = $("#lastName").val().trim();
+    const email = $("#email").val().trim();
+
+    // Save user details to localStorage
+    localStorage.setItem("userFirstName", firstName);
+    localStorage.setItem("userLastName", lastName);
+    localStorage.setItem("userEmail", email);
+
+    // Update navbar with user name
+    updateUserGreeting();
+
+    // Hide modal after submission
+    $("#userInfoModal").modal("hide");
+});
+
+// Run check on page load
+checkUserInfo();
+
+
     // Load session data from JSON
     $.getJSON("./sessions.json", function (data) {
       const sessions = data.sessions;
