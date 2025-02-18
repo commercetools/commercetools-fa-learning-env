@@ -8,13 +8,12 @@
       "tasks": [
         {
           "taskNumber": 1,
-          "taskTitle": "Get Started with Docs",
+          "taskTitle": "Getting Familiar with commercetools platform",
           "description": "",
           "infographic": "",
           "notes": [
-            "Get started by navigating the documentation, exploring release notes and limits, and learning about common patterns, such as Draft Representations and Update Actions.",
-            "<a href='https://docs.commercetools.com/docs'>Commercetools Docs</a>",
-            "<a href='https://docs.commercetools.com/api/'>HTTP API Guide</a>"
+            "Navigate to commercetools Documentation and explore the products offered by  commercetools.",
+            "Take notes on which commercetools product is relevant to your company."
           ],
           "solutionTitle": "",
           "solutionDescription": "",
@@ -22,12 +21,52 @@
         },
         {
           "taskNumber": 2,
-          "taskTitle": "Check Accounts",
+          "taskTitle": "Exploring Release Notes",
           "description": "",
           "infographic": "",
           "notes": [
-            "Ensure you have access to the <a href='https://learn.commercetools.com/'>Learning Management System</a>",
-            "Gain access to <a href='https://mc.europe-west1.gcp.commercetools.com/login'>Merchant Center</a>"
+            "Open the Release Notes section and locate the latest updates related to Composable Commerce.",
+            "Take notes on any recent announcement, API updates, or feature deprecations."
+          ],
+          "solutionTitle": "",
+          "solutionDescription": "",
+          "solutionRefLink": ""
+        },
+        {
+          "taskNumber": 3,
+          "taskTitle": "Learning about API Limits",
+          "description": "",
+          "infographic": "",
+          "notes": [
+            "Open the Limits Documentation and find out the default maximum limits for: Customer Groups, Carts, Product Variants",
+            "Research & note down how to increase limits for specific resources if you need to."
+          ],
+          "solutionTitle": "",
+          "solutionDescription": "",
+          "solutionRefLink": ""
+        },
+        {
+          "taskNumber": 4,
+          "taskTitle": "Exploring common patterns in the docs",
+          "description": "",
+          "infographic": "",
+          "notes": [
+            "Open the Customer API Documentation and Locate the Create Customer (POST /customers) request, observe the <code>CustomerDraft</code> representation",
+            "Identify all mandatory fields required to create a customer."
+          ],
+          "solutionTitle": "",
+          "solutionDescription": "",
+          "solutionRefLink": ""
+        },
+        {
+          "taskNumber": 5,
+          "taskTitle": "Check Access to Learning Portal and Merchant Center",
+          "description": "",
+          "infographic": "",
+          "notes": [
+            "Log in to the Learning Portal and verify your access.",
+            "Navigate to the Merchant Center and check if you can log in.",
+            "Confirm that you have access to the commercetools project created by the trainer."
           ],
           "solutionTitle": "",
           "solutionDescription": "",
