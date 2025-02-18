@@ -12,7 +12,7 @@
           "description": "",
           "infographic": "",
           "notes": [
-            "Navigate to commercetools Documentation and explore the products offered by  commercetools.",
+            "Navigate to <a href='https://docs.commercetools.com/docs'>commercetools Documentation</a> and explore the products offered by  commercetools.",
             "Take notes on which commercetools product is relevant to your company."
           ],
           "solutionTitle": "",
@@ -25,7 +25,7 @@
           "description": "",
           "infographic": "",
           "notes": [
-            "Open the Release Notes section and locate the latest updates related to Composable Commerce.",
+            "Open the <a href='https://docs.commercetools.com/docs/release-notes?tab=product'>Release Notes</a> section and locate the latest updates related to Composable Commerce.",
             "Take notes on any recent announcement, API updates, or feature deprecations."
           ],
           "solutionTitle": "",
@@ -38,7 +38,7 @@
           "description": "",
           "infographic": "",
           "notes": [
-            "Open the Limits Documentation and find out the default maximum limits for: Customer Groups, Carts, Product Variants",
+            "Open the <a href='https://docs.commercetools.com/api/limits'>Limits</a> Documentation and find out the default maximum limits for: Customer Groups, Carts, Product Variants",
             "Research & note down how to increase limits for specific resources if you need to."
           ],
           "solutionTitle": "",
@@ -51,7 +51,7 @@
           "description": "",
           "infographic": "",
           "notes": [
-            "Open the Customer API Documentation and Locate the Create Customer (POST /customers) request, observe the <code>CustomerDraft</code> representation",
+            "Open the <a href='https://docs.commercetools.com/api/customers-overview'>Customer API</a> Documentation and Locate the Create Customer (POST /customers) request, observe the <code>CustomerDraft</code> representation",
             "Identify all mandatory fields required to create a customer."
           ],
           "solutionTitle": "",
@@ -64,8 +64,8 @@
           "description": "",
           "infographic": "",
           "notes": [
-            "Log in to the Learning Portal and verify your access.",
-            "Navigate to the Merchant Center and check if you can log in.",
+            "Log in to the <a href='https://learn.commercetools.com/'>Learning Portal</a> and verify your access.",
+            "Navigate to the <a href='http://mc.europe-west1.gcp.commercetools.com/'>Merchant Center</a> and check if you can log in.",
             "Confirm that you have access to the commercetools project created by the trainer."
           ],
           "solutionTitle": "",
