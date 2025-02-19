@@ -320,7 +320,7 @@ $(document).ready(function () {
         if (task.infographic && task.infographic.trim() !== "") {
           mainContentHtml += `<img src="${task.infographic}" class="img-fluid" alt="Task Infographic">`;
         }
-        mainContentHtml += `<h4>Task Instructions:</h4>
+        mainContentHtml += `<h4></h4>
                             <ul>${task.notes.map(note => `<li>${note}</li>`).join('')}</ul>`;
   
         // Check task status to decide whether to render inputs or show a completion message
