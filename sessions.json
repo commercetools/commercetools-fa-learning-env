@@ -84,7 +84,7 @@
           "description": "",
           "notes": [
             "Create a new customer using the Merchant Center.",
-            "Observe the customer fields in the API playground and note the assigned customer ID."
+            "Observe the customer fields in the Merchant Center's HTTP API playground and note the assigned customer ID."
           ],
           "interactiveElements": [
             {
