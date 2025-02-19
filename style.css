@@ -1,196 +1,183 @@
 /* Updated Color Palette */
 :root {
-    --primary-color: #4E43D8;
-    --primary-dark: #4E43D8;
-    --primary-light: #8F8FFF;
-    --accent-color: #FFC806;
-    --dark-text: #2D2D5F;
-    --light-bg: #F7F2EA;
-    --hover-color: #6359FF;
-    --shadow-color: rgba(0, 0, 0, 0.15);
-    --border-radius: 8px;
-    --highlight-color: #FFB000;
-    --grey-background: #F7F2EA;
-  }
-  
-  /* General Styling */
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--light-bg);
-    color: var(--dark-text);
-  }
-  
-  /* Navbar */
-  .navbar {
-    background-color: var(--primary-dark);
-    padding: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-  }
-  
-  .navbar-brand img {
-    height: 40px;
-    display: block;
-  }
-  
-  /* Centered Course Title */
-  .navbar-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    text-align: left;
-    flex-grow: 1;
-    margin: 0 15px;
-  }
-  
-  /* Current Date Styling */
-  .navbar-date {
-    font-size: 14px;
-    color: white;
-    font-weight: 500;
-  }
-  
-  /* Accordion Styling */
-  .accordion-item {
-    border: none;
-  }
-  
-  .accordion-button {
-    background-color: var(--grey-background);
-    color: var(--dark-text);
-    border: 1px solid #ccc;
-    /* background-color: var(--primary-light);
-    color: white; */
-    font-weight: bold;
-    border-radius: var(--border-radius);
-    transition: all 0.3s ease-in-out;
-    box-shadow: 2px 2px 8px var(--shadow-color);
-  }
-  
-  .accordion-button:hover {
-    background-color: var(--highlight-color);
-    transform: scale(1.02);
-  }
-  
-  /* Active Session Title */
-  .accordion-button.active {
-    background-color: var(--hover-color) !important;
-    color: white;
-    font-size: 18px;
-    box-shadow: 0px 4px 8px var(--shadow-color);
-  }
-  
-  /* Content Layout */
-  .content-section {
-    min-height: 400px;
-    padding: 20px;
-    border-radius: var(--border-radius);
-    background-color: white;
-    box-shadow: 0px 2px 10px var(--shadow-color);
-  }
-  
-  /* Accordion Body & List Items */
-  .accordion-body ul {
-    padding: 0;
-    list-style: none;
-    margin: 0;
-  }
-  
-  .accordion-body ul li {
-    padding: 8px;
-    font-size: 14px;
-    border-bottom: 1px solid #ddd;
-    transition: background 0.3s ease-in-out, color 0.2s ease-in-out;
-    background-color: white;
-    color: var(--dark-text);
-    border-radius: 5px;
-  }
-  
-  /* Hover Effect for Items */
-  .accordion-body ul li:hover {
-    background-color: var(--primary-light);
-    color: white;
-  }
-  
-  /* Active Task (Clicked) - Fully Highlighted */
-  .accordion-body ul li.active,
+  --primary-color: #4E43D8;
+  --primary-dark: #4E43D8;
+  --primary-light: #8F8FFF;
+  --accent-color: #FFC806;
+  --dark-text: #2D2D5F;
+  --light-bg: #F7F2EA;
+  --hover-color: #6359FF;
+  --shadow-color: rgba(0, 0, 0, 0.15);
+  --border-radius: 8px;
+  --highlight-color: #FFB000;
+  --grey-background: #F7F2EA;
+}
+
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary-dark);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+.navbar-brand img {
+  height: 40px;
+  display: block;
+}
+.navbar-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-align: left;
+  flex-grow: 1;
+  margin: 0 15px;
+}
+.navbar-date {
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+}
+.navbar-user {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Progress Bar */
+#progressBarContainer {
+  margin-bottom: 15px;
+}
+#progressBar {
+  background-color: var(--primary-dark);
+  font-weight: bold;
+}
+
+/* Accordion Styling */
+.accordion-item {
+  border: none;
+}
+.accordion-button {
+  background-color: var(--grey-background);
+  color: var(--dark-text);
+  border: 1px solid #ccc;
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 2px 8px var(--shadow-color);
+}
+.accordion-button:hover {
+  background-color: var(--highlight-color);
+  transform: scale(1.02);
+}
+.accordion-button.active {
+  background-color: var(--hover-color) !important;
+  color: white;
+  font-size: 18px;
+  box-shadow: 0px 4px 8px var(--shadow-color);
+}
+
+/* Content Layout */
+.content-section {
+  min-height: 400px;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  background-color: white;
+  box-shadow: 0px 2px 10px var(--shadow-color);
+}
+
+/* Accordion Body & List Items */
+.accordion-body ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+.accordion-body ul li {
+  padding: 8px;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+  transition: background 0.3s ease-in-out, color 0.2s ease-in-out;
+  background-color: white;
+  color: var(--dark-text);
+  border-radius: 5px;
+}
+.accordion-body ul li:hover {
+  background-color: var(--primary-light);
+  color: white;
+}
+.accordion-body ul li.active,
 .accordion-body ul li.active-topic {
   background-color: var(--primary-light);
   color: white;
   font-weight: bold;
   border-radius: 5px;
+  box-shadow: 2px 2px 8px var(--shadow-color);
 }
-  
-/* Ensure the anchor text inside active items is white */
 .accordion-body ul li.active a,
 .accordion-body ul li.active-topic a {
   color: white !important;
+  text-decoration: none;
 }
-  
-  
-  .accordion-body ul li a {
-    text-decoration: none;
-    color: var(--primary-dark);
-    display: block;
-    padding: 5px;
-    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
-  }
-  
-  .accordion-body ul li a:hover {
-    color: white;
-  }
-  
-  /* Recommendations */
-  #recommendations {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  #recommendations a {
-    display: block;
-    text-decoration: none;
-    color: var(--primary-dark);
-    padding: 8px;
-    font-size: 14px;
-    border-radius: 5px;
-    transition: background 0.2s ease-in-out;
-    background-color: var(--light-bg);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-  
-  #recommendations a.active-recommendation {
-    background-color: var(--highlight-color);
-    color: white;
-    font-weight: bold;
-    transform: scale(1.05);
-  }
-  
-  #recommendations a:hover {
-    background-color: var(--primary-color);
-    color: white;
-    transform: scale(1.03);
-  }
-  
-  /* Notes Section */
-  /* Notes Section */
-#notesRow {
-  display: flex;
-  align-items: flex-start; /* Align toolbar & editor */
+.accordion-body ul li a {
+  text-decoration: none;
+  color: var(--primary-dark);
+  display: block;
+  padding: 5px;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.accordion-body ul li a:hover {
+  color: white;
 }
 
-/* Notes Container */
+/* Recommendations */
+#recommendations {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#recommendations a {
+  display: block;
+  text-decoration: none;
+  color: var(--primary-dark);
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background 0.2s ease-in-out;
+  background-color: var(--light-bg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+#recommendations a.active-recommendation {
+  background-color: var(--highlight-color);
+  color: white;
+  font-weight: bold;
+  transform: scale(1.05);
+}
+#recommendations a:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: scale(1.03);
+}
+
+/* Notes Section */
+#notesRow {
+  display: flex;
+  align-items: flex-start;
+}
 .notes-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-/* Notes Editor */
 #notesEditor {
   flex-grow: 1;
   min-height: 150px;
@@ -201,18 +188,14 @@
   width: 100%;
   overflow-y: auto;
 }
-
-/* Notes Toolbar (Vertical Alignment) */
 #notesToolbar {
   display: flex;
-  flex-direction: column; /* Stack buttons vertically */
+  flex-direction: column;
   gap: 8px;
   margin-left: 10px;
 }
-
-/* Toolbar Buttons */
 #notesToolbar button {
-  width: 36px; /* Ensure equal width */
+  width: 36px;
   height: 36px;
   display: flex;
   align-items: center;
@@ -222,62 +205,52 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-
-/* Toolbar Button Hover */
 #notesToolbar button:hover {
   background: var(--highlight-color);
   color: white;
 }
-
-  .note-editor {
-    width: 100%;
-    height: 400px;
-    border-radius: var(--border-radius);
-    padding-top: 0px;
-    padding: 10px;
-    font-size: 14px;
-    background: white;
-    border: 1px solid var(--primary-dark);
-    box-shadow: 2px 2px 8px var(--shadow-color);
-    overflow-y: auto; /* Adds a vertical scroll bar when content exceeds the height */
-  }
-  
-  /* Content Enhancements */
-  .content-section h3 {
-    font-size: 22px;
-    font-weight: bold;
-    color: var(--primary-dark);
-  }
-  
-  .content-section h4 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 10px;
-    color: var(--accent-color);
-  }
-  
-  /* Clickable Image */
-  .clickable-img {
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-  
-  .clickable-img:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Make the modal wider */
-.modal-lg {
-  max-width: 600px; /* Adjust width */
+.note-editor {
+  width: 100%;
+  height: 400px;
+  border-radius: var(--border-radius);
+  padding: 10px;
+  font-size: 14px;
+  background: white;
+  border: 1px solid var(--primary-dark);
+  box-shadow: 2px 2px 8px var(--shadow-color);
+  overflow-y: auto;
 }
 
-/* Ensure form labels are left-aligned */
+/* Content Enhancements */
+.content-section h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--primary-dark);
+}
+.content-section h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: var(--accent-color);
+}
+
+/* Clickable Image */
+.clickable-img {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.clickable-img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal-lg {
+  max-width: 600px;
+}
 .modal-body label {
   font-weight: bold;
   color: var(--dark-text);
 }
-
-/* Adjust spacing for better visual appearance */
 .modal-body input {
   padding: 10px;
   font-size: 16px;

@@ -3,74 +3,58 @@
     {
       "id": 1,
       "title": "Introduction to commercetools and Merchant Center",
-      "overview": "",
+      "overview": "This session provides a comprehensive introduction to commercetools and its API-first, headless commerce architecture. You will explore documentation, release notes, API limits, observe the common patterns in the API docs i.e. Draft Representation and Update Actions for Resources. You will also get started Merchant Center.",
       "infographic": "",
       "tasks": [
         {
           "taskNumber": 1,
-          "taskTitle": "Getting Familiar with commercetools platform",
+          "taskTitle": "Explore Documentation & API Limits",
           "description": "",
-          "infographic": "",
           "notes": [
-            "Navigate to <a href='https://docs.commercetools.com/docs'>commercetools Documentation</a> and explore the products offered by  commercetools.",
-            "Take notes on which commercetools product is relevant to your company."
+            ],
+          "interactiveElements": [
+            {
+              "question": "What was released on Dec 18, 2024?",
+              "type": "text"
+            },
+            {
+              "question": "How many customer groups can you create in a commercetools project by default?",
+              "type": "text"
+            },
+            {
+              "question": "List the mandatory fields required to create a customer.",
+              "type": "textarea"
+            },
+            {
+              "question": "Can you change the customer ID after creation?",
+              "type": "radio",
+              "options": ["Yes", "No"]
+            }
           ],
-          "solutionTitle": "",
-          "solutionDescription": "",
-          "solutionRefLink": ""
+          "responses": [],
+          "status": "Not Started"
         },
         {
           "taskNumber": 2,
-          "taskTitle": "Exploring Release Notes",
+          "taskTitle": "Verify Platform Access",
           "description": "",
-          "infographic": "",
           "notes": [
-            "Open the <a href='https://docs.commercetools.com/docs/release-notes?tab=product'>Release Notes</a> section and locate the latest updates related to Composable Commerce.",
-            "Take notes on any recent announcement, API updates, or feature deprecations."
+            "Log in to the Learning Portal and verify access.",
+            "Log in to the Merchant Center and confirm you can view the Project created by your Trainer."          ],
+          "interactiveElements": [
+            {
+              "question": "Were you able to log in to the Learning Portal?",
+              "type": "radio",
+              "options": ["Yes", "No"]
+            },
+            {
+              "question": "Were you able to access Merchant Center and view the project created by Trainer?",
+              "type": "radio",
+              "options": ["Yes", "No"]
+            }
           ],
-          "solutionTitle": "",
-          "solutionDescription": "",
-          "solutionRefLink": ""
-        },
-        {
-          "taskNumber": 3,
-          "taskTitle": "Learning about API Limits",
-          "description": "",
-          "infographic": "",
-          "notes": [
-            "Open the <a href='https://docs.commercetools.com/api/limits'>Limits</a> Documentation and find out the default maximum limits for: Customer Groups, Carts, Product Variants",
-            "Research & note down how to increase limits for specific resources if you need to."
-          ],
-          "solutionTitle": "",
-          "solutionDescription": "",
-          "solutionRefLink": ""
-        },
-        {
-          "taskNumber": 4,
-          "taskTitle": "Exploring common patterns in the docs",
-          "description": "",
-          "infographic": "",
-          "notes": [
-            "Open the <a href='https://docs.commercetools.com/api/customers-overview'>Customer API</a> Documentation and Locate the Create Customer (POST /customers) request, observe the <code>CustomerDraft</code> representation",
-            "Identify all mandatory fields required to create a customer."
-          ],
-          "solutionTitle": "",
-          "solutionDescription": "",
-          "solutionRefLink": ""
-        },
-        {
-          "taskNumber": 5,
-          "taskTitle": "Check Access to Learning Portal and Merchant Center",
-          "description": "",
-          "infographic": "",
-          "notes": [
-            "Log in to the <a href='https://learn.commercetools.com/'>Learning Portal</a> and verify your access.",
-            "Navigate to the <a href='http://mc.europe-west1.gcp.commercetools.com/'>Merchant Center</a> and check if you can log in.",
-            "Confirm that you have access to the commercetools project created by the trainer."
-          ],
-          "solutionTitle": "",
-          "solutionDescription": "",
-          "solutionRefLink": ""
+          "responses": [],
+          "status": "Not Started"
         }
       ],
       "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1384",
@@ -91,236 +75,63 @@
     {
       "id": 2,
       "title": "Product Setup and Basic Product Modeling",
-      "overview": "",
+      "overview": "This session covers setting up the commercetools project, creating a customer in Merchant Center, and understanding the basics of product modeling including product types, attributes, and variants.",
       "infographic": "",
       "tasks": [
         {
           "taskNumber": 3,
-          "taskTitle": "Project Setup",
+          "taskTitle": "Create a Customer in Merchant Center",
           "description": "",
-          "infographic": "",
           "notes": [
-            "Create Organization, Project, Teams and Configuration Permissions in the Merchant Center.",
-            "<a href='https://docs.commercetools.com/learning-model-your-business-structure/organizations-and-projects/overview'>Organizations, Teams, and Projects</a>"
+            "Create a new customer using the Merchant Center.",
+            "Observe the customer fields in the API playground and note the assigned customer ID."
           ],
-          "solutionTitle": "",
-          "solutionDescription": "",
-          "solutionRefLink": ""
+          "interactiveElements": [
+            {
+              "question": "Enter the customer ID of the newly created customer below",
+              "type": "text"
+            }
+          ],
+          "responses": [],
+          "status": "Not Started"
         },
         {
           "taskNumber": 4,
-          "taskTitle": "Create Product Type & Product",
-          "description": "",
-          "infographic": "",
+          "taskTitle": "Summarize Product Modeling Aspects",
+          "description": "Review the product modeling concepts covered in this session. Write a summary of the key aspects including product types, attributes, and product variants.",
           "notes": [
-            "Create a new Product Type with necessary attributes", 
-            "Create a new Product with required Product Variants (Note: A Product must have at least one Master Variant)"
+            "Summarize the key aspects to be considered when modeling a product",
+            "Highlight any best practices or important considerations discussed."
           ],
-          "solutionTitle": "",
-          "solutionDescription": "",
-          "solutionRefLink": ""
+          "interactiveElements": [
+            {
+              "question": "Write down a summary of all product modeling aspects in 3-5 bullet points.",
+              "type": "textarea"
+            }
+          ],
+          "responses": [],
+          "status": "Not Started"
         }
       ],
       "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1386",
       "case_studies": [
         {
           "title": "Case Study 1: Product Modeling",
-          "link": "https://learn.commercetools.com/mod/resource/view.php?id=756"
+          "link": "https://learn.commercetools.com/mod/resource/view.php?id=756",
+          "description" : "Design a flexible product model for All For Foodies online cooking class vouchers by creating a general 'Online Offering' product type with variants for French, Italian, Middle Eastern, Soup, and Grilling classes at specified prices. Then, implement the model in the Merchant Center and recommend an approach for incorporating detailed class information into the product data."
         }
       ],
       "recommendations": [
         {
-          "title" : "Merchant Center Guide",
-          "link" : "https://docs.commercetools.com/merchant-center/"
+          "title": "Merchant Center Guide",
+          "link": "https://docs.commercetools.com/merchant-center/"
         },
         {
-          "title": "Product Modeling",
+          "title": "Product Modeling Overview",
           "link": "https://docs.commercetools.com/learning-model-your-product-catalog/product-modeling/overview"
         }
       ]
-    },
-    {
-      "id": 3,
-      "title": "Advanced Product Modeling",
-      "overview": "",
-      "infographic": "",
-      "tasks": [
-        {
-          "taskNumber": 5,
-          "taskTitle": "Product Bundling",
-          "description": "",
-          "infographic": "",
-          "notes": [
-            "Explore the documentation about the “Reference” attribute and formulate a use case for this feature "
-          ],
-          "solutionTitle": "",
-          "solutionDescription": "",
-          "solutionRefLink": ""
-        }
-      ],
-      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1388",
-      "case_studies": [
-        {
-          "title": "Case Study 2: Product Modeling: Intermediate",
-          "link": "https://learn.commercetools.com/mod/resource/view.php?id=793"
-        }
-      ],
-      "recommendations": [
-        {
-          "title" : "Attribute Types",
-          "link" : "https://docs.commercetools.com/learning-model-your-product-catalog/attribute-types-and-attribute-groups/attribute-types#the-spectrum-of-attribute-types"
-        },
-        {
-          "title": "Product Bundling Tutorial",
-          "link": "https://docs.commercetools.com/tutorials/product-bundle-api"
-        },
-        {
-          "title": "Nested and Tabular Data",
-          "link": "https://docs.commercetools.com/tutorials/nested-types"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "title": "Data Extension and Context",
-      "overview": "Custom Types, Custom Objects, Channels and Store",
-      "infographic": "",
-      "tasks": [
-        {
-          "taskNumber": 6,
-          "taskTitle": "Create Custom Type for Customer",
-          "description": "",
-          "infographic": "",
-          "notes": [
-            "Create a Custom Type for customer to store food-preferences, cuisine-preferences",
-            "Update an existing customer to store the 'Custom Fields'"
-          ],
-          "solutionTitle": "",
-          "solutionDescription": "",
-          "solutionRefLink": ""
-        },
-        {
-          "taskNumber": 7,
-          "taskTitle": "Create Custom Objects",
-          "description": "",
-          "infographic": "",
-          "notes": [
-            "Create a Custom Object to store external prices",
-            "Query Custom Objects",
-            "Reference the Custom Objects using 'reference' attribute in Product or 'reference' attribute in custom fields"
-          ],
-          "solutionTitle": "",
-          "solutionDescription": "",
-          "solutionRefLink": ""
-        },
-        {
-          "taskNumber": 8,
-          "taskTitle": "Create Store",
-          "description": "",
-          "infographic": "",
-          "notes": [
-            "Create a Store - 'berlin-store' and configure languages"
-          ],
-          "solutionTitle": "",
-          "solutionDescription": "",
-          "solutionRefLink": ""
-        },
-        {
-          "taskNumber": 9,
-          "taskTitle": "Create Channel",
-          "description": "",
-          "infographic": "",
-          "notes": [
-            "Create a Supply channel and configure inventory for the product variants",
-            "Create a Product Distribution channel and configure prices for the product variants",
-            "Update the 'store' settings and configure the channels to the store"
-          ],
-          "solutionTitle": "",
-          "solutionDescription": "",
-          "solutionRefLink": ""
-        },
-        {
-          "taskNumber": 10,
-          "taskTitle": "Create Product Selection",
-          "description": "",
-          "infographic": "",
-          "notes": [
-            "Create a Product Selection for 'berlin-store' and add products / product variants",
-            "Update the store settings for 'berlin-store', configure the product selection and enable it"
-          ],
-          "solutionTitle": "",
-          "solutionDescription": "",
-          "solutionRefLink": ""
-        }
-      ],
-      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1390",
-      "case_studies": [
-        {
-          "title": "",
-          "link": ""
-        }
-      ],
-      "recommendations": [
-        {
-          "title" : "Adding Custom Fields on Resources",
-          "link" : "https://docs.commercetools.com/tutorials/custom-types"
-        },
-        {
-          "title": "Extending Prices with Custom Fields",
-          "link": "https://docs.commercetools.com/tutorials/custom-fields-prices"
-        },
-        {
-          "title": "Data model extensibility with Cutom Objects",
-          "link": "https://docs.commercetools.com/learning-model-your-business-structure/extensibility/data-model-extensions#custom-objects"
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "title": "Price Modeling",
-      "overview": "",
-      "infographic": "",
-      "tasks": [
-        {
-          "taskNumber": 11,
-          "taskTitle": "Set Prices",
-          "description": "",
-          "infographic": "",
-          "notes": [
-            "Set Embedded prices for the products you created, consider different dimensions like Country, Currency, Channels, Customer Groups etc.",
-            "Explore setting up a few Standalone Prices for the products you created"
-          ],
-          "solutionTitle": "",
-          "solutionDescription": "",
-          "solutionRefLink": ""
-        },
-        {
-          "taskNumber": 12,
-          "taskTitle": "Understand Price Selection",
-          "description": "",
-          "infographic": "",
-          "notes": [
-            "Explore /product-projection api and observe how price is selected based on the given price context i.e. provided currency, country, channel etc.",
-            "Switch the 'Price Mode' value of the Product and observe price selection"
-          ],
-          "solutionTitle": "",
-          "solutionDescription": "",
-          "solutionRefLink": ""
-        }
-      ],
-      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1390",
-      "case_studies": [
-        {
-          "title": "Case Study 3: Pricing",
-          "link": "https://learn.commercetools.com/mod/resource/view.php?id=847"
-        }
-      ],
-      "recommendations": [
-        {
-          "title" : "Price Selection",
-          "link" : "https://docs.commercetools.com/learning-price-and-discount-your-products/price-calculation/price-selection"
-        }
-      ]
     }
+    
   ]
 }
