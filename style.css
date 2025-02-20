@@ -6,7 +6,7 @@
   --accent-color: #FFC806;
   --dark-text: #2D2D5F;
   --light-bg: #F7F2EA;
-  --hover-color: #6359FF;
+  --hover-color: #4E43D8;
   --shadow-color: rgba(0, 0, 0, 0.15);
   --border-radius: 8px;
   --highlight-color: #FFB000;
@@ -84,6 +84,8 @@ body {
   font-size: 18px;
   box-shadow: 0px 4px 8px var(--shadow-color);
 }
+
+
 
 /* Content Layout */
 .content-section {

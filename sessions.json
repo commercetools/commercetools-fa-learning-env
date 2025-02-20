@@ -2,16 +2,15 @@
   "sessions": [
     {
       "id": 1,
-      "title": "Introduction to commercetools and Merchant Center",
-      "overview": "This session provides a comprehensive introduction to commercetools and its API-first, headless commerce architecture. You will explore documentation, release notes, API limits, observe the common patterns in the API docs i.e. Draft Representation and Update Actions for Resources. You will also get started Merchant Center.",
+      "title": "Introduction to commercetools",
+      "overview": "",
       "infographic": "",
       "tasks": [
         {
           "taskNumber": 1,
-          "taskTitle": "Explore Documentation & API Limits",
+          "taskTitle": "Documentation & API Limits",
           "description": "",
-          "notes": [
-            ],
+          "notes": [],
           "interactiveElements": [
             {
               "question": "What was released on Dec 18, 2024?",
@@ -112,6 +111,48 @@
           "responses": [],
           "status": "Not Started"
         }
+      ],
+      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1386",
+      "case_studies": [
+        {
+          "title": "Case Study 1: Product Modeling",
+          "link": "https://learn.commercetools.com/mod/resource/view.php?id=756",
+          "description" : "Design a flexible product model for All For Foodies online cooking class vouchers by creating a general 'Online Offering' product type with variants for French, Italian, Middle Eastern, Soup, and Grilling classes at specified prices. Then, implement the model in the Merchant Center and recommend an approach for incorporating detailed class information into the product data."
+        }
+      ],
+      "recommendations": [
+        {
+          "title": "Merchant Center Guide",
+          "link": "https://docs.commercetools.com/merchant-center/"
+        },
+        {
+          "title": "Product Modeling Overview",
+          "link": "https://docs.commercetools.com/learning-model-your-product-catalog/product-modeling/overview"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Advanced Product Modeling",
+      "overview": "",
+      "infographic": "",
+      "tasks": [
+        {
+          "taskNumber": 5,
+          "taskTitle": "Product Life Cycle & Categories",
+          "description": "",
+          "notes": [],
+          "interactiveElements": [
+            {
+              "question": "Can a product belong to multiple categories in commercetools? (Yes/No)",
+              "type": "radio",
+              "options": ["Yes", "No"]
+            }
+          ],
+          "responses": [],
+          "status": "Not Started"
+        }
+        
       ],
       "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1386",
       "case_studies": [

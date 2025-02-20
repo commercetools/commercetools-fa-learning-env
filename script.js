@@ -88,7 +88,6 @@ $(document).ready(function () {
 
   // Submits the task responses: captures inputs, updates task status, and appends responses to the notes section.
   function submitTask(taskNumber) {
-    // Find the session and task corresponding to the taskNumber
     const session = sessionsData.sessions.find(s => s.tasks && s.tasks.some(t => t.taskNumber === taskNumber));
     if (!session) return;
     const task = session.tasks.find(t => t.taskNumber === taskNumber);
@@ -96,55 +95,53 @@ $(document).ready(function () {
 
     let responses = [];
     task.interactiveElements.forEach((element, index) => {
-      let response = "";
-      if (element.type === "text" || element.type === "textarea") {
-        response = document.getElementById(`task-${task.taskNumber}-input-${index}`).value;
-      } else if (element.type === "radio") {
-        let radios = document.getElementsByName(`task-${task.taskNumber}-radio-${index}`);
-        for (let radio of radios) {
-          if (radio.checked) {
-            response = radio.value;
-            break;
-          }
+        let response = "";
+        if (element.type === "text" || element.type === "textarea") {
+            response = document.getElementById(`task-${task.taskNumber}-input-${index}`).value;
+        } else if (element.type === "radio") {
+            let radios = document.getElementsByName(`task-${task.taskNumber}-radio-${index}`);
+            for (let radio of radios) {
+                if (radio.checked) {
+                    response = radio.value;
+                    break;
+                }
+            }
         }
-      }
-      responses.push({ question: element.question, answer: response });
+        responses.push({ question: element.question, answer: response });
     });
 
-    // Update task object with responses and mark as completed
+    // Update task object
     task.responses = responses;
     task.status = "Completed";
 
-    // Append each response to the task's notes (each on a new line)
-    responses.forEach(r => {
-      task.notes.push(`${r.question} - ${r.answer}`);
-    });
-
-    // Save updated sessions data to localStorage
+    // Save to local storage to persist status
     localStorage.setItem("sessionsData", JSON.stringify(sessionsData));
 
-    // Create a task responses block to be appended in the overall notes section
+    // Append to the notes section only
     let taskResponsesHTML = `<div class="task-responses" id="task-responses-${task.taskNumber}">` +
-                              `<h5>Task ${task.taskNumber} Responses:</h5><ul>`;
+                              `<h5>Task ${task.taskNumber} Notes:</h5><ul>`;
     responses.forEach(r => {
-      taskResponsesHTML += `<li>${r.question} - ${r.answer}</li>`;
+        taskResponsesHTML += `<li>${r.question} - ${r.answer}</li>`;
     });
     taskResponsesHTML += `</ul></div>`;
+
     let $notesEditor = $("#notesEditor");
     if ($notesEditor.find(`#task-responses-${task.taskNumber}`).length > 0) {
-      $notesEditor.find(`#task-responses-${task.taskNumber}`).replaceWith(taskResponsesHTML);
+        $notesEditor.find(`#task-responses-${task.taskNumber}`).replaceWith(taskResponsesHTML);
     } else {
-      $notesEditor.append(taskResponsesHTML);
+        $notesEditor.append(taskResponsesHTML);
     }
 
-    // Hide interactive elements and show a "Re-submit" link
+    // Remove the interactive elements from UI and only show a re-submit link
     const containerId = `interactive-task-${task.taskNumber}`;
     document.getElementById(containerId).innerHTML =
-      `<em>Task Completed. Your responses have been recorded.</em> <a href="#" onclick="reSubmitTask(${task.taskNumber}); return false;">Re-submit</a>`;
+      `<em>Task Completed. Your responses have been recorded.</em> 
+      <a href="#" onclick="reSubmitTask(${task.taskNumber}); return false;">Re-submit</a>`;
 
     updateProgress();
     alert(`Task ${task.taskNumber} marked as completed!`);
-  }
+}
+
 
   // Allows the participant to re-submit a task, re-rendering the interactive inputs.
   function reSubmitTask(taskNumber) {
@@ -182,7 +179,7 @@ $(document).ready(function () {
     $accordion.empty();
     sessionsData.sessions.forEach((session, index) => {
       let isActive = index === 0 ? "show" : "";
-      let isButtonActive = index === 0 ? "active" : "collapsed";
+      let isButtonActive = index === 0 ? "" : "collapsed";
 
       // Build tasks list items for this session
       let tasksHtml = "";
@@ -259,29 +256,51 @@ $(document).ready(function () {
 
   /********** SESSION & TASK EVENT HANDLING **********/
   // When a session header is clicked, update main content and recommendations
-  $(document).on("click", ".session-button", function () {
-    $(".session-button").removeClass("active");
-    $(this).addClass("active");
+  $(document).on("click", ".session-link", function (e) {
+    e.preventDefault();
+    $(".list-group-item").removeClass("active");
+    $(this).parent().addClass("active");
 
     const sessionId = $(this).data("session");
+    const type = $(this).data("type");
     const session = sessionsData.sessions.find(s => s.id == sessionId);
-    if (session) {
-      let mainContentHtml = `<h3>${session.title}</h3>
-                             <p>${session.overview}</p>`;
-      if (session.infographic && session.infographic.trim() !== "") {
-        mainContentHtml += `<img src="${session.infographic}" class="img-fluid" alt="Session Infographic">`;
-      }
-      $("#mainContent").html(mainContentHtml);
+    if (!session) return;
 
-      let recHtml = "";
-      if (session.recommendations && session.recommendations.length > 0) {
-        recHtml = session.recommendations.map(rec => `
-          <a href="${rec.link}" target="_blank" class="recommendation-link d-block">${rec.title}</a>
-        `).join('');
-      }
-      $("#solutionContent").html(recHtml);
+    if (type === "task") {
+        const taskNumber = $(this).data("tasknumber");
+        const task = session.tasks.find(t => t.taskNumber == taskNumber);
+        if (task) {
+            let mainContentHtml = `<h3>Task ${task.taskNumber}: ${task.taskTitle}</h3>
+                                   <p>${task.description}</p>`;
+            if (task.infographic && task.infographic.trim() !== "") {
+                mainContentHtml += `<img src="${task.infographic}" class="img-fluid" alt="Task Infographic">`;
+            }
+            mainContentHtml += `<h4>Notes:</h4>
+                                <ul>${task.notes.map(note => `<li>${note}</li>`).join('')}</ul>`;
+
+            // Show completed message and re-submit link if the task is already completed
+            if (task.status === "Completed") {
+                mainContentHtml += `<div id="interactive-task-${task.taskNumber}" class="mt-3">
+                                      <em>Task Completed. Your responses have been recorded.</em>
+                                      <a href="#" onclick="reSubmitTask(${task.taskNumber}); return false;">Re-submit</a>
+                                    </div>`;
+            } else {
+                mainContentHtml += `<div id="interactive-task-${task.taskNumber}" class="mt-3"></div>
+                                    <button class="btn btn-primary mt-2" onclick="submitTask(${task.taskNumber})">
+                                      Submit Task ${task.taskNumber}
+                                    </button>`;
+            }
+
+            $("#mainContent").html(mainContentHtml);
+
+            // Only render interactive elements if task is not completed
+            if (task.status !== "Completed") {
+                renderInteractiveElements(task, `interactive-task-${task.taskNumber}`);
+            }
+        }
     }
-  });
+});
+
 
   // When a task link is clicked, render interactive elements or show completed message
   $(document).on("click", ".session-link", function (e) {
