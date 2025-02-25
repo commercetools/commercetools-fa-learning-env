@@ -186,7 +186,7 @@
         {
           "title": "Case Study 2: Advanced Product Modeling",
           "link": "https://learn.commercetools.com/mod/resource/view.php?id=756",
-          "description" : "Design a flexible product model for All For Foodies online cooking class vouchers by creating a general 'Online Offering' product type with variants for French, Italian, Middle Eastern, Soup, and Grilling classes at specified prices. Then, implement the model in the Merchant Center and recommend an approach for incorporating detailed class information into the product data."
+          "description" : ""
         }
       ],
       "recommendations": [
@@ -212,9 +212,9 @@
           "taskTitle": "Stores and Channels",
           "description": "",
           "notes": [
-            "Create a store <yourname>-store in Merchant Center",
-            "Create two channels in Merchant Center 1. <code><yourname>-store-inventory-channel</code and <code><yourname>-store-price-channel</code>",
-            "Create a Product Selection in Merchant Center as <code><yourname>-product-selection</code> and any 3 products to the selection"
+            "Create a store <code>[YOURNAME]-store</code> in Merchant Center",
+            "Create two channels in Merchant Center 1. <code> [YOURNAME]-store-inventory-channel</code and 2. <code> [YOURNAME]-store-price-channel</code>",
+            "Create a Product Selection in Merchant Center as <code> [YOURNAME]-product-selection</code> and any 3 products to the selection"
           ],
           "interactiveElements": [
             {
@@ -222,7 +222,7 @@
               "type": "textarea"
             },
             {
-              "question": "Customers expect dynamic pricing based on region and customer group. How would you configure <code><yourname>-store-price-channel</code> to support this?",
+              "question": "Customers expect dynamic pricing based on region and customer group. How would you configure <code> [YOURNAME]-store-price-channel</code> to support this?",
               "type": "textarea"
             },
             {
@@ -258,7 +258,7 @@
         {
           "title": "Case Study 3: Stores and Channels",
           "link": "https://learn.commercetools.com/mod/resource/view.php?id=756",
-          "description" : "Design a flexible product model for All For Foodies online cooking class vouchers by creating a general 'Online Offering' product type with variants for French, Italian, Middle Eastern, Soup, and Grilling classes at specified prices. Then, implement the model in the Merchant Center and recommend an approach for incorporating detailed class information into the product data."
+          "description" : ""
         }
       ],
       "recommendations": [
