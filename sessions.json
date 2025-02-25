@@ -147,17 +147,116 @@
               "question": "Can a product belong to multiple categories in commercetools? (Yes/No)",
               "type": "radio",
               "options": ["Yes", "No"]
+            },
+            {
+              "question": "Suggest a category structure for seasonal cooking courses",
+              "type": "textarea"
+            }
+          ],
+          "responses": [],
+          "status": "Not Started"
+        },
+        {
+          "taskNumber": 6,
+          "taskTitle": "Product Life Cycle & Categories",
+          "description": "",
+          "notes": [
+          ],
+          "interactiveElements": [
+            {
+              "question": "Can a reference attribute link a product to multiple other products? (Yes/No)",
+              "type": "radio",
+              "options": ["Yes", "No"]
+            },
+            {
+              "question": "Suggest an approach to managing inventory within a product bundle.",
+              "type": "textarea"
+            },
+            {
+              "question": "How would you configure products to recommend related products dynamically for example: A customer purchasing an 'Italian Pasta Masterclass' might also be interested in a 'Wine Pairing Workshop'?",
+              "type": "textarea"
             }
           ],
           "responses": [],
           "status": "Not Started"
         }
-        
       ],
       "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1386",
       "case_studies": [
         {
-          "title": "Case Study 1: Product Modeling",
+          "title": "Case Study 2: Advanced Product Modeling",
+          "link": "https://learn.commercetools.com/mod/resource/view.php?id=756",
+          "description" : "Design a flexible product model for All For Foodies online cooking class vouchers by creating a general 'Online Offering' product type with variants for French, Italian, Middle Eastern, Soup, and Grilling classes at specified prices. Then, implement the model in the Merchant Center and recommend an approach for incorporating detailed class information into the product data."
+        }
+      ],
+      "recommendations": [
+        {
+          "title": "Merchant Center Guide",
+          "link": "https://docs.commercetools.com/merchant-center/"
+        },
+        {
+          "title": "Product Modeling Overview",
+          "link": "https://docs.commercetools.com/learning-model-your-product-catalog/product-modeling/overview"
+        }
+      ]
+    },
+
+    {
+      "id": 4,
+      "title": "Stores and Channels",
+      "overview": "",
+      "infographic": "",
+      "tasks": [
+        {
+          "taskNumber": 7,
+          "taskTitle": "Stores and Channels",
+          "description": "",
+          "notes": [
+            "Create a store <yourname>-store in Merchant Center",
+            "Create two channels in Merchant Center 1. <code><yourname>-store-inventory-channel</code and <code><yourname>-store-price-channel</code>",
+            "Create a Product Selection in Merchant Center as <code><yourname>-product-selection</code> and any 3 products to the selection"
+          ],
+          "interactiveElements": [
+            {
+              "question": "What default currency did you set for your store? And why? ",
+              "type": "textarea"
+            },
+            {
+              "question": "Customers expect dynamic pricing based on region and customer group. How would you configure <code><yourname>-store-price-channel</code> to support this?",
+              "type": "textarea"
+            },
+            {
+              "question": "Your online store wants to feature a 'Season Special' collection that includes trending products for the summer. <b>How would you use a Product Selection to group these products efficiently</b>?",
+              "type": "textarea"
+            }
+          ],
+          "responses": [],
+          "status": "Not Started"
+        },
+        {
+          "taskNumber": 8,
+          "taskTitle": "Product Selections and Tailoring",
+          "description": "",
+          "notes": [
+          ],
+          "interactiveElements": [
+            {
+              "question": "Your online store wants to feature a 'Seasonal Special' collection that includes trending products for the summer. <b>How would you use a Product Selection to group these products efficiently</b>?",
+              "type": "textarea"
+            },
+            {
+              "question": "Your company operates in multiple countries, but some products are only available in select regions. <b>What feature would you use to tailor product availability based on geographic regions</b>?",
+              "type": "textarea"
+            }
+          ],
+          "responses": [],
+          "status": "Not Started"
+        }
+      ],
+      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1386",
+      "case_studies": [
+        {
+          "title": "Case Study 3: Stores and Channels",
           "link": "https://learn.commercetools.com/mod/resource/view.php?id=756",
           "description" : "Design a flexible product model for All For Foodies online cooking class vouchers by creating a general 'Online Offering' product type with variants for French, Italian, Middle Eastern, Soup, and Grilling classes at specified prices. Then, implement the model in the Merchant Center and recommend an approach for incorporating detailed class information into the product data."
         }
@@ -173,6 +272,5 @@
         }
       ]
     }
-    
   ]
 }
