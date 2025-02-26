@@ -37,9 +37,7 @@
           "taskNumber": 2,
           "taskTitle": "Verify Platform Access",
           "description": "",
-          "notes": [
-            "Log in to the Learning Portal and verify access.",
-            "Log in to the Merchant Center and confirm you can view the Project created by your Trainer."          ],
+          "notes": [   ],
           "interactiveElements": [
             {
               "question": "Were you able to log in to the Learning Portal?",
@@ -47,9 +45,8 @@
               "options": ["Yes", "No"]
             },
             {
-              "question": "Were you able to access Merchant Center and view the project created by Trainer?",
-              "type": "radio",
-              "options": ["Yes", "No"]
+              "question": "Provide the project key of the project we are working with in this course?",
+              "type": "text"
             }
           ],
           "responses": [],
@@ -82,8 +79,7 @@
           "taskTitle": "Create a Customer in Merchant Center",
           "description": "",
           "notes": [
-            "Create a new customer using the Merchant Center.",
-            "Observe the customer fields in the Merchant Center's HTTP API playground and note the assigned customer ID."
+            "Create a new customer using the Merchant Center."
           ],
           "interactiveElements": [
             {
@@ -97,14 +93,13 @@
         {
           "taskNumber": 4,
           "taskTitle": "Summarize Product Modeling Aspects",
-          "description": "Review the product modeling concepts covered in this session. Write a summary of the key aspects including product types, attributes, and product variants.",
+          "description": "",
           "notes": [
-            "Summarize the key aspects to be considered when modeling a product",
-            "Highlight any best practices or important considerations discussed."
+            
           ],
           "interactiveElements": [
             {
-              "question": "Write down a summary of all product modeling aspects in 3-5 bullet points.",
+              "question": "Summarise the key aspects of product modeling in 3-5 bullet points, mention best practices",
               "type": "textarea"
             }
           ],
@@ -117,7 +112,7 @@
         {
           "title": "Case Study 1: Product Modeling",
           "link": "https://learn.commercetools.com/mod/resource/view.php?id=756",
-          "description" : "Design a flexible product model for All For Foodies online cooking class vouchers by creating a general 'Online Offering' product type with variants for French, Italian, Middle Eastern, Soup, and Grilling classes at specified prices. Then, implement the model in the Merchant Center and recommend an approach for incorporating detailed class information into the product data."
+          "description" : "<div><p>All For Foodies is an American company catering to the needs of serious foodies. They want to launch an online business for selling vouchers for their online cooking classes.</p><p>commercetools acts as PIM and Order Management System.</p><p>All For Foodies currently sells:</p><ul><li>Online French cooking class, $39.99</li><li>Online Italian cooking class, $39.99</li><li>Online Middle Eastern cooking class, $39.99</li><li>Online Soup cooking class, $25.99</li><li>Online Grilling class, $22.99</li></ul><p>Create a product model using a product type Online Offering, products and variants of your choice.</p><p>Draft the solution in the Notes field together with a team in a breakout room.</p><p>Discuss then your model with the trainer before creating it in the Merchant Center.</p><p>If time allows, your trainer will discuss further requirements from the Case Study Document.</p></div>"
         }
       ],
       "recommendations": [
@@ -144,7 +139,7 @@
           "notes": [],
           "interactiveElements": [
             {
-              "question": "Can a product belong to multiple categories in commercetools? (Yes/No)",
+              "question": "Can a product belong to multiple categories in commercetools?",
               "type": "radio",
               "options": ["Yes", "No"]
             },
@@ -164,7 +159,7 @@
           ],
           "interactiveElements": [
             {
-              "question": "Can a reference attribute link a product to multiple other products? (Yes/No)",
+              "question": "Can a reference attribute link a product to multiple other products?",
               "type": "radio",
               "options": ["Yes", "No"]
             },
@@ -181,11 +176,11 @@
           "status": "Not Started"
         }
       ],
-      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1386",
+      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1388",
       "case_studies": [
         {
           "title": "Case Study 2: Advanced Product Modeling",
-          "link": "https://learn.commercetools.com/mod/resource/view.php?id=756",
+          "link": "https://learn.commercetools.com/mod/resource/view.php?id=793",
           "description" : ""
         }
       ],
@@ -253,7 +248,7 @@
           "status": "Not Started"
         }
       ],
-      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1386",
+      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1390",
       "case_studies": [
         {
           "title": "Case Study 3: Stores and Channels",
