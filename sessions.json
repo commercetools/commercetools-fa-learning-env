@@ -9,8 +9,6 @@
         {
           "taskNumber": 1,
           "taskTitle": "Documentation & API Limits",
-          "description": "",
-          "notes": [],
           "interactiveElements": [
             {
               "question": "What was released on Dec 18, 2024?",
@@ -30,14 +28,11 @@
               "options": ["Yes", "No"]
             }
           ],
-          "responses": [],
           "status": "Not Started"
         },
         {
           "taskNumber": 2,
           "taskTitle": "Verify Platform Access",
-          "description": "",
-          "notes": [   ],
           "interactiveElements": [
             {
               "question": "Were you able to log in to the Learning Portal?",
@@ -49,14 +44,11 @@
               "type": "text"
             }
           ],
-          "responses": [],
           "status": "Not Started"
         }
       ],
       "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1384",
-      "case_studies": [
-        
-      ],
+      "case_studies": [],
       "recommendations": [
         {
           "title": "Overview of Commercetools Products",
@@ -77,33 +69,23 @@
         {
           "taskNumber": 3,
           "taskTitle": "Create a Customer in Merchant Center",
-          "description": "",
-          "notes": [
-            "Create a new customer using the Merchant Center."
-          ],
           "interactiveElements": [
             {
               "question": "Enter the customer ID of the newly created customer below",
               "type": "text"
             }
           ],
-          "responses": [],
           "status": "Not Started"
         },
         {
           "taskNumber": 4,
           "taskTitle": "Summarize Product Modeling Aspects",
-          "description": "",
-          "notes": [
-            
-          ],
           "interactiveElements": [
             {
               "question": "Summarise the key aspects of product modeling in 3-5 bullet points, mention best practices",
               "type": "textarea"
             }
           ],
-          "responses": [],
           "status": "Not Started"
         }
       ],
@@ -112,7 +94,38 @@
         {
           "title": "Case Study 1: Product Modeling",
           "link": "https://learn.commercetools.com/mod/resource/view.php?id=756",
-          "description" : "<div><p>All For Foodies is an American company catering to the needs of serious foodies. They want to launch an online business for selling vouchers for their online cooking classes.</p><p>commercetools acts as PIM and Order Management System.</p><p>All For Foodies currently sells:</p><ul><li>Online French cooking class, $39.99</li><li>Online Italian cooking class, $39.99</li><li>Online Middle Eastern cooking class, $39.99</li><li>Online Soup cooking class, $25.99</li><li>Online Grilling class, $22.99</li></ul><p>Create a product model using a product type Online Offering, products and variants of your choice.</p><p>Draft the solution in the Notes field together with a team in a breakout room.</p><p>Discuss then your model with the trainer before creating it in the Merchant Center.</p><p>If time allows, your trainer will discuss further requirements from the Case Study Document.</p></div>"
+          "description": [
+            {
+              "type": "paragraph",
+              "content": "All For Foodies is an American company catering to the needs of serious foodies. They want to launch an online business for selling vouchers for their online cooking classes."
+            },
+            {
+              "type": "paragraph",
+              "content": "commercetools acts as a PIM and Order Management System."
+            },
+            {
+              "type": "list",
+              "content": [
+                "Online French cooking class, $39.99",
+                "Online Italian cooking class, $39.99",
+                "Online Middle Eastern cooking class, $39.99",
+                "Online Soup cooking class, $25.99",
+                "Online Grilling class, $22.99"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": "Create a product model using a product type ‘Online Offering,’ products, and variants of your choice."
+            },
+            {
+              "type": "task",
+              "content": [
+                "Draft the solution in the Notes field together with a team in a breakout room.",
+                "Discuss your model with the trainer before creating it in the Merchant Center.",
+                "If time allows, your trainer will discuss further requirements from the Case Study Document."
+              ]
+            }
+          ]
         }
       ],
       "recommendations": [
@@ -135,8 +148,6 @@
         {
           "taskNumber": 5,
           "taskTitle": "Product Life Cycle & Categories",
-          "description": "",
-          "notes": [],
           "interactiveElements": [
             {
               "question": "Can a product belong to multiple categories in commercetools?",
@@ -148,15 +159,11 @@
               "type": "textarea"
             }
           ],
-          "responses": [],
           "status": "Not Started"
         },
         {
           "taskNumber": 6,
           "taskTitle": "Product Life Cycle & Categories",
-          "description": "",
-          "notes": [
-          ],
           "interactiveElements": [
             {
               "question": "Can a reference attribute link a product to multiple other products?",
@@ -172,7 +179,6 @@
               "type": "textarea"
             }
           ],
-          "responses": [],
           "status": "Not Started"
         }
       ],
@@ -181,7 +187,39 @@
         {
           "title": "Case Study 2: Advanced Product Modeling",
           "link": "https://learn.commercetools.com/mod/resource/view.php?id=793",
-          "description" : ""
+          "description": [
+            {
+              "type": "paragraph",
+              "content": "Create two separate bundle products composed of the set of products below. The total cost equals $129 for both. Include new product types (with attributes and constraints), products, and product variants as necessary. Reference the Product Bundle tutorial on the docs."
+            },
+            {
+              "type": "paragraph",
+              "content": "Note: Your trainer will have created the individual products that are to be included in the bundles. This exercise focuses on the bundles that contain them."
+            },
+            {
+              "type": "paragraph",
+              "content": "French Ceramic Cooking Bundle"
+            },
+            {
+              "type": "list",
+              "content": [
+                "French cooking class",
+                "Crème brulé torch",
+                "Ceramic ramekins"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": "Italian Rustic Cooking Bundle"
+            },
+            {
+              "type": "list",
+              "content": [
+                "Italian cooking class",
+                "Rustic Pasta Pot"
+              ]
+            }
+          ]
         }
       ],
       "recommendations": [
@@ -195,7 +233,6 @@
         }
       ]
     },
-
     {
       "id": 4,
       "title": "Stores and Channels",
@@ -205,46 +242,35 @@
         {
           "taskNumber": 7,
           "taskTitle": "Stores and Channels",
-          "description": "",
-          "notes": [
-            "Create a store <code>[YOURNAME]-store</code> in Merchant Center",
-            "Create two channels in Merchant Center 1. <code> [YOURNAME]-store-inventory-channel</code and 2. <code> [YOURNAME]-store-price-channel</code>",
-            "Create a Product Selection in Merchant Center as <code> [YOURNAME]-product-selection</code> and any 3 products to the selection"
-          ],
           "interactiveElements": [
             {
-              "question": "What default currency did you set for your store? And why? ",
+              "question": "What default currency did you set for your store? And why?",
               "type": "textarea"
             },
             {
-              "question": "Customers expect dynamic pricing based on region and customer group. How would you configure <code> [YOURNAME]-store-price-channel</code> to support this?",
+              "question": "Customers expect dynamic pricing based on region and customer group. How would you configure <code>[YOURNAME]-store-price-channel</code> to support this?",
               "type": "textarea"
             },
             {
-              "question": "Your online store wants to feature a 'Season Special' collection that includes trending products for the summer. <b>How would you use a Product Selection to group these products efficiently</b>?",
+              "question": "Your online store wants to feature a <code>'Season Special'</code> collection that includes trending products for the summer. How would you use a Product Selection to group these products efficiently?",
               "type": "textarea"
             }
           ],
-          "responses": [],
           "status": "Not Started"
         },
         {
           "taskNumber": 8,
           "taskTitle": "Product Selections and Tailoring",
-          "description": "",
-          "notes": [
-          ],
           "interactiveElements": [
             {
-              "question": "Your online store wants to feature a 'Seasonal Special' collection that includes trending products for the summer. <b>How would you use a Product Selection to group these products efficiently</b>?",
+              "question": "Your online store wants to feature a 'Seasonal Special' collection that includes trending products for the summer. How would you use a Product Selection to group these products efficiently?",
               "type": "textarea"
             },
             {
-              "question": "Your company operates in multiple countries, but some products are only available in select regions. <b>What feature would you use to tailor product availability based on geographic regions</b>?",
+              "question": "Your company operates in multiple countries, but some products are only available in select regions. What feature would you use to tailor product availability based on geographic regions?",
               "type": "textarea"
             }
           ],
-          "responses": [],
           "status": "Not Started"
         }
       ],
@@ -253,7 +279,50 @@
         {
           "title": "Case Study 3: Stores and Channels",
           "link": "https://learn.commercetools.com/mod/resource/view.php?id=756",
-          "description" : ""
+          "description": [
+            {
+              "type": "paragraph",
+              "content": "Develop tailored regional storefronts (Europe, North America, Asia) addressing product selection, pricing strategies, and inventory management to enhance localized customer engagement."
+            },
+            {
+              "type": "paragraph",
+              "content": "Requirements:"
+            },
+            {
+              "type": "paragraph",
+              "content": "Scenario 1: Store Setup"
+            },
+            {
+              "type": "list",
+              "content": [
+                "Define distinct names for each regional storefront.",
+                "Select primary currencies and languages, providing clear justifications."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": "Scenario 2: Product Management"
+            },
+            {
+              "type": "list",
+              "content": [
+                "Formulate strategies for managing region-exclusive product selections.",
+                "Create a centralized approach for managing shared products across regions."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": "Scenario 3: Pricing & Inventory"
+            },
+            {
+              "type": "list",
+              "content": [
+                "Develop dynamic, region-specific pricing strategies influenced by local market conditions and customer segments.",
+                "Establish inventory management practices, considering regional logistics, supply channels, and cross-border complexities."
+              ]
+            }
+          ]
+          
         }
       ],
       "recommendations": [
@@ -266,6 +335,384 @@
           "link": "https://docs.commercetools.com/learning-model-your-product-catalog/product-modeling/overview"
         }
       ]
-    }
+    },
+    {
+      "id": 5,
+      "title": "Pricing and Discounts",
+      "overview": "",
+      "infographic": "",
+      "tasks": [
+        {
+          "taskNumber": 9,
+          "taskTitle": "Price Configuration",
+          "description": "",
+          "interactiveElements": [
+            {
+              "question": "Which of the following factors is NOT part of the default price selection precedence in commercetools?",
+              "type": "radio",
+              "options": ["Currency", "Country", "Customer Group", "Promotion Code"]
+            },
+            {
+              "question": "Describe your approach to setting up fallback prices. Explain how you would configure the pricing entries so that, if no price exists for a customer's currency, the system applies a pre-defined fallback price.",
+              "type": "textarea"
+            }
+          ],
+          "status": "Not Started"
+        },
+        {
+          "taskNumber": 10,
+          "taskTitle": "Discount Configuration",
+          "description": "",
+          "interactiveElements": [
+            {
+              "question": "What is the primary purpose of the sortOrder attribute in discount configuration?",
+              "type": "radio",
+              "options": ["It determines the ranking in which the applicable discounts are applied.", "It sets the discount percentage.", "It defines the discount duration.", "It indicates the target customer group."]
+            },
+            {
+              "question": "Enter a sample sortOrder value you might assign to a high-priority discount.",
+              "type": "text"
+            },
+            {
+              "question": "Explain how sortOrder manages overlapping discounts and ensures that the highest priority discount is applied correctly.",
+              "type": "textarea"
+            }
+          ],
+          "status": "Not Started"
+        }
+      ],
+      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1392",
+      "case_studies": [
+        {
+          "title": "Case Study 4: Pricing",
+          "link": "https://learn.commercetools.com/mod/resource/view.php?id=847",
+          "description": [
+            {
+              "type": "paragraph",
+              "content": "In Germany, all transactions are conducted exclusively in EUR, while in the US, only USD is accepted. The online shop in Germany and the standard online shop in the US offer two customer loyalty programs—Premium and Platinum—whereas the liquidation site does not. Due to the longevity of the mail-order catalog (available for half a year), product prices are often higher than their online counterparts. This exercise focuses on creating a comprehensive pricing model rather than generating individual products, which have already been pre-created by your trainer."
+            },
+            {
+              "type": "paragraph",
+              "content": "Assignment A: Leading Products"
+            },
+            {
+              "type": "list",
+              "content": [
+                "Truffle Infused Olive Oil:",
+                " - White Truffle Infused Extra Virgin Olive Oil (15 EUR, 10 USD)",
+                " - Black Truffle Infused Cold-Pressed Olive Oil (15 EUR, 10 USD)",
+                "Premium Coffee Beans:",
+                " - Single-Origin Arabica Coffee Beans (12 EUR, 10 USD)",
+                " - Limited Edition Espresso Blend (12 EUR, 10 USD)"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": "Assignment B: Discounted Products on the US Liquidation Site"
+            },
+            {
+              "type": "list",
+              "content": [
+                "Premium Copper Kitchen Utensil Set:",
+                " - Copper-coated Stainless Steel Cooking Spoons (8 USD)",
+                " - Copper Handled Silicone Cooking Utensils (7 USD)",
+                "Gourmet Scented Candle Collection:",
+                " - Espresso and Vanilla Bean Scented Candle (2 USD)",
+                " - Lavender and Earl Grey Infused Candle (2 USD)"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": "Develop a comprehensive pricing model for the above products, taking into account factors such as country, currency, customer group, channel, date, price tiers, and custom fields. Every product must include a fallback price in all currencies (e.g., 20 USD and 20 EUR) to ensure it can be sold even when no additional context is available."
+            }
+          ]
+        },
+        {
+          "title": "Case Study 5: Discounts",
+          "link": "https://learn.commercetools.com/mod/resource/view.php?id=768",
+          "description": [
+            {
+              "type": "paragraph",
+              "content": "Configure below discount promotions in the Merchant Center using cart discounts, product discounts, and discount codes as applicable."
+            },
+            {
+              "type": "list",
+              "content": [
+                "Promotion A: All items in the 'Kitchen Gadget' category are discounted at 10%, except for the pancakebot which is excluded from the sale.",
+                "Promotion B: Buy 2 French Cooking online classes and save 50% on the third, with the promotion applied up to 10 times per purchase.",
+                "Promotion C: When the cart total reaches $75 or more, customers receive a free garlic press—activated with the discount code 'GARLIC'.",
+                "Promotion D: If the cart contains an egg separator, a pocket-sized nutrition scale, and an Accusharp knife sharpener, customers receive $2 off all edible ink cartridges. This discount cannot be combined with other promotions."
+              ]
+            }
+          ]
+        }
+      ],
+      "recommendations": [
+        {
+          "title": "Merchant Center Guide",
+          "link": "https://docs.commercetools.com/merchant-center/"
+        },
+        {
+          "title": "Product Modeling Overview",
+          "link": "https://docs.commercetools.com/learning-model-your-product-catalog/product-modeling/overview"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Product Search, Shipping Methods",
+      "overview": "",
+      "infographic": "",
+      "tasks": [
+        {
+          "taskNumber": 11,
+          "taskTitle": "Project Search",
+          "description": "",
+          "interactiveElements": [
+            {
+              "question": "How many published products are currently returned in the HTTP API response?",
+              "type": "text"
+            },
+            {
+              "question": "What query parameter would you use to filter by category?",
+              "type": "text"
+            }
+          ],
+          "status": "Not Started"
+        },
+        {
+          "taskNumber": 12,
+          "taskTitle": "Shipping Methods",
+          "description": "",
+          "interactiveElements": [
+            {
+              "question": "Which statement best describes the role of a shipping predicate in commercetools shipping methods?",
+              "type": "radio",
+              "options": [
+                "It defines conditions based on cart/order properties to determine the eligibility of a shipping method.",
+                "It sets the default shipping rate for all orders.",
+                "It specifies the shipping zone of the method.",
+                "It orders shipping methods by priority."
+              ]
+            },
+            {
+              "question": "Provide an example of a shipping predicate expression that restricts a shipping method to orders with a line items having attrivute <code>heavy-weight</code> and shipping to a specific country.",
+              "type": "text"
+            },
+            {
+              "question": "Explain your strategy for configuring shipping methods to accommodate multiple regions and varying shipping costs.",
+              "type": "textarea"
+            }
+          ],
+          "status": "Not Started"
+        }
+      ],
+      "quiz": "https://learn.commercetools.com/mod/resource/view.php?id=762",
+      "case_studies": [
+        {
+          "title": "Case Study 6: Shipping",
+          "link": "https://learn.commercetools.com/mod/resource/view.php?id=847",
+          "description": [
+            {
+              "type": "paragraph",
+              "content": "Assignment: In the Merchant Center, create one or more shipping methods to address the following scenarios. Ensure you configure appropriate shipping zones, rates, and predicates."
+            },
+            {
+              "type": "paragraph",
+              "content": "Scenario A: Domestic Shipping"
+            },
+            {
+              "type": "list",
+              "content": [
+                "For shipping to the US, set a rate of 9.99 USD. Shipping is free for purchases above 50 USD, and shipments are handled by UPS.",
+                "For shipping to Canada, set a rate of 14.99 CAD. Shipping is free for purchases above 75 CAD, and shipments are handled by Fedex."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": "Scenario B: Non-Continental US Shipping"
+            },
+            {
+              "type": "list",
+              "content": [
+                "Describe how you would incorporate different shipping costs for the non-continental United States (Alaska and Hawaii) compared to the continental US. (Hint: reference the documentation for Zones.)",
+                "Discuss whether this update can be made in the Merchant Center, and explain why or why not."
+              ]
+            }
+          ]
+        }
+      ],
+      "recommendations": [
+        {
+          "title": "Merchant Center Guide",
+          "link": "https://docs.commercetools.com/merchant-center/"
+        },
+        {
+          "title": "Product Modeling Overview",
+          "link": "https://docs.commercetools.com/learning-model-your-product-catalog/product-modeling/overview"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Cart and Order Management",
+      "overview": "This session covers how to manage carts and orders in commercetools, including handling frozen carts and the Inventory Mode settings that control stock availability. It also covers shopping lists, shipping methods, and how to manage orders using direct updates or order edits.",
+      "infographic": "",
+      "tasks": [
+        {
+          "taskNumber": 13,
+          "taskTitle": "Cart Management and Frozen Carts",
+          "interactiveElements": [
+            {
+              "question": "What are the main differences between line items and custom line items in a cart?",
+              "type": "textarea"
+            },
+            {
+              "question": "Which inventory mode option ensures that stock is reserved when an order is placed?",
+              "type": "radio",
+              "options": ["None", "TrackOnly", "ReserveOnOrder"]
+            },
+            {
+              "question": "Provide a brief strategy for updating a frozen cart in commercetools.",
+              "type": "textarea"
+            }
+          ],
+          "status": "Not Started"
+        },
+        {
+          "taskNumber": 14,
+          "taskTitle": "Order Management and Updates",
+          "interactiveElements": [
+            {
+              "question": "What is the key difference between direct order updates and order edits?",
+              "type": "textarea"
+            },
+            {
+              "question": "How does multi-address shipping improve order fulfillment?",
+              "type": "textarea"
+            },
+            {
+              "question": "Name one advantage of managing shopping lists within commercetools.",
+              "type": "text"
+            }
+          ],
+          "status": "Not Started"
+        }
+      ],
+      "quiz": "https://learn.commercetools.com/mod/resource/view.php?id=762",
+      "case_studies": [],
+      "recommendations": [
+        {
+          "title": "Cart and Order Management Guide",
+          "link": "https://docs.commercetools.com/cart-order-management"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Extensions and State Management",
+      "overview": "",
+      "infographic": "",
+      "tasks": [
+        {
+          "taskNumber": 15,
+          "taskTitle": "Configure Custom Data Structures",
+          "interactiveElements": [
+            {
+              "question": "What are custom types in commercetools used for?",
+              "type": "textarea"
+            },
+            {
+              "question": "Provide an example use case for custom fields.",
+              "type": "text"
+            },
+            {
+              "question": "Explain how custom objects differ from custom types.",
+              "type": "textarea"
+            }
+          ],
+          "status": "Not Started"
+        },
+        {
+          "taskNumber": 16,
+          "taskTitle": "Implement Subscriptions and API Extensions",
+          "interactiveElements": [
+            {
+              "question": "What is the primary purpose of subscriptions in commercetools?",
+              "type": "textarea"
+            },
+            {
+              "question": "How can API extensions be used to trigger asynchronous processes?",
+              "type": "textarea"
+            },
+            {
+              "question": "Describe a scenario where state machines are used to manage order transitions.",
+              "type": "textarea"
+            }
+          ],
+          "status": "Not Started"
+        }
+      ],
+      "quiz": "https://learn.commercetools.com/mod/resource/view.php?id=762",
+      "case_studies": [],
+      "recommendations": [
+        {
+          "title": "Custom Data and API Extensions Guide",
+          "link": "https://docs.commercetools.com/custom-types"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Checkout, Connect, and Best Practices",
+      "overview": "This session provides an overview of the checkout process, commercetools Connect integration, and best practices for implementing a robust e-commerce solution. Topics include designing efficient checkout flows, integration patterns with external systems, and performance optimization strategies.",
+      "infographic": "",
+      "tasks": [
+        {
+          "taskNumber": 17,
+          "taskTitle": "Designing a Checkout Flow",
+          "interactiveElements": [
+            {
+              "question": "Outline the key steps in a typical checkout flow in commercetools.",
+              "type": "textarea"
+            },
+            {
+              "question": "What is one best practice for optimizing checkout performance?",
+              "type": "text"
+            }
+          ],
+          "status": "Not Started"
+        },
+        {
+          "taskNumber": 18,
+          "taskTitle": "Integration with Connect",
+          "interactiveElements": [
+            {
+              "question": "What is the role of commercetools Connect in integrating external systems?",
+              "type": "textarea"
+            },
+            {
+              "question": "Provide an example of how Connect can be used to synchronize customer data.",
+              "type": "text"
+            },
+            {
+              "question": "Explain one challenge you might face when integrating checkout with external systems and a strategy to overcome it.",
+              "type": "textarea"
+            }
+          ],
+          "status": "Not Started"
+        }
+      ],
+      "quiz": "https://learn.commercetools.com/mod/resource/view.php?id=762",
+      "case_studies": [],
+      "recommendations": [
+        {
+          "title": "Checkout and Integration Best Practices",
+          "link": "https://docs.commercetools.com/connect-checkout"
+        }
+      ]
+    }    
+    
+    
   ]
 }
