@@ -470,11 +470,11 @@
           "description": "",
           "interactiveElements": [
             {
-              "question": "How many published products are currently returned in the HTTP API response?",
+              "question": "Construct a search query to retrieve all published products in the category with key 'plant-seeds' that include the word 'Tulip' in the product name. Provide your query string.",
               "type": "text"
             },
             {
-              "question": "What query parameter would you use to filter by category?",
+              "question": "<p>Calcualte and input the facet counts for the following attributes:</p> <p>Color: White</p><p> Material: Metal</p><p>Provide your answer in the format: 'White: X, Metal: Y'</p>.",
               "type": "text"
             }
           ],
@@ -564,13 +564,12 @@
           "taskTitle": "Cart Management and Frozen Carts",
           "interactiveElements": [
             {
-              "question": "What are the main differences between line items and custom line items in a cart?",
+              "question": "Imagine you are selling 'Tulip Seeds' and want to offer an optional 'Fertilizer Pack' as a custom line item to enhance seed growth. How would you add this option to the cart? Describe your approach and any key considerations.",
               "type": "textarea"
             },
             {
-              "question": "Which inventory mode option ensures that stock is reserved when an order is placed?",
-              "type": "radio",
-              "options": ["None", "TrackOnly", "ReserveOnOrder"]
+              "question": "Based on the above scenario, explain which inventory mode you would choose to ensure that stock for the Tulip Seeds is properly reserved when an order is placed, while the fertilizer pack is managed separately. Provide your reasoning.",
+              "type": "textarea"
             },
             {
               "question": "Provide a brief strategy for updating a frozen cart in commercetools.",
@@ -584,21 +583,31 @@
           "taskTitle": "Order Management and Updates",
           "interactiveElements": [
             {
-              "question": "What is the key difference between direct order updates and order edits?",
+              "question": "A customer calls after placing an order to change their shipping address. Describe your approach to updating the order and explain the differences between direct order updates and order edits in this context.",
               "type": "textarea"
             },
             {
-              "question": "How does multi-address shipping improve order fulfillment?",
+              "question": "Imagine a customer wants items in the same order delivered to different addresses. How does multi-address shipping improve order fulfillment in this scenario?",
               "type": "textarea"
             },
             {
-              "question": "Name one advantage of managing shopping lists within commercetools.",
+              "question": "Name one advantage of managing shopping lists in commercetools.",
               "type": "text"
             }
-          ],
-          "status": "Not Started"
+          ] 
+        },
+        {
+          "taskNumber": 15,
+          "taskTitle": "Cart Merging",
+          "interactiveElements": [
+            {
+              "question": "Imagine a customer, John Doe, shops anonymously and builds an anonymous cart containing 2 units of 'Tulip Seeds' and an optional custom line item 'Fertilizer Pack'. After signing in, his account already has an existing cart containing 1 unit of 'Tulip Seeds' and 1 unit of 'Basil Seeds'. Based on the commercetools cart merge during sign-in process, describe your strategy to merge these two carts. ",
+              "type": "textarea"
+            }
+          ]
         }
-      ],
+          ],
+          "status": "Not Started",
       "quiz": "https://learn.commercetools.com/mod/resource/view.php?id=762",
       "case_studies": [],
       "recommendations": [
@@ -607,6 +616,7 @@
           "link": "https://docs.commercetools.com/cart-order-management"
         }
       ]
+    
     },
     {
       "id": 8,
@@ -615,7 +625,7 @@
       "infographic": "",
       "tasks": [
         {
-          "taskNumber": 15,
+          "taskNumber": 16,
           "taskTitle": "Configure Custom Data Structures",
           "interactiveElements": [
             {
@@ -634,7 +644,7 @@
           "status": "Not Started"
         },
         {
-          "taskNumber": 16,
+          "taskNumber": 17,
           "taskTitle": "Implement Subscriptions and API Extensions",
           "interactiveElements": [
             {
@@ -669,7 +679,7 @@
       "infographic": "",
       "tasks": [
         {
-          "taskNumber": 17,
+          "taskNumber": 18,
           "taskTitle": "Designing a Checkout Flow",
           "interactiveElements": [
             {
@@ -684,7 +694,7 @@
           "status": "Not Started"
         },
         {
-          "taskNumber": 18,
+          "taskNumber": 19,
           "taskTitle": "Integration with Connect",
           "interactiveElements": [
             {
