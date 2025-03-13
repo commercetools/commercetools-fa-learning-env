@@ -563,19 +563,19 @@
           "taskNumber": 13,
           "taskTitle": "Cart Management and Frozen Carts",
           "interactiveElements": [
-            {
-              "question": "Imagine you are selling 'Tulip Seeds' and want to offer an optional 'Fertilizer Pack' as a custom line item to enhance seed growth. How would you add this option to the cart? Describe your approach and any key considerations.",
-              "type": "textarea"
-            },
-            {
-              "question": "Based on the above scenario, explain which inventory mode you would choose to ensure that stock for the Tulip Seeds is properly reserved when an order is placed, while the fertilizer pack is managed separately. Provide your reasoning.",
-              "type": "textarea"
-            },
-            {
-              "question": "Provide a brief strategy for updating a frozen cart in commercetools.",
-              "type": "textarea"
-            }
-          ],
+          {
+            "question": "Imagine you are selling 'Tulip Seeds' and want to offer an optional 'Fertilizer Pack' as a custom line item to enhance seed growth. How would you add this option to the cart? Describe your approach and any key considerations.",
+            "type": "textarea"
+          },
+          {
+            "question": "Based on the above scenario, explain which inventory mode you would choose to ensure that stock for the Tulip Seeds is properly reserved when an order is placed, while the fertilizer pack is managed separately. Provide your reasoning.",
+            "type": "textarea"
+          },
+          {
+            "question": "Provide a brief strategy for updating a frozen cart in commercetools.",
+            "type": "textarea"
+          }
+        ],
           "status": "Not Started"
         },
         {
@@ -587,27 +587,28 @@
               "type": "textarea"
             },
             {
-              "question": "Imagine a customer wants items in the same order delivered to different addresses. How does multi-address shipping improve order fulfillment in this scenario?",
+              "question": "magine a customer wants items in the same order delivered to different addresses. How does multi-address shipping improve order fulfillment in this scenario?",
               "type": "textarea"
             },
             {
               "question": "Name one advantage of managing shopping lists in commercetools.",
               "type": "text"
             }
-          ] 
+          ],
+          "status": "Not Started"
         },
         {
           "taskNumber": 15,
           "taskTitle": "Cart Merging",
           "interactiveElements": [
             {
-              "question": "Imagine a customer, John Doe, shops anonymously and builds an anonymous cart containing 2 units of 'Tulip Seeds' and an optional custom line item 'Fertilizer Pack'. After signing in, his account already has an existing cart containing 1 unit of 'Tulip Seeds' and 1 unit of 'Basil Seeds'. Based on the commercetools cart merge during sign-in process, describe your strategy to merge these two carts. ",
+              "question": "Imagine a customer, John Doe, shops anonymously and builds an anonymous cart containing 2 units of 'Tulip Seeds' and an optional custom line item 'Fertilizer Pack'. After signing in, his account already has an existing cart containing 1 unit of 'Tulip Seeds' and 1 unit of 'Basil Seeds'. Based on the commercetools cart merge during sign-in process, describe your strategy to merge these two carts.",
               "type": "textarea"
             }
-          ]
-        }
           ],
-          "status": "Not Started",
+          "status": "Not Started"
+        }
+      ],
       "quiz": "https://learn.commercetools.com/mod/resource/view.php?id=762",
       "case_studies": [],
       "recommendations": [
@@ -616,7 +617,6 @@
           "link": "https://docs.commercetools.com/cart-order-management"
         }
       ]
-    
     },
     {
       "id": 8,
@@ -626,21 +626,17 @@
       "tasks": [
         {
           "taskNumber": 16,
-          "taskTitle": "Configure Custom Data Structures",
+          "taskTitle": "Extending Data Model",
           "interactiveElements": [
-            {
-              "question": "What are custom types in commercetools used for?",
-              "type": "textarea"
-            },
-            {
-              "question": "Provide an example use case for custom fields.",
-              "type": "text"
-            },
-            {
-              "question": "Explain how custom objects differ from custom types.",
-              "type": "textarea"
-            }
-          ],
+          {
+            "question": "Scenario: Your store displays daily promotional banners that change throughout the day. How would you use custom objects to manage banner content, scheduling, and image URLs? Provide a brief design.",
+            "type": "textarea"
+          },
+          {
+            "question": "Scenario: You want to temporarily capture anonymous browsing behavior (e.g., viewed products, search terms) before customers log in. Describe how you would use custom objects to store this session data, including the key fields you would record.",
+            "type": "textarea"
+          }
+        ],
           "status": "Not Started"
         },
         {
@@ -648,20 +644,21 @@
           "taskTitle": "Implement Subscriptions and API Extensions",
           "interactiveElements": [
             {
-              "question": "What is the primary purpose of subscriptions in commercetools?",
+              "question": "Scenario: Your online store processes a high volume of orders and needs real-time notifications to trigger subsequent processes (e.g., inventory updates and confirmation emails). Explain how you would configure a subscription in commercetools to receive notifications when a new order is created. Include key details such as the resource type and notification setup.",
               "type": "textarea"
             },
             {
-              "question": "How can API extensions be used to trigger asynchronous processes?",
+              "question": "Scenario: During peak sales periods, you require asynchronous actions like updating external systems and sending SMS alerts after an order update. Describe how you would implement an API extension in commercetools to trigger these asynchronous processes. Outline the key steps involved.",
               "type": "textarea"
             },
             {
-              "question": "Describe a scenario where state machines are used to manage order transitions.",
+              "question": "Scenario: Consider an order that transitions through multiple states (e.g., 'Pending' → 'Confirmed' → 'Shipped'). Describe how you would design a state machine in commercetools to manage these order transitions automatically, and explain the benefits of using state machines in ensuring order accuracy and workflow consistency.",
               "type": "textarea"
             }
           ],
           "status": "Not Started"
         }
+        
       ],
       "quiz": "https://learn.commercetools.com/mod/resource/view.php?id=762",
       "case_studies": [],
@@ -683,11 +680,11 @@
           "taskTitle": "Designing a Checkout Flow",
           "interactiveElements": [
             {
-              "question": "Outline the key steps in a typical checkout flow in commercetools.",
+              "question": "Scenario: Imagine you are designing a checkout flow for an online store using commercetools. Describe the key steps in the checkout process—from reviewing the cart to payment confirmation—including critical integration points such as shipping, tax calculation, and payment processing.",
               "type": "textarea"
             },
             {
-              "question": "What is one best practice for optimizing checkout performance?",
+              "question": "Scenario: Your mobile checkout experience is seeing high abandonment rates. What is one best practice you would implement to optimize checkout performance and reduce abandonment? Provide your answer in one sentence.",
               "type": "text"
             }
           ],
