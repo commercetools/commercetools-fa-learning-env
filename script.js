@@ -39,36 +39,55 @@ $(document).ready(function () {
   function updateProgress() {
     let totalItems = 0;
     let completedItems = 0;
+    
+    // Separate counters for tasks, quizzes, and case studies.
+    let totalTasks = 0, completedTasks = 0;
+    let totalQuizzes = 0, completedQuizzes = 0;
+    let totalCaseStudies = 0, completedCaseStudies = 0;
+    
     sessionsData.sessions.forEach((session) => {
       // Count tasks
       if (session.tasks) {
         totalItems += session.tasks.length;
+        totalTasks += session.tasks.length;
         session.tasks.forEach((task) => {
           if (task.status === "Completed") {
             completedItems++;
+            completedTasks++;
           }
         });
       }
       // Count quiz if exists
       if (session.quiz && session.quiz.trim() !== "") {
         totalItems += 1;
+        totalQuizzes++;
         if (session.quizStatus === "Completed") {
           completedItems++;
+          completedQuizzes++;
         }
       }
       // Count each case study
       if (session.case_studies) {
         totalItems += session.case_studies.length;
+        totalCaseStudies += session.case_studies.length;
         session.case_studies.forEach((cs) => {
           if (cs.status === "Completed") {
             completedItems++;
+            completedCaseStudies++;
           }
         });
       }
     });
+    
     let percentage = totalItems > 0 ? Math.round((completedItems / totalItems) * 100) : 0;
     $("#progressBar").css("width", percentage + "%").text(percentage + "%");
+    
+    // Update the detailed progress span.
+    $("#progressDetails").html(
+      `Tasks: ${completedTasks}/${totalTasks} | Case Studies: ${completedCaseStudies}/${totalCaseStudies} | Quizzes: ${completedQuizzes}/${totalQuizzes}`
+    );
   }
+  
 
   /********** TASK HANDLING **********/
   let sessionsData = {};
