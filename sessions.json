@@ -471,11 +471,11 @@
           "description": "",
           "interactiveElements": [
             {
-              "question": "Construct a search query to retrieve all published products in the category with key 'plant-seeds' that include the word 'Tulip' in the product name. Provide your query string.",
+              "question": "Construct a search query to retrieve all published products under the product type 'specialty-tea-products-product-type' that include the word 'Tea' in the product name. Provide your query string.",
               "type": "text"
             },
             {
-              "question": "<p>Calcualte and input the facet counts for the following attributes:</p> <p>Color: White</p><p> Material: Metal</p><p>Provide your answer in the format: 'White: X, Metal: Y'</p>.",
+              "question": "Calculate and provide the facet counts for products with Color set to 'White' and Material set to 'Metal'. Format your answer as: 'White: X, Metal: Y'..",
               "type": "text"
             }
           ],
