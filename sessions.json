@@ -93,11 +93,11 @@
       "case_studies": [
         {
           "title": "Case Study 1: Product Modeling",
-          "link": "https://learn.commercetools.com/mod/resource/view.php?id=756",
+          "link": "https://docs.google.com/document/d/1EikDjb77fWfWYe55pUnY1Ss-bPtdZNgl/edit",
           "description": [
             {
               "type": "paragraph",
-              "content": "All For Foodies is an American company catering to the needs of serious foodies. They want to launch an online business for selling vouchers for their online cooking classes."
+              "content": "<b>AllForFoodies</b> wants to launch an online business for selling vouchers for their online cooking classes."
             },
             {
               "type": "paragraph",
@@ -118,9 +118,12 @@
               "content": "Create a product model using a product type ‘Online Offering,’ products, and variants of your choice."
             },
             {
+              "type": "paragraph",
+              "content": "Draft the solution in the Notes field together with a team in a breakout room."
+            },
+            {
               "type": "task",
               "content": [
-                "Draft the solution in the Notes field together with a team in a breakout room.",
                 "Discuss your model with the trainer before creating it in the Merchant Center.",
                 "If time allows, your trainer will discuss further requirements from the Case Study Document."
               ]
@@ -186,19 +189,29 @@
       "case_studies": [
         {
           "title": "Case Study 2: Advanced Product Modeling",
-          "link": "https://learn.commercetools.com/mod/resource/view.php?id=793",
+          "link": "https://docs.google.com/document/d/1-qEHy47tPIDAaKPx3XegXKnhU3QfZtBr/edit",
           "description": [
             {
               "type": "paragraph",
-              "content": "Create two separate bundle products composed of the set of products below. The total cost equals $129 for both. Include new product types (with attributes and constraints), products, and product variants as necessary. Reference the Product Bundle tutorial on the docs."
+              "content": "Your trainer will create the following products for you:"
+            },
+            {
+              "type": "list",
+              "content": [
+                "French cooking class",
+                "Italian cooking class",
+                "Crème brulé torch",
+                "Ceramic ramekins",
+                "Rustic Pasta Pot"
+              ]
             },
             {
               "type": "paragraph",
-              "content": "Note: Your trainer will have created the individual products that are to be included in the bundles. This exercise focuses on the bundles that contain them."
+              "content": "Create product types, products, and product variants to sell the following bundles, each costing $129"
             },
             {
               "type": "paragraph",
-              "content": "French Ceramic Cooking Bundle"
+              "content": "1. French Ceramic Cooking Bundle"
             },
             {
               "type": "list",
@@ -210,7 +223,7 @@
             },
             {
               "type": "paragraph",
-              "content": "Italian Rustic Cooking Bundle"
+              "content": "2. Italian Rustic Cooking Bundle"
             },
             {
               "type": "list",
@@ -250,10 +263,6 @@
             {
               "question": "Customers expect dynamic pricing based on region and customer group. How would you configure <code>[YOURNAME]-store-price-channel</code> to support this?",
               "type": "textarea"
-            },
-            {
-              "question": "Your online store wants to feature a <code>'Season Special'</code> collection that includes trending products for the summer. How would you use a Product Selection to group these products efficiently?",
-              "type": "textarea"
             }
           ],
           "status": "Not Started"
@@ -278,7 +287,7 @@
       "case_studies": [
         {
           "title": "Case Study 3: Stores and Channels",
-          "link": "https://learn.commercetools.com/mod/resource/view.php?id=756",
+          "link": "https://docs.google.com/document/d/1g_fSEad3lu7772WszwAq3F_uHYerlAzA/edit",
           "description": [
             {
               "type": "paragraph",
@@ -286,39 +295,41 @@
             },
             {
               "type": "paragraph",
-              "content": "Requirements:"
-            },
-            {
-              "type": "paragraph",
-              "content": "Scenario 1: Store Setup"
+              "content": "Scenario 1: Regional Storefront Setup: "
             },
             {
               "type": "list",
               "content": [
-                "Define distinct names for each regional storefront.",
-                "Select primary currencies and languages, providing clear justifications."
+                "Configure regional storefronts with clearly defined names, currencies, and languages. ",
+                "Justify your choices in terms of market alignment and customer experience."
               ]
             },
             {
               "type": "paragraph",
-              "content": "Scenario 2: Product Management"
+              "content": "Scenario 2: Product Selection and Management:"
+            },
+            {
+              "type": "paragraph",
+              "content": "Set up store-specific product selections clearly identifying exclusivity as below:"
             },
             {
               "type": "list",
               "content": [
-                "Formulate strategies for managing region-exclusive product selections.",
-                "Create a centralized approach for managing shared products across regions."
+                " - Europe: Premium gourmet kitchenware",
+                " - North America: Outdoor grilling essentials",
+                " - Asia: Specialty tea products and traditional utensils",
+                "Manages shared products centrally across regions for consistency."
               ]
             },
             {
               "type": "paragraph",
-              "content": "Scenario 3: Pricing & Inventory"
+              "content": "Scenario 3: Pricing & Inventory Strategy"
             },
             {
               "type": "list",
               "content": [
-                "Develop dynamic, region-specific pricing strategies influenced by local market conditions and customer segments.",
-                "Establish inventory management practices, considering regional logistics, supply channels, and cross-border complexities."
+                "Create necessary channels to implement dynamic pricing configurations per region and customer segment.",
+                "Set up inventory supply channel aligning with regional logistics."
               ]
             }
           ]
@@ -348,9 +359,8 @@
           "description": "",
           "interactiveElements": [
             {
-              "question": "Which of the following factors is NOT part of the default price selection precedence in commercetools?",
-              "type": "radio",
-              "options": ["Currency", "Country", "Customer Group", "Promotion Code"]
+              "question": "<p>A product variant has the following prices attached:</p> <p>- country: US, channel: pickup price: $12,99</p><p>country: US, customer group: loyal price: $11,99</p><p>No further price is defined. Tom is a loyal customer and stands in front of the pickup warehouse. What will he have to pay?</p> ",
+              "type": "textarea"
             },
             {
               "question": "Describe your approach to setting up fallback prices. Explain how you would configure the pricing entries so that, if no price exists for a customer's currency, the system applies a pre-defined fallback price.",
@@ -384,46 +394,37 @@
       "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1392",
       "case_studies": [
         {
-          "title": "Case Study 4: Pricing",
-          "link": "https://learn.commercetools.com/mod/resource/view.php?id=847",
+          "title": "Case Study 4: Price Configuration",
+          "link": "https://docs.google.com/document/d/1572dUI4VyxjcMqQuivNKNid6OvFaF5qT/edit",
           "description": [
             {
               "type": "paragraph",
-              "content": "In Germany, all transactions are conducted exclusively in EUR, while in the US, only USD is accepted. The online shop in Germany and the standard online shop in the US offer two customer loyalty programs—Premium and Platinum—whereas the liquidation site does not. Due to the longevity of the mail-order catalog (available for half a year), product prices are often higher than their online counterparts. This exercise focuses on creating a comprehensive pricing model rather than generating individual products, which have already been pre-created by your trainer."
+              "content": "AllForFoodies is expanding its global presence with dedicated storefronts in Europe (EUR), North America (USD), and Asia (SGD, INR, AUD) and requires a layered pricing model—incorporating fallback, country-specific, customer group (Standard, Premium, Platinum), and channel-specific pricing—to tailor its offerings to local market needs."
             },
             {
               "type": "paragraph",
-              "content": "Assignment A: Leading Products"
+              "content": "Each group is required to configure a comprehensive pricing model in the Merchant Center for their assigned product type (Trainer will assign products for each group)"
+            },
+            {
+              "type": "paragraph",
+              "content": "The pricing model must include:"
             },
             {
               "type": "list",
               "content": [
-                "Truffle Infused Olive Oil:",
-                " - White Truffle Infused Extra Virgin Olive Oil (15 EUR, 10 USD)",
-                " - Black Truffle Infused Cold-Pressed Olive Oil (15 EUR, 10 USD)",
-                "Premium Coffee Beans:",
-                " - Single-Origin Arabica Coffee Beans (12 EUR, 10 USD)",
-                " - Limited Edition Espresso Blend (12 EUR, 10 USD)"
+                "<b>Base/Fallback Price</b>:",
+                " - Set a fallback price for each currency",
+                " - Example Base Prices: 100 EUR, 120 USD, 150 SGD, 900 INR, 130 AUD.",
+                "<b>Country-Specific Price:</b>:",
+                " - Configure a price for each country within the region.",
+                " - Example: For EUR, set Germany at 100 EUR, France at 105 EUR, and Italy at 110 EUR.",
+                "<b>Customer Group Price:</b>:",
+                " - Further refine these prices for Standard, Premium, and Platinum customer groups.",
+                " - Example: In the United States, Standard might be $120, Premium $130, and Platinum $140.",
+                "<b>Channel-Specific Price:</b>:",
+                " - Configure final prices specific to the sales channel linked with the respective store.",
+                " - Example: On the “AllForFoodies Asia” channel, configure prices for each customer segment within Singapore, India, and Australia, such as a slight discount or premium feature price modification"
               ]
-            },
-            {
-              "type": "paragraph",
-              "content": "Assignment B: Discounted Products on the US Liquidation Site"
-            },
-            {
-              "type": "list",
-              "content": [
-                "Premium Copper Kitchen Utensil Set:",
-                " - Copper-coated Stainless Steel Cooking Spoons (8 USD)",
-                " - Copper Handled Silicone Cooking Utensils (7 USD)",
-                "Gourmet Scented Candle Collection:",
-                " - Espresso and Vanilla Bean Scented Candle (2 USD)",
-                " - Lavender and Earl Grey Infused Candle (2 USD)"
-              ]
-            },
-            {
-              "type": "paragraph",
-              "content": "Develop a comprehensive pricing model for the above products, taking into account factors such as country, currency, customer group, channel, date, price tiers, and custom fields. Every product must include a fallback price in all currencies (e.g., 20 USD and 20 EUR) to ensure it can be sold even when no additional context is available."
             }
           ]
         },
