@@ -559,17 +559,22 @@
           "taskTitle": "Cart Management and Frozen Carts",
           "interactiveElements": [
           {
-            "question": "Imagine you are selling 'Tulip Seeds' and want to offer an optional 'Fertilizer Pack' as a custom line item to enhance seed growth. How would you add this option to the cart? Describe your approach and any key considerations.",
+            "question": "Imagine customers purchasing the 'Premium Non-stick Frying Pan' receive a 'Exclusive Recipe Book' and an 'Extended Warranty' at a cost of $1 each, but the product catalog doesn't have these products. How would you model these line items in the cart? Describe your approach and any key considerations",
             "type": "textarea"
           },
           {
-            "question": "Based on the above scenario, explain which inventory mode you would choose to ensure that stock for the Tulip Seeds is properly reserved when an order is placed, while the fertilizer pack is managed separately. Provide your reasoning.",
+            "question": "Based on the above scenario, explain which inventory mode you would choose to ensure that stock for the 'Premium Non-stick Frying Pan' is properly reserved when an order is placed, while the 'Exclusive Recipe Book' and an 'Extended Warranty' is managed separately. Provide your reasoning.",
+            "type": "textarea"
+          },
+           {
+            "question": "A customer orders the 'Deluxe Cookware Set' and 'Herbal Chamomile Tea' from AllForFoodies. He wants the cookware delivered to his home while the tea is shipped directly to his partner's address. How would you model the cart to support multiple shipping addresses and ensure that each item reaches the correct destination?",
             "type": "textarea"
           },
           {
             "question": "Provide a brief strategy for updating a frozen cart in commercetools.",
             "type": "textarea"
           }
+        
         ],
           "status": "Not Started"
         },
