@@ -674,23 +674,9 @@
       "overview": "",
       "infographic": "",
       "tasks": [
+       
         {
           "taskNumber": 18,
-          "taskTitle": "Designing a Checkout Flow",
-          "interactiveElements": [
-            {
-              "question": "Scenario: Imagine you are designing a checkout flow for an online store using commercetools. Describe the key steps in the checkout process—from reviewing the cart to payment confirmation—including critical integration points such as shipping, tax calculation, and payment processing.",
-              "type": "textarea"
-            },
-            {
-              "question": "Scenario: Your mobile checkout experience is seeing high abandonment rates. What is one best practice you would implement to optimize checkout performance and reduce abandonment? Provide your answer in one sentence.",
-              "type": "text"
-            }
-          ],
-          "status": "Not Started"
-        },
-        {
-          "taskNumber": 19,
           "taskTitle": "Integration with Connect",
           "interactiveElements": [
             {
