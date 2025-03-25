@@ -598,7 +598,7 @@
           "taskTitle": "Cart Merging",
           "interactiveElements": [
             {
-              "question": "Imagine a customer, John Doe, shops anonymously and builds an anonymous cart containing 2 units of 'Tulip Seeds' and an optional custom line item 'Fertilizer Pack'. After signing in, his account already has an existing cart containing 1 unit of 'Tulip Seeds' and 1 unit of 'Basil Seeds'. Based on the commercetools cart merge during sign-in process, describe your strategy to merge these two carts.",
+              "question": "Imagine a customer, shops anonymously and builds a cart with 2 units of 'Tulip Seed' and an optional custom line item 'Fertilizer Pack'. After signing in, his account already has an existing cart containing 1 unit of 'Tulip Seeds' and 1 unit of 'Basil Seeds'. <p>Describe your strategy for merging these two carts during the sign-in process in commercetools, ensuring a smooth and consistent customer experience.</p>",
               "type": "textarea"
             }
           ],
@@ -620,21 +620,20 @@
       "overview": "",
       "infographic": "",
       "tasks": [
-        {
+        { 
           "taskNumber": 16,
           "taskTitle": "Extending Data Model",
-          "interactiveElements": [
-          {
-            "question": "Scenario: Your store displays daily promotional banners that change throughout the day. How would you use custom objects to manage banner content, scheduling, and image URLs? Provide a brief design.",
-            "type": "textarea"
-          },
-          {
-            "question": "Scenario: You want to temporarily capture anonymous browsing behavior (e.g., viewed products, search terms) before customers log in. Describe how you would use custom objects to store this session data, including the key fields you would record.",
-            "type": "textarea"
-          }
-        ],
-          "status": "Not Started"
-        },
+          "interactiveElements": [ 
+            { 
+              "question": "Describe how you would store the number of orders placed since this morning in your project. Explain whether you would use a custom field (specify the resource) or a custom object, and outline your rationale.", 
+              "type": "textarea" 
+            }, 
+              { 
+                "question": "Explain your approach to capturing a customer's wish to subscribe to our newsletter. In your answer, detail if you would implement this as a custom field (indicating the resource) or as a custom object, and justify your decision.", "type": "textarea" }, { "question": "Outline how you would model and store special delivery instructions (e.g., 'shout loudly,' 'give to neighbour,' 'leave parcel at doorstep,' 'do not come after 3 pm') in your project. Specify whether you would use a custom field or a custom object, mention the relevant resource if applicable, and describe your reasoning.",
+                 "type": "textarea" 
+                 } 
+                ], 
+              "status": "Not Started" },
         {
           "taskNumber": 17,
           "taskTitle": "Implement Subscriptions and API Extensions",
