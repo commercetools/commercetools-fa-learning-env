@@ -487,14 +487,8 @@
           "description": "",
           "interactiveElements": [
             {
-              "question": "Which statement best describes the role of a shipping predicate in commercetools shipping methods?",
-              "type": "radio",
-              "options": [
-                "It defines conditions based on cart/order properties to determine the eligibility of a shipping method.",
-                "It sets the default shipping rate for all orders.",
-                "It specifies the shipping zone of the method.",
-                "It orders shipping methods by priority."
-              ]
+              "question": "Write a predicate that restricts a shipping method to be used only for products with 'heavy-weight' set to true and not belonging to the special sales categories.",
+              "type": "textarea"
             },
             {
               "question": "Provide an example of a shipping predicate expression that restricts a shipping method to orders with a line items having attrivute <code>heavy-weight</code> and shipping to a specific country.",
