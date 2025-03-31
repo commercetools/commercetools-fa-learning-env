@@ -62,7 +62,7 @@
     },
     {
       "id": 2,
-      "title": "Product Setup and Basic Product Modeling",
+      "title": "Project Setup and Basic Product Modeling",
       "overview": "This session covers setting up the commercetools project, creating a customer in Merchant Center, and understanding the basics of product modeling including product types, attributes, and variants.",
       "infographic": "",
       "tasks": [
