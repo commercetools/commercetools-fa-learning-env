@@ -1,47 +1,78 @@
 {
   "sessions": [
+    
+    
     {
       "id": 1,
-      "title": "Introduction to commercetools",
-      "overview": "",
+      "title": "Introduction to commercetools Platform",
+      "overview": "This session introduces commercetools concepts, capabilities, and key resources. You will set up projects and explore essential tools like the Merchant Center.",
       "infographic": "",
-      "tasks": [
+      "keyDecisions": [
         {
-          "taskNumber": 1,
-          "taskTitle": "Documentation & API Limits",
-          "interactiveElements": [
+          "decisionId": 1,
+          "title": "Public Beta Features",
+          "scenario": "<b>EcoLiving</b> is evaluating a new Public Beta Feature (Multiple Customer Group Assignment) for its loyalty campaign.",
+          "options": [
             {
-              "question": "What was released on Dec 18, 2024?",
-              "type": "text"
+              "text": "<b>Evaluate in staging:</b> Test thoroughly before production.",
+              "isCorrect": false,
+              "feedback": "While rigorous staging testing lowers risk, it might delay benefits. Consider a gradual production rollout for a quicker market response."
             },
             {
-              "question": "How many customer groups can you create in a commercetools project by default?",
-              "type": "text"
+              "text": "<b>Start gradually in production:</b> Roll out with limited scope and close monitoring.",
+              "isCorrect": true,
+              "feedback": "Correct. This approach balances speed and risk, gathering timely feedback and allowing agile adjustments."
             },
             {
-              "question": "List the mandatory fields required to create a customer.",
-              "type": "textarea"
-            },
-            {
-              "question": "Can you change the customer ID after creation?",
-              "type": "radio",
-              "options": ["Yes", "No"]
+              "text": "<b>Wait for GA:</b> Delay until the feature is generally available.",
+              "isCorrect": false,
+              "feedback": "Although waiting for GA ensures stability, it may slow innovation. A gradual rollout with controlled monitoring typically offers a better balance."
             }
           ],
           "status": "Not Started"
         },
         {
-          "taskNumber": 2,
-          "taskTitle": "Verify Platform Access",
-          "interactiveElements": [
+          "decisionId": 2,
+          "title": "Limits",
+          "scenario": "<b>EcoLiving</b> is nearing the 10,000-category limit due to heavy use of product categories. How should they increase the limit?",
+          "options": [
             {
-              "question": "Were you able to log in to the Learning Portal?",
-              "type": "radio",
-              "options": ["Yes", "No"]
+              "text": "Submit a support request to boost the limit.",
+              "isCorrect": true,
+              "feedback": "Correct. Officially raising the limit aligns with best practices and ensures scalability without complicating your data structure."
             },
             {
-              "question": "Provide the project key of the project we are working with in this course?",
-              "type": "text"
+              "text": "Reorganize into subcategories or adjust attributes.",
+              "isCorrect": false,
+              "feedback": "While this might temporarily ease the strain, it doesn't actually expand capacity and may overcomplicate your structure."
+            },
+            {
+              "text": "Use custom fields to simulate extra categories.",
+              "isCorrect": false,
+              "feedback": "A workaround at best; it doesn’t truly increase the limit. Pursuing an official limit increase is advisable."
+            }
+          ],
+          "status": "Not Started"
+        },
+        {
+          "decisionId": 3,
+          "title": "Organization & Project Setup",
+          "scenario": "<b>EcoLiving</b> must determine the optimal DEV and PROD setup.",
+          "options": [
+            {
+              "text": "Same organization, separate projects.",
+              "isCorrect": false,
+              "feedback": "Central management is convenient but may not provide enough production isolation."
+            },
+            {
+              "text": "Isolate PROD in its own organization.",
+              "isCorrect": true,
+              "feedback": "Correct. Separating PROD into its own organization enhances security and risk mitigation per best practices."
+            },
+            {
+              "text": "Single project; publish products & other data only when production-ready.",
+              "isCorrect": false,
+              "feedback": "This approach blurs DEV/PROD boundaries, increasing risks. Isolation offers better operational safety."
             }
           ],
           "status": "Not Started"
@@ -51,39 +82,104 @@
       "case_studies": [],
       "recommendations": [
         {
-          "title": "Overview of Commercetools Products",
+          "title": "Overview of commercetools Platform",
           "link": "https://docs.commercetools.com/offering/products-overview"
         },
         {
-          "title": "AI Assistant",
-          "link": "https://docs.commercetools.com/docs/chat"
+          "title": "Understanding commercetools APIs",
+          "link": "https://docs.commercetools.com/api/"
+        },
+        {
+          "title": "Platform Limits and Compatibility",
+          "link": "https://docs.commercetools.com/api/limits"
+        },
+        {
+          "title": "Merchant Center Overview",
+          "link": "https://docs.commercetools.com/merchant-center"
         }
       ]
-    },
+    }
+    ,
+    
+
+
     {
       "id": 2,
-      "title": "Project Setup and Basic Product Modeling",
-      "overview": "This session covers setting up the commercetools project, creating a customer in Merchant Center, and understanding the basics of product modeling including product types, attributes, and variants.",
+      "title": "Product Modeling Basics",
+      "overview": "This session covers setting up the commercetools project, creating a customer in Merchant Center, and the basics of product modeling: product types, attributes, and variants.",
       "infographic": "",
-      "tasks": [
+      "keyDecisions": [
         {
-          "taskNumber": 3,
-          "taskTitle": "Create a Customer in Merchant Center",
-          "interactiveElements": [
+          "decisionId": 4,
+          "title": "Product Modeling",
+          "scenario": "<b>EcoLiving</b> launches the 'Maya Pillow Cover' available in various colors and materials.",
+          "options": [
             {
-              "question": "Enter the customer ID of the newly created customer below",
-              "type": "text"
+              "text": "<b>Use multiple product variants</b>: Manage variants as per different colors/materials efficiently within a single product.",
+              "isCorrect": true,
+              "feedback": "Correct: Using product variants streamlines management by grouping different attributes under one product, ensuring consistency and efficient operations."
+            },
+            {
+              "text": "<b>Separate Products</b>: Create standalone products for clear individual SEO and marketing.",
+              "isCorrect": false,
+              "feedback": "Although separate products might boost SEO, they lead to redundancy and complicate inventory management. Consider using product variants for a cohesive strategy if it stays withing the limits."
+            },
+            {
+              "text": "<b>Hybrid Approach</b>: Create Variants by color in one product and create another separat product with variants by material to optimize discoverability.",
+              "isCorrect": false,
+              "feedback": "Could be overcomplicated: While hybrid strategies sound flexible, they might add unnecessary complexity. A unified product variant approach is usually recommended within the limits or consider creating separate products"
             }
           ],
           "status": "Not Started"
         },
         {
-          "taskNumber": 4,
-          "taskTitle": "Summarize Product Modeling Aspects",
-          "interactiveElements": [
+          "decisionId": 5,
+          "title": "Product Configuration",
+          "scenario": "EcoLiving needs rich, multilingual product specifications and descriptions in different locales.",
+          "options": [
             {
-              "question": "Summarise the key aspects of product modeling in 3-5 bullet points, mention best practices",
-              "type": "textarea"
+              "text": "Use <b>LocalizedText</b> to provide clear, detailed, and localized product descriptions.",
+              "isCorrect": true,
+              "feedback": "Correct: LocalizedText fields deliver the needed detail in multiple languages, making product descriptions clear even if they aren’t optimized for filtering."
+            },
+            {
+              "text": "Use <b>Multilingual Text Field attributes</b> to offer language-specific content.",
+              "isCorrect": false,
+              "feedback": "Consider this: While multilingual fields  might work, using dedicated LocalizedText ensures consistency and better integration for detailed content."
+            },
+            {
+              "text": "<b>Structured Filterable Attributes</b>: Focus on attributes optimized for filtering rather than detailed description.",
+              "isCorrect": false,
+              "feedback": "Not optimal: Filterable attributes are great for search but fall short on conveying the full descriptive detail in different locales needed for rich product content."
+            }
+          ],
+          "status": "Not Started"
+        },
+        
+        {
+          "decisionId": 6,
+          "title": "Choosing the Correct Identifier",
+          "scenario": "EcoLiving must decide which identifier to use for stable integrations and efficient querying.",
+          "options": [
+            {
+              "text": "Use <b>ID</b>s which are automatically generated for each resource",
+              "isCorrect": false,
+              "feedback": "Avoid this: System-generated IDs are not designed for external integrations. Rely on them only for internal tracking."
+            },
+            {
+              "text": "Use <b>Key</b> to have meaningful, readable to have stable code integrations.",
+              "isCorrect": true,
+              "feedback": "Correct: The key is the recommended identifier for stable external references and integrations due to its clarity and adaptability."
+            },
+            {
+              "text": "Use <b>SKU</b>",
+              "isCorrect": false,
+              "feedback": "Not the best choice: While SKU is vital for stock management, it isn’t suited as a primary code reference. Use it only for inventory purposes."
+            },
+            {
+              "text": "Use <b>Slug</b> to have SEO-friendly URLs and SEO",
+              "isCorrect": false,
+              "feedback": "Not ideal: Slugs are perfect for user-friendly URLs for products / categories only, not for stable integration."
             }
           ],
           "status": "Not Started"
@@ -97,7 +193,7 @@
           "description": [
             {
               "type": "paragraph",
-              "content": "<b>AllForFoodies</b> wants to launch an online business for selling vouchers for their online cooking classes."
+              "content": "<b>AllForFoodies</b> plans to launch online cooking classes using an integrated product model."
             },
             {
               "type": "paragraph",
@@ -115,18 +211,11 @@
             },
             {
               "type": "paragraph",
-              "content": "Create a product model using a product type ‘Online Offering,’ products, and variants of your choice."
+              "content": "Create a product model using a product type ‘Online Offering’ and associated variants."
             },
             {
               "type": "paragraph",
-              "content": "Draft the solution in the Notes field together with a team in a breakout room."
-            },
-            {
-              "type": "task",
-              "content": [
-                "Discuss your model with the trainer before creating it in the Merchant Center.",
-                "If time allows, your trainer will discuss further requirements from the Case Study Document."
-              ]
+              "content": "Draft your solution in the Notes field with your team."
             }
           ]
         }
@@ -141,201 +230,206 @@
           "link": "https://docs.commercetools.com/learning-model-your-product-catalog/product-modeling/overview"
         }
       ]
-    },
+    }
+    ,
+
+
+
+
     {
       "id": 3,
       "title": "Advanced Product Modeling",
-      "overview": "",
+      "overview": "This session dives deeper into product modeling strategies and effective promotion tactics to enhance commerce performance.",
       "infographic": "",
-      "tasks": [
+      "keyDecisions": [
         {
-          "taskNumber": 5,
-          "taskTitle": "Product Life Cycle & Categories",
-          "interactiveElements": [
+          "decisionId": 7,
+          "title": "Dynamic Recommendations Strategy",
+          "scenario": "<b>EcoLiving</b> plans dynamic recommendations between products like 'Edgar Armchair' and 'Silky Pillow Cover'. Which strategy do you prefer?",
+          "options": [
             {
-              "question": "Can a product belong to multiple categories in commercetools?",
-              "type": "radio",
-              "options": ["Yes", "No"]
+              "text": "<b>Product Reference Attributes:</b> Direct, explicit links for curation.",
+              "isCorrect": true,
+              "feedback": "Correct. This approach ensures precise, manual curation. Consider this optimal method for reliable recommendations."
             },
             {
-              "question": "Suggest a category structure for seasonal cooking courses",
-              "type": "textarea"
+              "text": "<b>Attribute-based Lookup:</b> Store the recommended SKU/ID in a custom field and fetch via API.",
+              "isCorrect": false,
+              "feedback": "Not ideal. Think about how explicit linking minimizes extra API calls and inconsistency. Consider the recommended reference attributes instead."
+            },
+            {
+              "text": "<b>Category Matching:</b> Use same-category filtering for dynamic recommendations.",
+              "isCorrect": false,
+              "feedback": "Less precise. Reflect on how using categories alone might retrieve unrelated products. Consider explicit product references for higher accuracy."
             }
           ],
           "status": "Not Started"
         },
         {
-          "taskNumber": 6,
-          "taskTitle": "Product Life Cycle & Categories",
-          "interactiveElements": [
+          "decisionId": 8,
+          "title": "Seasonal Category Management",
+          "scenario": "<b>EcoLiving</b> frequently updates its seasonal collections. Which category management approach best suits this need?",
+          "options": [
             {
-              "question": "Can a reference attribute link a product to multiple other products?",
-              "type": "radio",
-              "options": ["Yes", "No"]
+              "text": "<b>Season-based Parent Categories:</b> Use top-level seasonal categories (e.g., Summer, Winter).",
+              "isCorrect": true,
+              "feedback": "Correct. This straightforward method provides clarity. Consider this optimal approach for managing seasonal changes."
             },
             {
-              "question": "Suggest an approach to managing inventory within a product bundle.",
-              "type": "textarea"
+              "text": "<b>Attribute-based Dynamic Categories:</b> Auto-assign products using seasonal attributes.",
+              "isCorrect": false,
+              "feedback": "Automated but less controlled. Think about the benefits of clear, top-level seasonal categories instead."
             },
             {
-              "question": "How would you configure products to recommend related products dynamically for example: A customer purchasing an 'Italian Pasta Masterclass' might also be interested in a 'Wine Pairing Workshop'?",
-              "type": "textarea"
+              "text": "<b>Combined Hierarchy and Attributes:</b> Mix static categories for SEO with dynamic attributes.",
+              "isCorrect": false,
+              "feedback": "This adds complexity. Reflect on how a simpler season-based approach might work better."
+            }
+          ],
+          "status": "Not Started"
+        },
+        {
+          "decisionId": 9,
+          "title": "Product Bundling",
+          "scenario": "<b>EcoLiving</b> offers multiple products bundled with discounted prices to boost sales, but bundling isn’t natively supported. How should these be modeled?",
+          "options": [
+            {
+              "text": "<b>Use Reference Attributes</b>: Link items via reference attributes.",
+              "isCorrect": true,
+              "feedback": "Correct. This method provides flexible, scalable linking between products. Consider this approach as the best option."
+            },
+            {
+              "text": "<b>Implement Cart-Level Logic:</b> Add bundled items as a gift line item or apply discount logic at the cart level.",
+              "isCorrect": false,
+              "feedback": "Not ideal. Cart-level logic may introduce complexity with extra rules and may be less consistent than explicit references."
+            },
+            {
+              "text": "<b>Same-Category Discounting:</b> Configure products in the same category and use cart discounts for items within that category.",
+              "isCorrect": false,
+              "feedback": "Less precise. Reflect on how this approach may rely too much on category membership, which can lead to less targeted recommendations. Consider explicit linking instead."
             }
           ],
           "status": "Not Started"
         }
       ],
-      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1388",
-      "case_studies": [
-        {
-          "title": "Case Study 2: Advanced Product Modeling",
-          "link": "https://docs.google.com/document/d/1-qEHy47tPIDAaKPx3XegXKnhU3QfZtBr/edit",
-          "description": [
-            {
-              "type": "paragraph",
-              "content": "Your trainer will create the following products for you:"
-            },
-            {
-              "type": "list",
-              "content": [
-                "French cooking class",
-                "Italian cooking class",
-                "Crème brulé torch",
-                "Ceramic ramekins",
-                "Rustic Pasta Pot"
-              ]
-            },
-            {
-              "type": "paragraph",
-              "content": "Create product types, products, and product variants to sell the following bundles, each costing $129"
-            },
-            {
-              "type": "paragraph",
-              "content": "1. French Ceramic Cooking Bundle"
-            },
-            {
-              "type": "list",
-              "content": [
-                "French cooking class",
-                "Crème brulé torch",
-                "Ceramic ramekins"
-              ]
-            },
-            {
-              "type": "paragraph",
-              "content": "2. Italian Rustic Cooking Bundle"
-            },
-            {
-              "type": "list",
-              "content": [
-                "Italian cooking class",
-                "Rustic Pasta Pot"
-              ]
-            }
-          ]
-        }
-      ],
+      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=???",
+      "case_studies": [],
       "recommendations": [
         {
-          "title": "Merchant Center Guide",
-          "link": "https://docs.commercetools.com/merchant-center/"
+          "title": "Advanced Product Modeling Techniques",
+          "link": "https://docs.commercetools.com/learning-model-your-product-catalog/product-modeling/advanced"
         },
         {
-          "title": "Product Modeling Overview",
-          "link": "https://docs.commercetools.com/learning-model-your-product-catalog/product-modeling/overview"
+          "title": "Effective Promotions and Discounts",
+          "link": "https://docs.commercetools.com/discounts"
         }
       ]
     },
+
+
+
     {
       "id": 4,
       "title": "Stores and Channels",
-      "overview": "",
+      "overview": "This session focuses on pricing strategies, product selections, supply channel configuration, and tailoring product offerings for different regions.",
       "infographic": "",
-      "tasks": [
+      "keyDecisions": [
         {
-          "taskNumber": 7,
-          "taskTitle": "Stores and Channels",
-          "interactiveElements": [
+          "decisionId": 10,
+          "title": "Regional Pricing Strategy",
+          "scenario": "<b>EcoLiving</b> is expanding in APAC—launching in Australia (AUD), Japan (JPY), and Singapore (SGD). Which pricing channel strategy best fits these diverse markets?",
+          "options": [
             {
-              "question": "What default currency did you set for your store? And why?",
-              "type": "textarea"
+              "text": "<b>Single Channel, Multiple Currencies:</b> Use one pricing channel (e.g., <code>apac-price-channel</code>) and configure it with multiple currency prices (e.g., <code>apac-price-channel</code> +  AUD / JPY / SGD ).",
+              "isCorrect": false,
+              "feedback": "While a single channel simplifies management, it may not provide sufficient control for market-specific pricing nuances. Consider a method that allows country-level differentiation."
             },
             {
-              "question": "Customers expect dynamic pricing based on region and customer group. How would you configure <code>[YOURNAME]-store-price-channel</code> to support this?",
-              "type": "textarea"
+              "text": "<b>Single Channel with Price per Country:</b> Use one regional pricing channel (e.g., <code>apac-price-channel</code>) and define distinct prices for each country (e.g., set a specific AUD price for Australia, JPY for Japan, and SGD for Singapore).",
+              "isCorrect": true,
+              "feedback": "Correct. This approach offers clear, country-specific control within a single channel, ensuring that each market’s pricing is tailored appropriately. Consider this optimal for handling diverse currencies and regional pricing dynamics."
+            },
+            {
+              "text": "<b>Mixed (Hybrid):</b> Combine a common channel with fallback prices for most markets, plus dedicated channels for selected regions (e.g., Australia could have a dedicated channel with both AUD and USD prices).",
+              "isCorrect": false,
+              "feedback": "This strategy introduces extra complexity and might be hard to manage. Reflect on how a single channel with country-specific pricing usually provides the right balance of simplicity and control."
+            }
+          ],
+          "status": "Not Started"
+        }
+        ,
+        {
+          "decisionId": 11,
+          "title": "Product Selections",
+          "scenario": "<b>EcoLiving</b> manages exclusive regional product availability (e.g., for EU, APAC, UA). Which strategy best delineates regional catalogs?",
+          "options": [
+            {
+              "text": "<b>Inclusion-based Selections:</b> Explicitly define which products are available per region.",
+              "isCorrect": true,
+              "feedback": "Correct. This approach clearly outlines product availability for each region. Consider this the most straightforward method."
+            },
+            {
+              "text": "<b>Exclusion-based Selections:</b> Offer global availability with specific regional exclusions.",
+              "isCorrect": false,
+              "feedback": "Not ideal. Reflect on how exclusions can be ambiguous, leading to inconsistencies. Consider explicit inclusion instead."
+            },
+            {
+              "text": "<b>Combined Inclusion-Exclusion:</b> Global core catalog with explicit regional exclusions.",
+              "isCorrect": false,
+              "feedback": "Overly complex. Think about the benefits of a simple, clear inclusion-based approach for predictable regional availability."
             }
           ],
           "status": "Not Started"
         },
         {
-          "taskNumber": 8,
-          "taskTitle": "Product Selections and Tailoring",
-          "interactiveElements": [
+          "decisionId": 12,
+          "title": "Supply Channel Configuration",
+          "scenario": "For example, <b>EcoLiving</b> sources products from different warehouses to serve the APAC market. How should the supply channel be configured for accurate inventory tracking?",
+          "options": [
             {
-              "question": "Your online store wants to feature a 'Seasonal Special' collection that includes trending products for the summer. How would you use a Product Selection to group these products efficiently?",
-              "type": "textarea"
+              "text": "<b>Dedicated Supply Channel per Warehouse:</b> Assign a specific channel for each warehouse.",
+              "isCorrect": true,
+              "feedback": "Correct. This method provides clear and direct tracking for each warehouse. Consider this approach for precise inventory management."
             },
             {
-              "question": "Your company operates in multiple countries, but some products are only available in select regions. What feature would you use to tailor product availability based on geographic regions?",
-              "type": "textarea"
+              "text": "<b>Centralized Supply Channel:</b> Use a single channel for all warehouses with fallback logic.",
+              "isCorrect": false,
+              "feedback": "Not ideal. Think about how a centralized channel can blur distinctions between warehouses, reducing tracking accuracy."
+            },
+            {
+              "text": "<b>Dynamic Supply Mapping:</b> Auto-map products to warehouses using custom logic.",
+              "isCorrect": false,
+              "feedback": "Reflect on how dynamic mapping might introduce complexity & need for custom logic to map to nearest warehouse. Consider the clarity of dedicated channels."
+            }
+          ],
+          "status": "Not Started"
+        },
+        {
+          "decisionId": 13,
+          "title": "Product Tailoring for Regional Stores",
+          "scenario": "<b>EcoLiving</b> wants products tailored differently in each regional store. How can tailored content be best achieved?",
+          "options": [
+            {
+              "text": "<b>Same Product, Tailored Presentation:</b> Use built-in product tailoring to adjust name, description, and images per region.",
+              "isCorrect": true,
+              "feedback": "Correct. This approach leverages a single product with region-specific presentation, ensuring consistency and efficiency. Consider this optimal for maintaining centralized data with localized appeal."
+            },
+            {
+              "text": "<b>Create Separate Products:</b> Develop distinct products per region and assign them using product selections.",
+              "isCorrect": false,
+              "feedback": "Not ideal. Think about how creating separate products increases duplication and complexity. Reflect on the benefits of tailoring a single product."
+            },
+            {
+              "text": "<b>Attribute-Based Tailoring:</b> Use product attributes for regional variations and display only relevant ones.",
+              "isCorrect": false,
+              "feedback": "Less effective. Reflect on how this method might not provide the full customization needed. Consider the tailored presentation of a single product for better control."
             }
           ],
           "status": "Not Started"
         }
       ],
       "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1390",
-      "case_studies": [
-        {
-          "title": "Case Study 3: Stores and Channels",
-          "link": "https://docs.google.com/document/d/1g_fSEad3lu7772WszwAq3F_uHYerlAzA/edit",
-          "description": [
-            {
-              "type": "paragraph",
-              "content": "Develop tailored regional storefronts (Europe, North America, Asia) addressing product selection, pricing strategies, and inventory management to enhance localized customer engagement."
-            },
-            {
-              "type": "paragraph",
-              "content": "Scenario 1: Regional Storefront Setup: "
-            },
-            {
-              "type": "list",
-              "content": [
-                "Configure regional storefronts with clearly defined names, currencies, and languages. ",
-                "Justify your choices in terms of market alignment and customer experience."
-              ]
-            },
-            {
-              "type": "paragraph",
-              "content": "Scenario 2: Product Selection and Management:"
-            },
-            {
-              "type": "paragraph",
-              "content": "Set up store-specific product selections clearly identifying exclusivity as below:"
-            },
-            {
-              "type": "list",
-              "content": [
-                " - Europe: Premium gourmet kitchenware",
-                " - North America: Outdoor grilling essentials",
-                " - Asia: Specialty tea products and traditional utensils",
-                "Manages shared products centrally across regions for consistency."
-              ]
-            },
-            {
-              "type": "paragraph",
-              "content": "Scenario 3: Pricing & Inventory Strategy"
-            },
-            {
-              "type": "list",
-              "content": [
-                "Create necessary channels to implement dynamic pricing configurations per region and customer segment.",
-                "Set up inventory supply channel aligning with regional logistics."
-              ]
-            }
-          ]
-          
-        }
-      ],
+      "case_studies": [],
       "recommendations": [
         {
           "title": "Merchant Center Guide",
@@ -346,365 +440,53 @@
           "link": "https://docs.commercetools.com/learning-model-your-product-catalog/product-modeling/overview"
         }
       ]
-    },
-    {
-      "id": 5,
-      "title": "Pricing and Discounts",
-      "overview": "",
-      "infographic": "",
-      "tasks": [
-        {
-          "taskNumber": 9,
-          "taskTitle": "Price Configuration",
-          "description": "",
-          "interactiveElements": [
-            {
-              "question": "<p>A product variant has the following prices attached:</p> <p>- country: US, channel: pickup price: $12,99</p><p>country: US, customer group: loyal price: $11,99</p><p>No further price is defined. Tom is a loyal customer and stands in front of the pickup warehouse. What will he have to pay?</p> ",
-              "type": "textarea"
-            },
-            {
-              "question": "Describe your approach to setting up fallback prices. Explain how you would configure the pricing entries so that, if no price exists for a customer's currency, the system applies a pre-defined fallback price.",
-              "type": "textarea"
-            }
-          ],
-          "status": "Not Started"
-        },
-        {
-          "taskNumber": 10,
-          "taskTitle": "Discount Configuration",
-          "description": "",
-          "interactiveElements": [
-            {
-              "question": "What is the primary purpose of the sortOrder attribute in discount configuration?",
-              "type": "radio",
-              "options": ["It determines the ranking in which the applicable discounts are applied.", "It sets the discount percentage.", "It defines the discount duration.", "It indicates the target customer group."]
-            },
-            {
-              "question": "Enter a sample sortOrder value you might assign to a high-priority discount.",
-              "type": "text"
-            },
-            {
-              "question": "Explain how sortOrder manages overlapping discounts and ensures that the highest priority discount is applied correctly.",
-              "type": "textarea"
-            }
-          ],
-          "status": "Not Started"
-        }
-      ],
-      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1392",
-      "case_studies": [
-        {
-          "title": "Case Study 4: Price Configuration",
-          "link": "https://docs.google.com/document/d/1572dUI4VyxjcMqQuivNKNid6OvFaF5qT/edit",
-          "description": [
-            {
-              "type": "paragraph",
-              "content": "AllForFoodies is expanding its global presence with dedicated storefronts in Europe (EUR), North America (USD), and Asia (SGD, INR, AUD) and requires a layered pricing model—incorporating fallback, country-specific, customer group (Standard, Premium, Platinum), and channel-specific pricing—to tailor its offerings to local market needs."
-            },
-            {
-              "type": "paragraph",
-              "content": "Each group is required to configure a comprehensive pricing model in the Merchant Center for their assigned product type (Trainer will assign products for each group)"
-            },
-            {
-              "type": "paragraph",
-              "content": "The pricing model must include:"
-            },
-            {
-              "type": "list",
-              "content": [
-                "<b>Base/Fallback Price</b>:",
-                " - Set a fallback price for each currency",
-                " - Example Base Prices: 100 EUR, 120 USD, 150 SGD, 900 INR, 130 AUD.",
-                "<b>Country-Specific Price:</b>:",
-                " - Configure a price for each country within the region.",
-                " - Example: For EUR, set Germany at 100 EUR, France at 105 EUR, and Italy at 110 EUR.",
-                "<b>Customer Group Price:</b>:",
-                " - Further refine these prices for Standard, Premium, and Platinum customer groups.",
-                " - Example: In the United States, Standard might be $120, Premium $130, and Platinum $140.",
-                "<b>Channel-Specific Price:</b>:",
-                " - Configure final prices specific to the sales channel linked with the respective store.",
-                " - Example: On the “AllForFoodies Asia” channel, configure prices for each customer segment within Singapore, India, and Australia, such as a slight discount or premium feature price modification"
-              ]
-            }
-          ]
-        },
-        {
-          "title": "Case Study 5: Discounts",
-          "link": "https://learn.commercetools.com/mod/resource/view.php?id=768",
-          "description": [
-            {
-              "type": "paragraph",
-              "content": "Configure below discount promotions in the Merchant Center using cart discounts, product discounts, and discount codes as applicable."
-            },
-            {
-              "type": "list",
-              "content": [
-                "Promotion A: All items in the 'Kitchen Gadget' category are discounted at 10%, except for the pancakebot which is excluded from the sale.",
-                "Promotion B: Buy 2 French Cooking online classes and save 50% on the third, with the promotion applied up to 10 times per purchase.",
-                "Promotion C: When the cart total reaches $75 or more, customers receive a free garlic press—activated with the discount code 'GARLIC'.",
-                "Promotion D: If the cart contains an egg separator, a pocket-sized nutrition scale, and an Accusharp knife sharpener, customers receive $2 off all edible ink cartridges. This discount cannot be combined with other promotions."
-              ]
-            }
-          ]
-        }
-      ],
-      "recommendations": [
-        {
-          "title": "Merchant Center Guide",
-          "link": "https://docs.commercetools.com/merchant-center/"
-        },
-        {
-          "title": "Product Modeling Overview",
-          "link": "https://docs.commercetools.com/learning-model-your-product-catalog/product-modeling/overview"
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "title": "Product Search, Shipping Methods",
-      "overview": "",
-      "infographic": "",
-      "tasks": [
-        {
-          "taskNumber": 11,
-          "taskTitle": "Project Search",
-          "description": "",
-          "interactiveElements": [
-            {
-              "question": "Construct a search query to retrieve all published products under the product type 'specialty-tea-products-product-type' that include the word 'Tea' in the product name. Provide your query string.",
-              "type": "text"
-            },
-            {
-              "question": "Calculate and provide the facet counts for products with Color set to 'White' and Material set to 'Metal'. Format your answer as: 'White: X, Metal: Y'..",
-              "type": "text"
-            }
-          ],
-          "status": "Not Started"
-        },
-        {
-          "taskNumber": 12,
-          "taskTitle": "Shipping Methods",
-          "description": "",
-          "interactiveElements": [
-            {
-              "question": "Write a predicate that restricts a shipping method to be used only for products with 'heavy-weight' set to true and not belonging to the special sales categories.",
-              "type": "textarea"
-            },
-            {
-              "question": "Provide an example of a shipping predicate expression that restricts a shipping method to orders with a line items having attrivute <code>heavy-weight</code> and shipping to a specific country.",
-              "type": "text"
-            },
-            {
-              "question": "Explain your strategy for configuring shipping methods to accommodate multiple regions and varying shipping costs.",
-              "type": "textarea"
-            }
-          ],
-          "status": "Not Started"
-        }
-      ],
-      "quiz": "https://learn.commercetools.com/mod/resource/view.php?id=762",
-      "case_studies": [
-        {
-          "title": "Case Study 6: Shipping",
-          "link": "https://learn.commercetools.com/mod/resource/view.php?id=847",
-          "description": [
-            {
-              "type": "paragraph",
-              "content": "Assignment: In the Merchant Center, create one or more shipping methods to address the following scenarios. Ensure you configure appropriate shipping zones, rates, and predicates."
-            },
-            {
-              "type": "paragraph",
-              "content": "Scenario A: Domestic Shipping"
-            },
-            {
-              "type": "list",
-              "content": [
-                "For shipping to the US, set a rate of 9.99 USD. Shipping is free for purchases above 50 USD, and shipments are handled by UPS.",
-                "For shipping to Canada, set a rate of 14.99 CAD. Shipping is free for purchases above 75 CAD, and shipments are handled by Fedex."
-              ]
-            },
-            {
-              "type": "paragraph",
-              "content": "Scenario B: Non-Continental US Shipping"
-            },
-            {
-              "type": "list",
-              "content": [
-                "Describe how you would incorporate different shipping costs for the non-continental United States (Alaska and Hawaii) compared to the continental US. (Hint: reference the documentation for Zones.)",
-                "Discuss whether this update can be made in the Merchant Center, and explain why or why not."
-              ]
-            }
-          ]
-        }
-      ],
-      "recommendations": [
-        {
-          "title": "Merchant Center Guide",
-          "link": "https://docs.commercetools.com/merchant-center/"
-        },
-        {
-          "title": "Product Modeling Overview",
-          "link": "https://docs.commercetools.com/learning-model-your-product-catalog/product-modeling/overview"
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "title": "Cart and Order Management",
-      "overview": "This session covers how to manage carts and orders in commercetools, including handling frozen carts and the Inventory Mode settings that control stock availability. It also covers shopping lists, shipping methods, and how to manage orders using direct updates or order edits.",
-      "infographic": "",
-      "tasks": [
-        {
-          "taskNumber": 13,
-          "taskTitle": "Cart Management and Frozen Carts",
-          "interactiveElements": [
-          {
-            "question": "Imagine customers purchasing the 'Premium Non-stick Frying Pan' receive a 'Exclusive Recipe Book' and an 'Extended Warranty' at a cost of $1 each, but the product catalog doesn't have these products. How would you model these line items in the cart? Describe your approach and any key considerations",
-            "type": "textarea"
-          },
-          {
-            "question": "Based on the above scenario, explain which inventory mode you would choose to ensure that stock for the 'Premium Non-stick Frying Pan' is properly reserved when an order is placed, while the 'Exclusive Recipe Book' and an 'Extended Warranty' is managed separately. Provide your reasoning.",
-            "type": "textarea"
-          },
-          {
-            "question": "Provide a brief strategy for updating a frozen cart in commercetools.",
-            "type": "textarea"
-          }
-        
-        ],
-          "status": "Not Started"
-        },
-        {
-          "taskNumber": 14,
-          "taskTitle": "Order Management and Updates",
-          "interactiveElements": [
-            {
-              "question": "A customer calls after placing an order to change their shipping address. Describe your approach to updating the order and explain the differences between direct order updates and order edits in this context.",
-              "type": "textarea"
-            },
-            {
-            "question": "A customer orders the 'Deluxe Cookware Set' and 'Herbal Chamomile Tea' from AllForFoodies. He wants the cookware delivered to his home while the tea is shipped directly to his partner's address. How would you model the cart to support multiple shipping addresses and ensure that each item reaches the correct destination?",
-            "type": "textarea"
-            },
-            {
-              "question": "Name one advantage of managing shopping lists in commercetools.",
-              "type": "text"
-            }
-          ],
-          "status": "Not Started"
-        },
-        {
-          "taskNumber": 15,
-          "taskTitle": "Cart Merging",
-          "interactiveElements": [
-            {
-              "question": "Imagine a customer, shops anonymously and builds a cart with 2 units of 'Tulip Seed' and an optional custom line item 'Fertilizer Pack'. After signing in, his account already has an existing cart containing 1 unit of 'Tulip Seeds' and 1 unit of 'Basil Seeds'. <p>Describe your strategy for merging these two carts during the sign-in process in commercetools, ensuring a smooth and consistent customer experience.</p>",
-              "type": "textarea"
-            }
-          ],
-          "status": "Not Started"
-        }
-      ],
-      "quiz": "https://learn.commercetools.com/mod/resource/view.php?id=762",
-      "case_studies": [],
-      "recommendations": [
-        {
-          "title": "Cart and Order Management Guide",
-          "link": "https://docs.commercetools.com/cart-order-management"
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "title": "Extensions and State Management",
-      "overview": "",
-      "infographic": "",
-      "tasks": [
-        { 
-          "taskNumber": 16,
-          "taskTitle": "Extending Data Model",
-          "interactiveElements": [ 
-            { 
-              "question": "Describe how you would store the number of orders placed since this morning in your project. Explain whether you would use a custom field (specify the resource) or a custom object, and outline your rationale.", 
-              "type": "textarea" 
-            }, 
-              { 
-                "question": "Explain your approach to capturing a customer's wish to subscribe to our newsletter. In your answer, detail if you would implement this as a custom field (indicating the resource) or as a custom object, and justify your decision.",
-                 "type": "textarea" 
-                }, 
-                 { 
-                  "question": "Outline how you would model and store special delivery instructions (e.g., 'shout loudly,' 'give to neighbour,' 'leave parcel at doorstep,' 'do not come after 3 pm') in your project. Specify whether you would use a custom field or a custom object, mention the relevant resource if applicable, and describe your reasoning.",
-                 "type": "textarea" 
-                 } 
-                ], 
-              "status": "Not Started" },
-        {
-          "taskNumber": 17,
-          "taskTitle": "Implement Subscriptions and API Extensions",
-          "interactiveElements": [
-            {
-              "question": "Scenario: Your online store processes a high volume of orders and needs real-time notifications to trigger subsequent processes (e.g., inventory updates and confirmation emails). Explain how you would configure a subscription in commercetools to receive notifications when a new order is created. Include key details such as the resource type and notification setup.",
-              "type": "textarea"
-            },
-            {
-              "question": "Scenario: During peak sales periods, you require asynchronous actions like updating external systems and sending SMS alerts after an order update. Describe how you would implement an API extension in commercetools to trigger these asynchronous processes. Outline the key steps involved.",
-              "type": "textarea"
-            },
-            {
-              "question": "Scenario: Consider an order that transitions through multiple states (e.g., 'Pending' → 'Confirmed' → 'Shipped'). Describe how you would design a state machine in commercetools to manage these order transitions automatically, and explain the benefits of using state machines in ensuring order accuracy and workflow consistency.",
-              "type": "textarea"
-            }
-          ],
-          "status": "Not Started"
-        }
-        
-      ],
-      "quiz": "https://learn.commercetools.com/mod/resource/view.php?id=762",
-      "case_studies": [],
-      "recommendations": [
-        {
-          "title": "Custom Data and API Extensions Guide",
-          "link": "https://docs.commercetools.com/custom-types"
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "title": "Checkout, Connect, and Best Practices",
-      "overview": "",
-      "infographic": "",
-      "tasks": [
-       
-        {
-          "taskNumber": 18,
-          "taskTitle": "Integration with Connect",
-          "interactiveElements": [
-            {
-              "question": "What is the role of commercetools Connect in integrating external systems?",
-              "type": "textarea"
-            },
-            {
-              "question": "Seach and provide an example of a pre-configured public connector you might like to install and test in Merchant Center.",
-              "type": "text"
-            },
-            {
-              "question": "Explain one challenge you might face when integrating checkout with external systems and a strategy to overcome it.",
-              "type": "textarea"
-            }
-          ],
-          "status": "Not Started"
-        }
-      ],
-      "quiz": "https://learn.commercetools.com/mod/resource/view.php?id=762",
-      "case_studies": [],
-      "recommendations": [
-        {
-          "title": "Checkout and Integration Best Practices",
-          "link": "https://docs.commercetools.com/connect-checkout"
-        }
-      ]
-    }    
+    }
     
+
     
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    ,{
+      "id": "",
+      "title": "",
+      "overview": "",
+      "infographic": "",
+      "tasks": [
+      ],
+      "quiz": "",
+      "case_studies": [
+      ],
+      "recommendations": [
+      ]
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   ]
 }

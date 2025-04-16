@@ -35,18 +35,17 @@ $(document).ready(function () {
   checkUserInfo();
 
   /********** PROGRESS TRACKING **********/
-  // Now count tasks + quiz + case studies as progress items.
   function updateProgress() {
     let totalItems = 0;
     let completedItems = 0;
     
-    // Separate counters for tasks, quizzes, and case studies.
+    // Counters for tasks, key decisions, quizzes, and case studies.
     let totalTasks = 0, completedTasks = 0;
+    let totalKeyDecisions = 0, completedKeyDecisions = 0;
     let totalQuizzes = 0, completedQuizzes = 0;
     let totalCaseStudies = 0, completedCaseStudies = 0;
     
     sessionsData.sessions.forEach((session) => {
-      // Count tasks
       if (session.tasks) {
         totalItems += session.tasks.length;
         totalTasks += session.tasks.length;
@@ -57,7 +56,16 @@ $(document).ready(function () {
           }
         });
       }
-      // Count quiz if exists
+      if (session.keyDecisions) {
+        totalItems += session.keyDecisions.length;
+        totalKeyDecisions += session.keyDecisions.length;
+        session.keyDecisions.forEach((decision) => {
+          if (decision.status === "Completed") {
+            completedItems++;
+            completedKeyDecisions++;
+          }
+        });
+      }
       if (session.quiz && session.quiz.trim() !== "") {
         totalItems += 1;
         totalQuizzes++;
@@ -66,7 +74,6 @@ $(document).ready(function () {
           completedQuizzes++;
         }
       }
-      // Count each case study
       if (session.case_studies) {
         totalItems += session.case_studies.length;
         totalCaseStudies += session.case_studies.length;
@@ -81,14 +88,11 @@ $(document).ready(function () {
     
     let percentage = totalItems > 0 ? Math.round((completedItems / totalItems) * 100) : 0;
     $("#progressBar").css("width", percentage + "%").text(percentage + "%");
-    
-    // Update the detailed progress span.
     $("#progressDetails").html(
-      `Tasks: ${completedTasks}/${totalTasks} | Case Studies: ${completedCaseStudies}/${totalCaseStudies} | Quizzes: ${completedQuizzes}/${totalQuizzes}`
+      `Tasks: ${completedTasks}/${totalTasks} | Key Decisions: ${completedKeyDecisions}/${totalKeyDecisions} | Case Studies: ${completedCaseStudies}/${totalCaseStudies} | Quizzes: ${completedQuizzes}/${totalQuizzes}`
     );
   }
   
-
   /********** TASK HANDLING **********/
   let sessionsData = {};
 
@@ -145,7 +149,7 @@ $(document).ready(function () {
     localStorage.setItem("sessionsData", JSON.stringify(sessionsData));
 
     let taskResponsesHTML = `<div class="task-responses" id="task-responses-${task.taskNumber}">` +
-                              `<h5>Task ${task.taskNumber} </h5><ul>`;
+                              `<h5>Task ${task.taskNumber}</h5><ul>`;
     responses.forEach((r) => {
       taskResponsesHTML += `<li>${r.question} - ${r.answer}</li>`;
     });
@@ -170,7 +174,7 @@ $(document).ready(function () {
   function reSubmitTask(taskNumber) {
     const session = sessionsData.sessions.find((s) => s.tasks && s.tasks.some((t) => t.taskNumber === taskNumber));
     if (!session) return;
-    const task = session.tasks.find((t) => t.taskNumber === taskNumber);
+    const task = session.tasks.find((t) => t.taskNumber == taskNumber);
     if (!task) return;
     task.status = "In Progress";
     renderInteractiveElements(task, `interactive-task-${task.taskNumber}`);
@@ -188,7 +192,6 @@ $(document).ready(function () {
     localStorage.setItem("sessionsData", JSON.stringify(sessionsData));
     updateProgress();
     alert("Quiz marked as completed!");
-    // Re-render quiz view to update the UI.
     $(`.session-link[data-session='${sessionId}'][data-type='quiz']`).click();
   }
 
@@ -201,7 +204,6 @@ $(document).ready(function () {
     localStorage.setItem("sessionsData", JSON.stringify(sessionsData));
     updateProgress();
     alert("Case Study marked as completed!");
-    // Re-render case study view to update the UI.
     $(`.session-link[data-session='${sessionId}'][data-type='caseStudy'][data-csindex='${csIndex}']`).click();
   }
 
@@ -234,6 +236,20 @@ $(document).ready(function () {
           <li class="list-group-item">
             <a href="#" class="session-link" data-session="${session.id}" data-type="task" data-tasknumber="${task.taskNumber}">
               Task ${task.taskNumber}: ${task.taskTitle}
+            </a>
+          </li>`
+          )
+          .join("");
+      }
+
+      let keyDecisionsHtml = "";
+      if (session.keyDecisions) {
+        keyDecisionsHtml = session.keyDecisions
+          .map(
+            (decision) => `
+          <li class="list-group-item">
+            <a href="#" class="session-link" data-session="${session.id}" data-type="keyDecision" data-decisionid="${decision.decisionId}">
+            ${decision.decisionId} - ${decision.title}
             </a>
           </li>`
           )
@@ -273,6 +289,7 @@ $(document).ready(function () {
           <div id="session${session.id}" class="accordion-collapse collapse ${isActive}" data-bs-parent="#sessionAccordion">
             <div class="accordion-body">
               <ul class="list-group">
+                ${keyDecisionsHtml}
                 ${tasksHtml}
                 ${caseStudyHtml}
                 ${quizHtml}
@@ -304,7 +321,7 @@ $(document).ready(function () {
     }
   }
 
-  /********** SESSION & TASK EVENT HANDLING **********/
+  /********** SESSION & INTERACTION EVENT HANDLING **********/
   $(document).on("click", ".session-link", function (e) {
     e.preventDefault();
     $(".list-group-item").removeClass("active");
@@ -330,7 +347,6 @@ $(document).ready(function () {
       }
       $("#mainContent").html(mainContentHtml);
       $("#solutionContent").html("");
-      // Bind click event for the Done button
       $("#quizDoneBtn").on("click", function () {
         markQuizDone(sessionId);
       });
@@ -368,7 +384,6 @@ $(document).ready(function () {
       }
       $("#mainContent").html(mainContentHtml);
       $("#solutionContent").html("");
-      // Bind click event for the Done button
       $("#caseStudyDoneBtn").on("click", function () {
         markCaseStudyDone(sessionId, csIndex);
       });
@@ -397,8 +412,117 @@ $(document).ready(function () {
           renderInteractiveElements(task, `interactive-task-${task.taskNumber}`);
         }
       }
+    } else if (type === "keyDecision") {
+      const decisionId = $(this).data("decisionid");
+      const decision = session.keyDecisions.find((d) => d.decisionId == decisionId);
+      if (!decision) return;
+      let mainContentHtml = `<h3>${decision.title}</h3>
+                             <p>${decision.scenario}</p>`;
+      if (decision.status === "Completed") {
+        // Use re-submit link with data attributes for event delegation.
+        mainContentHtml += `<div id="keyDecision-container-${decision.decisionId}">
+                              <em>Key Decision Completed. Your response has been recorded.</em>
+                              <a href="#" class="re-submit-link" data-sessionid="${session.id}" data-decisionid="${decision.decisionId}">Re-submit</a>
+                           </div>`;
+      } else {
+        mainContentHtml += `<form id="keyDecisionForm-${decision.decisionId}">`;
+        decision.options.forEach((opt, index) => {
+          mainContentHtml += `<div class="form-check">
+                                <input class="form-check-input" type="radio" name="keydecision-${decision.decisionId}-option" id="keydecision-${decision.decisionId}-option-${index}" value="${index}">
+                                <label class="form-check-label" for="keydecision-${decision.decisionId}-option-${index}">${opt.text}</label>
+                              </div>`;
+        });
+        mainContentHtml += `<br/><textarea id="keyDecisionNotes-${decision.decisionId}" class="form-control" placeholder="Enter any additional points or notes to consider..."></textarea>
+                            <button type="button" class="btn btn-primary mt-2" onclick="submitKeyDecision(${session.id}, ${decision.decisionId});">Submit</button>
+                            </form>`;
+      }
+      $("#mainContent").html(mainContentHtml);
+      $("#solutionContent").html("");
     }
   });
+
+  /********** SUBMIT KEY DECISION FUNCTION **********/
+window.submitKeyDecision = function (sessionId, decisionId) {
+  const session = sessionsData.sessions.find((s) => s.id == sessionId);
+  if (!session) return;
+  const decision = session.keyDecisions.find((d) => d.decisionId == decisionId);
+  if (!decision) return;
+  
+  // Prevent duplicate submission
+  if (decision.status === "Completed") {
+    alert("This key decision has already been submitted.");
+    return;
+  }
+  
+  let selectedOptionIndex = $(`input[name='keydecision-${decision.decisionId}-option']:checked`).val();
+  if (selectedOptionIndex === undefined) {
+    alert("Please select an option");
+    return;
+  }
+  selectedOptionIndex = parseInt(selectedOptionIndex);
+  let selectedOption = decision.options[selectedOptionIndex];
+  let notes = $(`#keyDecisionNotes-${decision.decisionId}`).val();
+  
+  // Mark the decision as completed.
+  decision.status = "Completed";
+  
+  let feedbackText = selectedOption.feedback;
+  let noteEntry = `<div class="alert alert-info mt-2" id="keyDecision-responses-${decision.decisionId}">
+                        <strong>Decision ${decision.decisionId}:</strong><br/>
+                        <strong>Scenario:</strong> ${decision.scenario}<br/>
+                        <strong>Feedback:</strong> ${feedbackText}<br/>
+                        <em>Your notes:</em> ${notes}
+                   </div>`;
+  
+  // Prepend the note (so the latest appears first)
+  if ($(`#keyDecision-responses-${decision.decisionId}`).length > 0) {
+    $(`#keyDecision-responses-${decision.decisionId}`).replaceWith(noteEntry);
+  } else {
+    $("#notesEditor").prepend(noteEntry);
+  }
+  
+  // Immediately update localStorage for userNotes
+  localStorage.setItem("userNotes", $("#notesEditor").html());
+  
+  // Replace the form with a completion message and a re-submit link
+  $("#mainContent").html(
+    `<em>Key Decision Completed. Your response has been recorded.</em>
+     <a href="#" onclick="reSubmitKeyDecision(${sessionId}, ${decisionId}); return false;">Re-submit</a>`
+  );
+  
+  localStorage.setItem("sessionsData", JSON.stringify(sessionsData));
+  updateProgress();
+  alert("Your response has been recorded!");
+};
+
+/********** RE-SUBMIT KEY DECISION FUNCTION **********/
+window.reSubmitKeyDecision = function (sessionId, decisionId) {
+  const session = sessionsData.sessions.find((s) => s.id == sessionId);
+  if (!session) return;
+  const decision = session.keyDecisions.find((d) => d.decisionId == decisionId);
+  if (!decision) return;
+  
+  // Reset status to allow re-submission.
+  decision.status = "In Progress";
+  
+  // Re-render the key decision form.
+  let mainContentHtml = `<h3>${decision.title}</h3>
+                           <p>${decision.scenario}</p>
+                           <form id="keyDecisionForm-${decision.decisionId}">`;
+  decision.options.forEach((opt, index) => {
+    mainContentHtml += `<div class="form-check">
+                          <input class="form-check-input" type="radio" name="keydecision-${decision.decisionId}-option" id="keydecision-${decision.decisionId}-option-${index}" value="${index}">
+                          <label class="form-check-label" for="keydecision-${decision.decisionId}-option-${index}">${opt.text}</label>
+                        </div>`;
+  });
+  mainContentHtml += `<br/><textarea id="keyDecisionNotes-${decision.decisionId}" class="form-control" placeholder="Enter your notes..."></textarea>
+                      <button type="button" class="btn btn-primary mt-2" onclick="submitKeyDecision(${sessionId}, ${decision.decisionId});">Submit</button>
+                      </form>`;
+  
+  $("#mainContent").html(mainContentHtml);
+  localStorage.setItem("sessionsData", JSON.stringify(sessionsData));
+};
+
 
   /********** DISPLAY CURRENT DATE **********/
   function updateCurrentDate() {
@@ -428,4 +552,3 @@ $(document).ready(function () {
   window.submitTask = submitTask;
   window.reSubmitTask = reSubmitTask;
 });
-
