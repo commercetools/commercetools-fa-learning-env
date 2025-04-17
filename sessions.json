@@ -11,20 +11,20 @@
         {
           "decisionId": 1,
           "title": "Public Beta Features",
-          "scenario": "<b>EcoLiving</b> is evaluating a new Public Beta Feature (Multiple Customer Group Assignment) for its loyalty campaign. Which of the below approach would you follow?",
+          "scenario": "<b>EcoLiving</b> is launching a new loyalty campaign and wants to leverage commercetools' recently introduced Public Beta feature - <b>Multiple Customer Group Assignment</b>. How should they approach implementing this feature??",
           "options": [
             {
-              "text": "<b>Evaluate in staging:</b> Test thoroughly before production.",
+              "text": "Evaluate Thoroughly in Staging First before production.",
               "isCorrect": false,
-              "feedback": "While rigorous staging testing lowers risk, it might delay benefits. Consider a gradual production rollout for a quicker market response."
+              "feedback": "Safe approach, ensures thorough validation, but may delay capturing early competitive advantage. Consider whether your timeline permits extensive pre-production testing and think about gradual production rollout for a quicker market response."
             },
             {
-              "text": "<b>Start gradually in production:</b> Roll out with limited scope and close monitoring.",
+              "text": "Gradual Production Rollout with Controlled Monitoring",
               "isCorrect": true,
-              "feedback": "Correct. This approach balances speed and risk, gathering timely feedback and allowing agile adjustments."
+              "feedback": "Ideal. Balances rapid innovation with careful risk management. Enables agile adjustments based on real-time insights and user feedback.."
             },
             {
-              "text": "<b>Wait for GA:</b> Delay until the feature is generally available.",
+              "text": "Delay Implementation Until General Availability (GA)",
               "isCorrect": false,
               "feedback": "Although waiting for GA ensures stability, it may slow innovation. A gradual rollout with controlled monitoring typically offers a better balance."
             }
@@ -37,12 +37,12 @@
           "scenario": "<b>EcoLiving</b> is nearing the 10,000-category limit due to heavy use of product categories. How should they increase the limit?",
           "options": [
             {
-              "text": "Submit a support request to boost the limit.",
+              "text": "Submit a support request to increase the limit.",
               "isCorrect": true,
               "feedback": "Correct. Officially raising the limit aligns with best practices and ensures scalability without complicating your data structure."
             },
             {
-              "text": "Reorganize into subcategories or adjust attributes.",
+              "text": "Reorganize into subcategories or adjust product attributes.",
               "isCorrect": false,
               "feedback": "While this might temporarily ease the strain, it doesn't actually expand capacity and may overcomplicate your structure."
             },
@@ -60,17 +60,17 @@
           "scenario": "<b>EcoLiving</b> must determine the optimal DEV and PROD setup.",
           "options": [
             {
-              "text": "Same organization, separate projects.",
+              "text": "Single Organization, Separate Projects for DEV and PROD",
               "isCorrect": false,
-              "feedback": "Central management is convenient but may not provide enough production isolation."
+              "feedback": "While it may be convenient for central administration, but might not provide sufficient isolation for security, compliance, and risk management purposes consider isolated organization."
             },
             {
-              "text": "Isolate PROD in its own organization.",
+              "text": "Isolate PROD in a separate organization.",
               "isCorrect": true,
-              "feedback": "Correct. Separating PROD into its own organization enhances security and risk mitigation per best practices."
+              "feedback": "Yes, Recommended Approach. Ensures strong isolation, better security, clearer compliance boundaries, and significantly reduces risk exposure."
             },
             {
-              "text": "Single project; publish products & other data only when production-ready.",
+              "text": "Single Project for DEV and PROD, Publish When Ready",
               "isCorrect": false,
               "feedback": "This approach blurs DEV/PROD boundaries, increasing risks. Isolation offers better operational safety."
             }
