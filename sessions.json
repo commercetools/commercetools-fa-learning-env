@@ -440,10 +440,577 @@
           "link": "https://docs.commercetools.com/learning-model-your-product-catalog/product-modeling/overview"
         }
       ]
+    },
+
+
+
+
+
+
+
+
+
+    {
+      "id": 5,
+      "title": "Pricing and Customer Strategies",
+      "overview": "This session covers pricing modeling techniques and customer API concepts—including flexible pricing, global versus store-specific customers, and managing multiple customer groups.",
+      "infographic": "",
+      "keyDecisions": [
+        {
+          "decisionId": 14,
+          "title": "Standalone vs Embedded Prices",
+          "scenario": "<b>EcoLiving</b> in the EU needs flexible pricing per region and imports new prices every week. Which option would you prefer?",
+          "options": [
+            {
+              "text": "<b>Use Standalone Prices:</b> Supports up to 50,000 prices; import new prices weekly and deactivate old ones.",
+              "isCorrect": true,
+              "feedback": "Correct. Standalone Prices provide greater flexibility and scalability. Consider this approach for frequent, dynamic pricing updates using defined validity periods."
+            },
+            {
+              "text": "<b>Embedded Prices:</b> Remove old prices and import new ones weekly, with prices tied directly to the product.",
+              "isCorrect": false,
+              "feedback": "Not ideal. Embedded pricing reduces flexibility. Think about the benefits of decoupling prices from products to handle frequent updates more efficiently."
+            },
+            {
+              "text": "<b>Hybrid Approach:</b> Use standalone prices with validity for weekly updates alongside embedded base prices.",
+              "isCorrect": false,
+              "feedback": "This adds unnecessary complexity by requiring dynamic switching of price modes. Reflect on how a pure standalone model offers clearer, more agile pricing control."
+            }
+          ],
+          "status": "Not Started"
+        }
+        ,
+        {
+          "decisionId": 15,
+          "title": "Price Selection Logic",
+          "scenario": "<b>EcoLiving</b> has a customer assigned to 3 groups - Alpha, Beta, Delta and has set multiple prices for a product variant for each customer Group. Consider the following pricing table:<br/><br/><table class='table table-bordered'><thead><tr><th>Customer Group</th><th>Country</th><th>Channel</th><th>Price</th></tr></thead><tbody><tr><td>Alpha</td><td>USA</td><td>Zeta</td><td>$123</td></tr><tr><td>Beta</td><td>USA</td><td>Zeta</td><td>$100</td></tr><tr><td>Delta</td><td>*</td><td>Zeta</td><td>$99</td></tr></tbody></table><br/>Based on fallback logic in case of multiple customer groups , which price is ultimately chosen for country <b>USA</b> and currency <b>USD</b>?",
+          "options": [
+            {
+              "text": "$123",
+              "isCorrect": false,
+              "feedback": "Not ideal. Although $123 is listed, it's not the lowest eligible price among matching conditions. Reflect on the logic for selecting the lowest price."
+            },
+            {
+              "text": "$100",
+              "isCorrect": true,
+              "feedback": "Correct. The system selects the lowest eligible price within the matching criteria. This approach ensures cost efficiency when evaluating multiple price entries."
+            },
+            {
+              "text": "$99",
+              "isCorrect": false,
+              "feedback": "Not chosen. Even though $99 is lower, it may not satisfy the highest priority criteria. Consider how the fallback logic prioritizes matching customer group and channel over a general lower price."
+            }
+          ],
+          "status": "Not Started"
+        }
+        
+        ,
+        {
+          "decisionId": 16,
+          "title": "Global vs Store-Specific Customers",
+          "scenario": "<b>EcoLiving</b> must decide whether to manage customers globally or maintain store-specific customer records to support localized marketing and service.",
+          "options": [
+            {
+              "text": "<b>Global Customers:</b> One unified customer record across all stores.",
+              "isCorrect": false,
+              "feedback": "Not ideal. A single global record may limit localization. Consider the benefits of tailored customer data for each store."
+            },
+            {
+              "text": "<b>Store-Specific Customers:</b> Separate customer records for each store to support targeted marketing.",
+              "isCorrect": true,
+              "feedback": "Correct. This enables localized marketing and tailored customer service, supporting regional strategies. Consider this optimal for store-specific engagement."
+            },
+            {
+              "text": "<b>Hybrid Approach:</b> Use a global record supplemented with store-specific segmentation using different emails.",
+              "isCorrect": false,
+              "feedback": "More complex and may lead to data duplication. Reflect on the simplicity and clarity of managing separate customer records per store."
+            }
+          ],
+          "status": "Not Started"
+        },
+        {
+          "decisionId": 17,
+          "title": "Multiple Customer Group Assignment",
+          "scenario": "<b>EcoLiving</b> can assign up to 500 Customer Groups per customer. The legacy <b>customerGroup</b> field allows only one group, whereas the new <b>customerGroupAssignments</b> field supports multiple groups. Which approach should be used in new projects?",
+          "options": [
+            {
+              "text": "Use only the <b>customerGroup</b> field (single assignment).",
+              "isCorrect": false,
+              "feedback": "Not ideal. Single assignment limits pricing flexibility. Consider the advantages of multiple group assignments."
+            },
+            {
+              "text": "Use only the <b>customerGroupAssignments</b> field to support multiple groups.",
+              "isCorrect": true,
+              "feedback": "Correct. The customerGroupAssignments field offers greater flexibility in price selection and targeting. Consider this the recommended approach for new projects."
+            },
+            {
+              "text": "Use both fields concurrently.",
+              "isCorrect": false,
+              "feedback": "Less optimal. While possible in existing projects, new projects should rely solely on customerGroupAssignments for clarity and enhanced flexibility."
+            }
+          ],
+          "status": "Not Started"
+        }
+      ],
+      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=XXXX",
+      "case_studies": [],
+      "recommendations": [
+        {
+          "title": "Pricing and Discount Best Practices",
+          "link": "https://docs.commercetools.com/discounts"
+        },
+        {
+          "title": "Customer API Guide",
+          "link": "https://docs.commercetools.com/customer-api"
+        }
+      ]
+    },
+
+
+
+
+
+
+
+
+    {
+      "id": 6,
+      "title": "Discount Strategies",
+      "overview": "This session covers product discounts, cart discounts, and discount code strategies to maximize promotion effectiveness.",
+      "infographic": "",
+      "keyDecisions": [
+        {
+          "decisionId": 18,
+          "title": "Discount Strategy for Red Products",
+          "scenario": "<b>EcoLiving</b>, a furniture and decor retailer, is launching a Christmas promotion offering 10% off on all products featuring the color 'RED' (e.g., red sofas, decor). Which discount strategy would be most effective?",
+          "options": [
+            {
+              "text": "<b>Product Discount:</b> Apply the 10% discount directly on red product variants for clear visibility on the product page.",
+              "isCorrect": true,
+              "feedback": "Correct. A product discount ensures the discount is visible on the product page and simplifies management on a per-variant basis. Consider this approach for better promotional communication."
+            },
+            {
+              "text": "<b>Cart Discount:</b> Set up a cart-level discount that triggers when the cart includes red products.",
+              "isCorrect": false,
+              "feedback": "Not ideal. While a cart discount is flexible, it may not clearly signal the promotion on the product page itself, potentially reducing its impact. Reflect on the benefits of a product-level discount."
+            },
+            {
+              "text": "<b>Hybrid Approach:</b> Combine product and cart discounts for red products.",
+              "isCorrect": false,
+              "feedback": "Overly complex. Introducing a hybrid method can add unnecessary management complexity without significant benefit. Consider the simplicity and clarity of a pure product discount."
+            }
+          ],
+          "status": "Not Started"
+        }
+        ,
+        {
+          "decisionId": 19,
+          "title": "Free Gift via Cart Discount",
+          "scenario": "<b>EcoLiving</b> wants to offer a free branded tote bag when a customer’s cart meets a minimum value. Which cart discount strategy is recommended to offer such a gift?",
+          "options": [
+            {
+              "text": "<b>Buy X Get Y Target:</b> Use a discount that applies 100% off on a specific product variant as a gift.",
+              "isCorrect": false,
+              "feedback": "Not ideal. While this method can work, it typically requires strict qualifying rules and may not be as flexible."
+            },
+            {
+              "text": "<b>Gift Line Item Discount:</b> Configure a cart discount that adds a designated gift line item with a 100% discount when the cart qualifies.",
+              "isCorrect": true,
+              "feedback": "Correct. This approach clearly designates the gift as a separate line item and applies a full discount automatically. Consider this as the most effective method for offering a free gift."
+            },
+            {
+              "text": "<b>LineItem Discount:</b> Offer a 100% discount targeting eligible line items when the cart meets certain conditions.",
+              "isCorrect": false,
+              "feedback": "Not the best choice. Targeting all eligible line items can lead to broader discounting than intended. Reflect on the precision offered by a dedicated gift line item discount."
+            }
+          ],
+          "status": "Not Started"
+        },
+        {
+          "decisionId": 20,
+          "title": "Best Practices on Cart Discounts",
+          "scenario": "<b>EcoLiving</b> wishes to run a seamless promotion without requiring discount codes. Based on commercetools best practices, which approach should they adopt?",
+          "options": [
+            {
+              "text": "<b>Auto-Applied Cart Discount:</b> Configure a cart discount that applies automatically based on cart conditions.",
+              "isCorrect": true,
+              "feedback": "Correct. Auto-applied cart discounts provide a smooth customer experience without the need for codes, <b>CAUTION</b> only 100 such discounts can be defined only per project / store. Consider this best practice for a frictionless promotion."
+            },
+            {
+              "text": "<b>Code-based Cart Discount:</b> Require a discount code to trigger the cart discount.",
+              "isCorrect": false,
+              "feedback": "Not as optimal. While code-based discounts give control and no limits, they add friction to the customer experience. Reflect on the benefits of a seamless, auto-applied approach."
+            },
+            {
+              "text": "<b>Product Discount:</b> Apply discounts directly on products instead of at the cart level.",
+              "isCorrect": false,
+              "feedback": "Not recommended for broad promotions. Think about how cart discounts offer more flexibility for complex cart conditions."
+            }
+          ],
+          "status": "Not Started"
+        }
+      ],
+      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=XXXX",
+      "case_studies": [],
+      "recommendations": [
+        {
+          "title": "Pricing and Discount Best Practices",
+          "link": "https://docs.commercetools.com/discounts"
+        },
+        {
+          "title": "Customer API Guide",
+          "link": "https://docs.commercetools.com/customer-api"
+        }
+      ]
+    },
+    
+    
+    
+
+    {
+      "id": 7,
+      "title": "Shipping & Product Search",
+      "overview": "In this session, EcoLiving explores advanced shipping method modeling and best practices for optimizing product search using the Product Search API.",
+      "infographic": "",
+      "keyDecisions": [
+        {
+          "decisionId": 21,
+          "title": "Shipping Method Modelling",
+          "scenario": "<b>EcoLiving</b> ships heavy furniture separately. Which approach would best model the shipping method for heavy items?",
+          "options": [
+            {
+              "text": "<b>Define Predicates:</b> Use product type/attributes to determine if the cart contains heavy items directly within the shipping method.",
+              "isCorrect": true,
+              "feedback": "Correct. By defining predicates based on product attributes, you ensure targeted eligibility for heavy shipping. Consider this method for its precision and integration with the platform."
+            },
+            {
+              "text": "<b>Add as Custom Line Items:</b> Insert additional shipping costs via custom line items in the cart for heavy transport.",
+              "isCorrect": false,
+              "feedback": "Not ideal. While this can work, it increases the complexity of cart calculations. Reflect on how direct predicate validation simplifies the logic."
+            },
+            {
+              "text": "<b>Create New Shipping Method:</b> Build a separate shipping method for heavy furniture and add it to the cart as a customShipping.",
+              "isCorrect": false,
+              "feedback": "This approach introduces extra development overhead and may lead to inconsistencies. Think about the benefits of predicate-based eligibility for streamlined management."
+            }
+          ],
+          "status": "Not Started"
+        },
+        {
+          "decisionId": 22,
+          "title": "Tiered Shipping Rates",
+          "scenario": "<b>EcoLiving</b> implements tiered shipping rates based on cart classification. For example, consider a cart classified as 'Heavy' that qualifies for a higher shipping rate. Which tier strategy best suits this scenario?",
+          "options": [
+            {
+              "text": "<b>Cart Value Tier:</b> Select tiered pricing based solely on the total cart value.",
+              "isCorrect": false,
+              "feedback": "Not ideal. Cart Value Tier ignores product characteristics like weight or classification. Reflect on how product classification can offer a more targeted approach."
+            },
+            {
+              "text": "<b>Cart Classification Tier:</b> Use cart classification (e.g., 'Heavy', 'Medium', 'Light') to select the appropriate tier.",
+              "isCorrect": true,
+              "feedback": "Correct. Cart Classification Tier directly addresses differing shipping needs based on product or cart characteristics. Consider this the optimal strategy for handling varying shipping costs."
+            },
+            {
+              "text": "<b>Cart Score Tier:</b> Apply tiers based on a computed cart score (using custom score functions).",
+              "isCorrect": false,
+              "feedback": "Less straightforward. While flexible, Cart Score Tier may add unnecessary complexity compared to the clear, defined thresholds of classification tiers."
+            }
+          ],
+          "status": "Not Started"
+        },
+        {
+          "decisionId": 23,
+          "title": "Attribute Indexing",
+          "scenario": "<b>EcoLiving</b> optimizes product searches for items like furniture and decor by filtering on attributes such as Material and Color. Which indexing strategy best balances performance and flexibility?",
+          "options": [
+            {
+              "text": "<b>Limited Attribute Indexing:</b> Index only the most frequently searched attributes for faster performance.",
+              "isCorrect": true,
+              "feedback": "Correct. Limiting indexing to key attributes maximizes performance while meeting most search requirements. Consider this approach to ensure speedy, efficient searches."
+            },
+            {
+              "text": "<b>Comprehensive Attribute Indexing:</b> Index all searchable attributes for maximum customer flexibility.",
+              "isCorrect": false,
+              "feedback": "Not optimal. While comprehensive indexing offers versatility, it may degrade performance. Reflect on the trade-offs between breadth and speed."
+            },
+            {
+              "text": "<b>Tiered Attribute Indexing:</b> Fully index primary attributes and index secondary attributes dynamically as needed.",
+              "isCorrect": false,
+              "feedback": "This approach adds dynamic complexity. Think about the benefits of focusing on a limited set of high-frequency attributes to ensure robust performance."
+            }
+          ],
+          "status": "Not Started"
+        },
+        {
+          "decisionId": 24,
+          "title": "Storefront Search",
+          "scenario": "<b>EcoLiving</b> needs an efficient and faceted product listing for its online storefront. Which method should be used for product discovery and listing on storefront pages?",
+          "options": [
+            {
+              "text": "<b>Product Search:</b> Optimized for discovery with full‐text search, prefixes, wildcards, and faceting for multi‐facet navigation.",
+              "isCorrect": true,
+              "feedback": "Correct. Product Search is built for storefronts, offering fast, flexible queries and faceting—despite some indexing delay. This is the ideal approach for high-performance product listings."
+            },
+            {
+              "text": "<b>Product Projections Query:</b> Directly queries the product database for current or staged data.",
+              "isCorrect": false,
+              "feedback": "Not ideal. Although it can provide more current/staged data, it’s slower and not optimized for storefront performance. Think about how Product Search is designed for fast product discovery."
+            },
+            {
+              "text": "<b>Product Query:</b> Retrieves full product representations for both current and staged states.",
+              "isCorrect": false,
+              "feedback": "Not recommended. This method returns too much data and is designed for management tasks rather than efficient storefront product listing."
+            }
+          ],
+          "status": "Not Started"
+        }
+        
+      ],
+      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=XXXX",
+      "case_studies": [],
+      "recommendations": [
+        {
+          "title": "Shipping Methods and Product Search Best Practices",
+          "link": "https://docs.commercetools.com/merchant-center"
+        },
+        {
+          "title": "Optimizing Search with Composable Commerce",
+          "link": "https://docs.commercetools.com/product-search"
+        }
+      ]
+    },
+
+
+
+
+
+
+
+    {
+      "id": 8,
+      "title": "Carts and Orders",
+      "overview": "This session covers best practices for managing carts and orders—handling promotional items, resolving frozen carts, and maintaining efficient order management.",
+      "infographic": "",
+      "keyDecisions": [
+        {
+          "decisionId": 25,
+          "title": "Custom Line Item Modeling",
+          "scenario": "<b>EcoLiving</b> offers promotional items with little or no cost that are not part of its standard product catalog. Which approach best handles these non-catalog items?",
+          "options": [
+            {
+              "text": "Add <b>Custom Line Items</b> on the cart with separate pricing and manage inventory separately with custom logic.",
+              "isCorrect": true,
+              "feedback": "Correct. Using custom line items clearly differentiates promotional items from catalog products. Consider this approach for non-catalog promotions."
+            },
+            {
+              "text": "Use <b>Zero-price Standard Items</b> with price set to zero price, add them to cart & manage inventory like other catalog-items",
+              "isCorrect": false,
+              "feedback": "Could be a workaround,Zero-price standard items may cause confusion in inventory and reporting. Reflect on the benefits of custom line items for clarity."
+            },
+            {
+              "text": "<b>Hybrid Approach:</b> Use custom line items for unique promos or offering non-catalog items and use standard items for recurring promotions.",
+              "isCorrect": false,
+              "feedback": "Could be complex. A hybrid model can introduce inconsistencies in pricing and tracking. Think about how a pure custom line item strategy may offer cleaner management."
+            }
+          ],
+          "status": "Not Started"
+        },
+        {
+          "decisionId": 26,
+          "title": "Frozen Cart Management",
+          "scenario": "<b>EcoLiving</b> needs to ensure that once prices and promotions are applied to a cart, they don’t change before checkout. Which method would you choose?",
+          "options": [
+            {
+              "text": "<b>Disable Recalculation:</b> Skip the recalculation step so the cart keeps its original prices and discounts.",
+              "isCorrect": false,
+              "feedback": "Disabling recalculation may prevent needed updates for all line-items and other fields as well (e.g., taxes or shipping). Consider a more robust cart-freeze feature to preserve your intended prices and promotions."
+            },
+            {
+              "text": "<b>Freeze Cart:</b> Use the cart‑freeze feature to lock all prices and discounts, preventing any updates or expirations.",
+              "isCorrect": true,
+              "feedback": "Correct. Freezing the cart halts all recalculations and discount checks, ensuring the applied prices and promotions remain intact through checkout."
+            },
+            {
+              "text": "<b>External Line‑Item Prices:</b> Fetch the current price and set it as an external price on each line item.",
+              "isCorrect": false,
+              "feedback": "While using external prices could be a workaround, this adds complexity in implementing the logic and may not cover discount expirations. Freezing the cart is simpler and more comprehensive."
+            }
+          ],
+          "status": "Not Started"
+        },
+        {
+          "decisionId": 27,
+          "title": "Order Management Best Practices",
+          "scenario": "<b>EcoLiving</b> processes a high volume of orders and needs to handle order modifications—such as shipping address updates and need basis may require changing quantity, adding/removing existing lineitems from order —in a consistent manner. Which approach should be followed?",
+          "options": [
+            {
+              "text": "<b>Direct Order Updates:</b> Modify orders directly using Order API for immediate changes.",
+              "isCorrect": false,
+              "feedback": "Not ideal. Order API can modify shipping address and other basic changes, but cannot add/remove line items or change quantity. Direct updates can also bypass important audit trails and validations. Reflect on the need for controlled, traceable order changes using Order Edits."
+            },
+            {
+              "text": "Use <b>Order Edits </b> to modify existing orders and also to simulate changes while preserving order history and auditability.",
+              "isCorrect": true,
+              "feedback": "Correct. Order edits provide a controlled way to modify orders without losing the historical context, and also can add/remove line items, change quatity etc.. Consider this approach as the best practice for robust order management."
+            },
+            {
+              "text": "Combine direct updates for basic changes like shipping address, payment info etc. and use Order Edits for modifications that requires changes in lineitems / quantity etc..",
+              "isCorrect": false,
+              "feedback": "Can be consisidered as a good practice, however think about the benefits of using Order Edits exclusively to maintain clear audit trails and historical data."
+            }
+          ],
+          "status": "Not Started"
+        }
+      ],
+      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=YYYY",
+      "case_studies": [],
+      "recommendations": [
+        {
+          "title": "Cart and Order Management Best Practices",
+          "link": "https://docs.commercetools.com/cart-order-management"
+        },
+        {
+          "title": "Order Edits and Order Processing",
+          "link": "https://docs.commercetools.com/order-edits"
+        }
+      ]
+    }, 
+
+
+
+    
+
+
+    {
+      "id": 9,
+      "title": "Checkout, Connect, and Best Practices",
+      "overview": "This session explores workflow automation, event handling, and integrations—covering state machines, API extensions, subscriptions, and Connect.",
+      "infographic": "",
+      "keyDecisions": [
+        {
+          "decisionId": 28,
+          "title": "State Machine Design",
+          "scenario": "<b>EcoLiving</b> manages orders through multiple states (e.g., Pending → Packed → Shipped). Which workflow configuration do you prefer?",
+          "options": [
+            {
+              "text": "<b>Simple Linear States:</b> Define a straight path: Pending → Packed → Shipped.",
+              "isCorrect": false,
+              "feedback": "Linear flows are easy to implement but can’t handle exceptions like backorders or cancellations. Consider a more flexible state machine for real-world scenarios."
+            },
+            {
+              "text": "<b>Complex Branched States:</b> Implement branches for Cancelled, Backordered, and other paths.",
+              "isCorrect": true,
+              "feedback": "Correct. Branched state machines handle real‑world exceptions and improve reliability in complex order workflows."
+            },
+            {
+              "text": "<b>Custom Fields on Orders:</b> Track state changes via custom order fields, update the custom fields whenever required.",
+              "isCorrect": false,
+              "feedback": "Custom fields bypass validation and transitions. Think about the benefits of using custom state machines for consistency and being able to subscribe to changes in transition states."
+            }
+          ],
+          "status": "Not Started"
+        },
+        {
+          "decisionId": 29,
+          "title": "API Extensions",
+          "scenario": "<b>EcoLiving</b> must add mandatory insurance to carts containing any high‑value item (price ≥ $500). How would you implement this?",
+          "options": [
+            {
+              "text": "Use <b>API Extension</b> On cart update to add/remove Custom LineItems with insurance cost.",
+              "isCorrect": true,
+              "feedback": "Correct. An API Extension lets you enforce business rules synchronously, ensuring insurance is added or removed immediately when cart contents change."
+            },
+            {
+              "text": "Use <b>Subscription</b> to listen to cart events and call the API to add/remove insurance asynchronously.",
+              "isCorrect": false,
+              "feedback": "Subscriptions, being asynchronus may ntroduce delays and lead to temporary cart inconsistencies. Consider API Extensions for guaranteed, real‑time enforcement."
+            },
+            {
+              "text": "Implement <b>Client‑Side Logic</b> to add insurance to the cart in the storefront application code.",
+              "isCorrect": false,
+              "feedback": "Client logic can be bypassed or may lead to errors. Server‑side API Extensions provide a reliable, tamper‑proof solution."
+            }
+          ],
+          "status": "Not Started"
+        },
+        {
+          "decisionId": 30,
+          "title": "Event Notifications with Subscriptions",
+          "scenario": "<b>EcoLiving</b> needs real‑time order creation notifications to trigger downstream systems (e.g., warehouse). Which approach do you use?",
+          "options": [
+            {
+              "text": "Configure a <b>Subscriptions</b> to send events to a messaging endpoint (i.e. AWS SQS / Google PubSub) when new orders are created.",
+              "isCorrect": true,
+              "feedback": "Correct. Subscriptions provide reliable, event‑driven notifications suited for integration with minimal polling overhead."
+            },
+            {
+              "text": "Periodically fetch new orders via scheduled API calls from external systems.",
+              "isCorrect": false,
+              "feedback": "Polling increases load and latency. Consider event‑driven Subscriptions for faster and more efficient workflows."
+            },
+            {
+              "text": "Use an API Extension to push notifications externally.",
+              "isCorrect": false,
+              "feedback": "API Extensions are synchronous and meant for request processing. Subscriptions are designed for asynchronous event delivery."
+            }
+          ],
+          "status": "Not Started"
+        },
+        {
+          "decisionId": 31,
+          "title": "Choosing an Integration Approach",
+          "scenario": "<b>EcoLiving</b> needs to integrate commercetools with an external OMS (e.g., FulfillmentTools). Which approach do you prefer?",
+          "options": [
+            {
+              "text": "Build a <b>Custom Integration</b> - Develop, deploy, and monitor your own code with full control.",
+              "isCorrect": false,
+              "feedback": "Custom integrations require significant effort and ongoing maintenance. Consider turnkey solutions first."
+            },
+            {
+              "text": "Use<b>commercetools Connect</b> - Install and configure a pre‑built connector for OMS integration without needing to worry about development, deployment and monitoring.",
+              "isCorrect": true,
+              "feedback": "Correct. Connect offers a tested/certified, maintainable connector that streamlines integration with minimal development overhead."
+            },
+            {
+              "text": "Rely on <b>Third‑Party Integration Services</b> - Engage a middleware provider to handle the integration.",
+              "isCorrect": false,
+              "feedback": "Third‑party services can add cost and complexity. Think about the simplicity and support of commercetools Connect."
+            }
+          ],
+          "status": "Not Started"
+        }
+      ],
+      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=xxxx",
+      "case_studies": [],
+      "recommendations": [
+        {
+          "title": "State Machine Guide",
+          "link": "https://docs.commercetools.com/state-machines"
+        },
+        {
+          "title": "API Extensions Guide",
+          "link": "https://docs.commercetools.com/api/extensions"
+        },
+        {
+          "title": "Subscriptions Guide",
+          "link": "https://docs.commercetools.com/subscriptions"
+        },
+        {
+          "title": "Connect Integration Guide",
+          "link": "https://docs.commercetools.com/connect"
+        }
+      ]
     }
     
 
+
+
+
+
     
+
+
 
     
 
@@ -461,8 +1028,8 @@
 
 
     ,{
-      "id": "",
-      "title": "",
+      "id": "10",
+      "title": "Next Steps",
       "overview": "",
       "infographic": "",
       "tasks": [
