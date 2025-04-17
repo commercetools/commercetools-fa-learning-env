@@ -11,7 +11,7 @@
         {
           "decisionId": 1,
           "title": "Public Beta Features",
-          "scenario": "<b>EcoLiving</b> is evaluating a new Public Beta Feature (Multiple Customer Group Assignment) for its loyalty campaign.",
+          "scenario": "<b>EcoLiving</b> is evaluating a new Public Beta Feature (Multiple Customer Group Assignment) for its loyalty campaign. Which of the below approach would you follow?",
           "options": [
             {
               "text": "<b>Evaluate in staging:</b> Test thoroughly before production.",
