@@ -89,7 +89,7 @@ $(document).ready(function () {
     let percentage = totalItems > 0 ? Math.round((completedItems / totalItems) * 100) : 0;
     $("#progressBar").css("width", percentage + "%").text(percentage + "%");
     $("#progressDetails").html(
-      `Tasks: ${completedTasks}/${totalTasks} | Key Decisions: ${completedKeyDecisions}/${totalKeyDecisions} | Case Studies: ${completedCaseStudies}/${totalCaseStudies} | Quizzes: ${completedQuizzes}/${totalQuizzes}`
+      `<b>Key Decisions:</b> ${completedKeyDecisions}/${totalKeyDecisions} | <b>Case Studies:</b> ${completedCaseStudies}/${totalCaseStudies} | <b>Quizzes:</b> ${completedQuizzes}/${totalQuizzes}`
     );
   }
   

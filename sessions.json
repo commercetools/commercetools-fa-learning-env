@@ -884,7 +884,7 @@
 
     {
       "id": 9,
-      "title": "Checkout, Connect, and Best Practices",
+      "title": "Customization & Extensions",
       "overview": "This session explores workflow automation, event handling, and integrations—covering state machines, API extensions, subscriptions, and Connect.",
       "infographic": "",
       "keyDecisions": [
