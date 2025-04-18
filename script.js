@@ -242,19 +242,7 @@ $(document).ready(function () {
           .join("");
       }
 
-      let keyDecisionsHtml = "";
-      if (session.keyDecisions) {
-        keyDecisionsHtml = session.keyDecisions
-          .map(
-            (decision) => `
-          <li class="list-group-item">
-            <a href="#" class="session-link" data-session="${session.id}" data-type="keyDecision" data-decisionid="${decision.decisionId}">
-            ${decision.decisionId} - ${decision.title}
-            </a>
-          </li>`
-          )
-          .join("");
-      }
+      
 
       let caseStudyHtml = "";
       if (session.case_studies && session.case_studies.length) {
@@ -264,6 +252,20 @@ $(document).ready(function () {
           <li class="list-group-item">
             <a href="#" class="session-link" data-session="${session.id}" data-type="caseStudy" data-csindex="${idx}">
               ${cs.title}
+            </a>
+          </li>`
+          )
+          .join("");
+      }
+
+      let keyDecisionsHtml = "";
+      if (session.keyDecisions) {
+        keyDecisionsHtml = session.keyDecisions
+          .map(
+            (decision) => `
+          <li class="list-group-item">
+            <a href="#" class="session-link" data-session="${session.id}" data-type="keyDecision" data-decisionid="${decision.decisionId}">
+            ${decision.decisionId} - ${decision.title}
             </a>
           </li>`
           )
@@ -289,9 +291,10 @@ $(document).ready(function () {
           <div id="session${session.id}" class="accordion-collapse collapse ${isActive}" data-bs-parent="#sessionAccordion">
             <div class="accordion-body">
               <ul class="list-group">
-                ${keyDecisionsHtml}
+                
                 ${tasksHtml}
                 ${caseStudyHtml}
+                ${keyDecisionsHtml}
                 ${quizHtml}
               </ul>
             </div>

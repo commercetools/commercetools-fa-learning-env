@@ -4,7 +4,7 @@
     
     {
       "id": 1,
-      "title": "Introduction to commercetools Platform",
+      "title": "Composable Commerce Essentials",
       "overview": "This session introduces commercetools concepts, capabilities, and key resources. You will set up projects and explore essential tools like the Merchant Center.",
       "infographic": "",
       "keyDecisions": [
@@ -16,12 +16,12 @@
             {
               "text": "Evaluate Thoroughly in Staging First before production.",
               "isCorrect": false,
-              "feedback": "Safe approach, ensures thorough validation, but may delay capturing early competitive advantage. Consider whether your timeline permits extensive pre-production testing and think about gradual production rollout for a quicker market response."
+              "feedback": "Evaluating thoroughly seems safe approach, ensures validation, but may delay capturing early competitive advantage. Consider whether your timeline permits extensive pre-production testing and think about gradual production rollout for a quicker market response."
             },
             {
               "text": "Gradual Production Rollout with Controlled Monitoring",
               "isCorrect": true,
-              "feedback": "Ideal. Balances rapid innovation with careful risk management. Enables agile adjustments based on real-time insights and user feedback.."
+              "feedback": "Yes, Gradual production rollout with controlled monitoring is ideal, balances rapid innovation with careful risk management. Enables agile adjustments based on real-time insights and user feedback.."
             },
             {
               "text": "Delay Implementation Until General Availability (GA)",
@@ -44,12 +44,12 @@
             {
               "text": "Reorganize into subcategories or adjust product attributes.",
               "isCorrect": false,
-              "feedback": "While this might temporarily ease the strain, it doesn't actually expand capacity and may overcomplicate your structure."
+              "feedback": "While reorganizing categories keeping them within the limits, and might temporarily ease the strain, it doesn't actually expand capacity and may overcomplicate your structure."
             },
             {
               "text": "Use custom fields to simulate extra categories.",
               "isCorrect": false,
-              "feedback": "A workaround at best; it doesn’t truly increase the limit. Pursuing an official limit increase is advisable."
+              "feedback": "Using custom frields could be a workaround at best; but it doesn’t truly increase the limit. Pursuing an official limit increase is advisable."
             }
           ],
           "status": "Not Started"
@@ -62,17 +62,17 @@
             {
               "text": "Single Organization, Separate Projects for DEV and PROD",
               "isCorrect": false,
-              "feedback": "While it may be convenient for central administration, but might not provide sufficient isolation for security, compliance, and risk management purposes consider isolated organization."
+              "feedback": "Setting up Single Organization for both DEV and PROD may be convenient for central administration, but might not provide sufficient isolation for security, compliance, and risk management purposes consider isolated organization."
             },
             {
               "text": "Isolate PROD in a separate organization.",
               "isCorrect": true,
-              "feedback": "Yes, Recommended Approach. Ensures strong isolation, better security, clearer compliance boundaries, and significantly reduces risk exposure."
+              "feedback": "Yes, Isolate PROD in a separate organization is a recommended Approach. Ensures strong isolation, better security, clearer compliance boundaries, and significantly reduces risk exposure."
             },
             {
               "text": "Single Project for DEV and PROD, Publish When Ready",
               "isCorrect": false,
-              "feedback": "This approach blurs DEV/PROD boundaries, increasing risks. Isolation offers better operational safety."
+              "feedback": "Single Project approach blurs DEV/PROD boundaries, increasing risks. Consider isolatting PROD into separate Organization offers better operational safety."
             }
           ],
           "status": "Not Started"
@@ -105,7 +105,7 @@
 
     {
       "id": 2,
-      "title": "Product Modeling Basics",
+      "title": "Product Modeling & Configuration",
       "overview": "This session covers setting up the commercetools project, creating a customer in Merchant Center, and the basics of product modeling: product types, attributes, and variants.",
       "infographic": "",
       "keyDecisions": [
@@ -188,34 +188,20 @@
       "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1386",
       "case_studies": [
         {
-          "title": "Case Study 1: Product Modeling",
+          "title": "Case 1: Product Configuration",
           "link": "https://docs.google.com/document/d/1EikDjb77fWfWYe55pUnY1Ss-bPtdZNgl/edit",
           "description": [
             {
               "type": "paragraph",
-              "content": "<b>AllForFoodies</b> plans to launch online cooking classes using an integrated product model."
+              "content": "<b>EcoLiving</b> currently sells individual candles in three fragrances: Lavender, Vanilla, and Jasmine. They plan to introduce <b>gift-ready candle boxes</b> with fixed configurations."
             },
             {
               "type": "paragraph",
-              "content": "commercetools acts as a PIM and Order Management System."
-            },
-            {
-              "type": "list",
-              "content": [
-                "Online French cooking class, $39.99",
-                "Online Italian cooking class, $39.99",
-                "Online Middle Eastern cooking class, $39.99",
-                "Online Soup cooking class, $25.99",
-                "Online Grilling class, $22.99"
-              ]
+              "content": "<b>Goals:</b> Determine how to configure and model these new candle boxes in commercetools."
             },
             {
               "type": "paragraph",
-              "content": "Create a product model using a product type ‘Online Offering’ and associated variants."
-            },
-            {
-              "type": "paragraph",
-              "content": "Draft your solution in the Notes field with your team."
+              "content": "<b>Challenge:</b> Decide whether to model the boxes as variants under a single product or as separate products, considering factors like product types, attributes, customer experience, search behavior, catalog maintainability, and performance constraints."
             }
           ]
         }
@@ -253,7 +239,7 @@
               "feedback": "Correct. This approach ensures precise, manual curation. Consider this optimal method for reliable recommendations."
             },
             {
-              "text": "<b>Attribute-based Lookup:</b> Store the recommended SKU/ID in a custom field and fetch via API.",
+              "text": "<b>Attribute-based Lookup:</b> Store the recommended SKU/ID in a product attribute and fetch via API.",
               "isCorrect": false,
               "feedback": "Not ideal. Think about how explicit linking minimizes extra API calls and inconsistency. Consider the recommended reference attributes instead."
             },
@@ -313,7 +299,42 @@
         }
       ],
       "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=???",
-      "case_studies": [],
+      "case_studies": [
+        {
+          "title": "Case 2: Advanced Product Modeling",
+          "link": "https://docs.google.com/document/d/1EikDjb77fWfWYe55pUnY1Ss-bPtdZNgl/edit",
+          "description": [
+            {
+              "type": "paragraph",
+              "content": "<b>EcoLiving Home & Lifestyle</b> is expanding its catalog with thematic product bundles, which are collections of existing products sold together under a new SKU."
+            },
+            {
+              "type": "paragraph",
+              "content": "<b>Goals:</b>"
+            },
+            {
+              "type": "list",
+              "content": [
+                "Launch thematic home décor bundles.",
+                "Avoid duplicating product data",
+                "Ensure bundle components are visible and accessible during checkout, order processing, and fulfillment.",
+                "Clearly show all bundle items on product detail pages."              ]
+            },
+            {
+              "type": "paragraph",
+              "content": "<b>Challenges:</b>"
+            },
+            {
+              "type": "list",
+              "content": [
+                "Effectively model bundles using commercetools' reference and/or nested attribute types as applicable",
+                "Design and create new bundle products using appropriate reference attributes.",
+                "Add relevant metadata attributes on the bundle products for filtering, search, and display.",
+                "Ensure modeling decisions support future extensibility, storefront clarity, and operational ease."              ]
+            }
+          ]
+        }
+      ],
       "recommendations": [
         {
           "title": "Advanced Product Modeling Techniques",
@@ -330,7 +351,7 @@
 
     {
       "id": 4,
-      "title": "Stores and Channels",
+      "title": "Stores and Channels Configuration",
       "overview": "This session focuses on pricing strategies, product selections, supply channel configuration, and tailoring product offerings for different regions.",
       "infographic": "",
       "keyDecisions": [
@@ -429,7 +450,26 @@
         }
       ],
       "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1390",
-      "case_studies": [],
+      "case_studies": [
+        {
+          "title": "Case 3: Multi-Region Expansion",
+          "link": "https://docs.google.com/document/d/1EikDjb77fWfWYe55pUnY1Ss-bPtdZNgl/edit",
+          "description": [
+            {
+              "type": "paragraph",
+              "content": "<b>EcoLiving Home & Lifestyle</b> is expanding to Europe, USA, and APAC with localized websites. They need a solution for Stores, Channels, Product Selections, and Inventory strategies in commercetools."
+            },
+            {
+              "type": "paragraph",
+              "content": "<b>Goals:</b> Configure shared product catalog globally applicable, region-specific strategy for pricing/inventory using channels, and strategy for exclusive products catalog per region."
+            }, 
+            {
+              "type": "paragraph",
+              "content": "<b>Challenge:</b> Design Store & Channel configuration, including Distribution & Supply Channels, Product Selections, and Product Tailoring to meet the requirements."
+            }
+          ]
+        }
+      ],
       "recommendations": [
         {
           "title": "Merchant Center Guide",
@@ -553,7 +593,26 @@
         }
       ],
       "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=XXXX",
-      "case_studies": [],
+      "case_studies": [
+        {
+          "title": "Case 4: Pricing Strategy",
+          "link": "https://docs.google.com/document/d/1EikDjb77fWfWYe55pUnY1Ss-bPtdZNgl/edit",
+          "description": [
+            {
+              "type": "paragraph",
+              "content": "<b>EcoLiving Home & Lifestyle</b> needs to implement localized pricing for <code>SKU CCM-089</code> across EU, APAC, and USA regions within their commercetools project."
+            },
+            {
+              "type": "paragraph",
+              "content": "<b>Goals:</b> Define a pricing configuration strategy for each region, estimate the number of required prices per SKU, and configure the actual prices for <code>SKU CCM-089</code> using embedded pricing, channels, and fallbacks."
+            }, 
+            {
+              "type": "paragraph",
+              "content": "<b>Challenge:</b> Manage different currencies (EUR, INR, SGD, AUD, USD), country-specific pricing variations within each region, and setting up appropriate Price Channels and fallback logic to ensure complete price coverage for all scenarios."
+            }
+          ]
+        }
+      ],
       "recommendations": [
         {
           "title": "Pricing and Discount Best Practices",
@@ -575,7 +634,7 @@
 
     {
       "id": 6,
-      "title": "Discount Strategies",
+      "title": "Promotions & Discounts",
       "overview": "This session covers product discounts, cart discounts, and discount code strategies to maximize promotion effectiveness.",
       "infographic": "",
       "keyDecisions": [
@@ -651,7 +710,34 @@
         }
       ],
       "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=XXXX",
-      "case_studies": [],
+      "case_studies": [
+        {
+          "title": "Case 5: Promotions and Discounts",
+          "link": "https://docs.google.com/document/d/1EikDjb77fWfWYe55pUnY1Ss-bPtdZNgl/edit",
+          "description": [
+            {
+              "type": "paragraph",
+              "content": "<b>EcoLiving Home & Lifestyle</b> aims to enhance customer engagement and increase sales through targeted promotional strategies across Europe, the United States, and Asia-Pacific regions, using their centralized commercetools project."
+            },
+            {
+              "type": "paragraph",
+              "content": "<b>Goals:</b> configure promotions effectively to drive sales, enhance customer experience, and ensure seamless regional applicability of these promotions."
+            }, 
+            {
+              "type": "paragraph",
+              "content": "<b>Challenge:</b>"
+            },
+            {
+              "type": "list",
+              "content": [
+                "Implement a 25% discount on the <b>Edgar Armchair</b> for <b>EcoPremium</b> members in Germany and France for 10 days",
+                "10% discount on a bundle of 2 <b>Living Room</b> and 1 <b>Bedroom furniture</b> item, up to 3 times per cart, with the cheapest matching items selected",
+                "20% discount on up to 3 <b>Bar and Glassware</b> items when a customer buys 2 pairs of <b>Serving and Tableware</b>, up to 4 times per cart, selecting the most expensive eligible items."
+              ]
+            }
+          ]
+        }
+      ],
       "recommendations": [
         {
           "title": "Pricing and Discount Best Practices",
@@ -669,7 +755,7 @@
 
     {
       "id": 7,
-      "title": "Shipping & Product Search",
+      "title": "Shipping Modelling & Product Search",
       "overview": "In this session, EcoLiving explores advanced shipping method modeling and best practices for optimizing product search using the Product Search API.",
       "infographic": "",
       "keyDecisions": [
@@ -768,7 +854,35 @@
         
       ],
       "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=XXXX",
-      "case_studies": [],
+      "case_studies": [
+        {
+          "title": "Case 6: Shipping Modelling",
+          "link": "https://docs.google.com/document/d/1EikDjb77fWfWYe55pUnY1Ss-bPtdZNgl/edit",
+          "description": [
+            {
+              "type": "paragraph",
+              "content": "<b>EcoLiving Home & Lifestyle</b> is expanding globally (EU, APAC, USA) and needs flexible, region-specific shipping strategies."
+            },
+            {
+              "type": "paragraph",
+              "content": "<b>Goals:</b> Design Shipping Methods per region with appropriate Zones, Rates, and Tier Types to balance cost-efficiency and customer satisfaction."
+            }, 
+            {
+              "type": "paragraph",
+              "content": "<b>Challenge:</b>"
+            },
+            {
+              "type": "list",
+              "content": [
+                "EU: Implement country-specific shipping rates within a single shipping method for Germany, France, and the Netherlands.",
+                "APAC: Configure tiered shipping based on cart value for India, using a predicate to target specific products (mugs).",
+                "USA: Set a flat shipping rate for large furniture items in the USA."
+              ]
+            }
+
+          ]
+        }
+      ],
       "recommendations": [
         {
           "title": "Shipping Methods and Product Search Best Practices",
@@ -789,7 +903,7 @@
 
     {
       "id": 8,
-      "title": "Carts and Orders",
+      "title": "Standard Checkout - Carts & Orders",
       "overview": "This session covers best practices for managing carts and orders—handling promotional items, resolving frozen carts, and maintaining efficient order management.",
       "infographic": "",
       "keyDecisions": [
