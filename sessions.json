@@ -78,7 +78,7 @@
           "status": "Not Started"
         }
       ],
-      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1384",
+      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1571",
       "case_studies": [],
       "recommendations": [
         {
@@ -185,11 +185,11 @@
           "status": "Not Started"
         }
       ],
-      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1386",
+      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1572",
       "case_studies": [
         {
           "title": "Case 1: Product Configuration",
-          "link": "https://docs.google.com/document/d/1EikDjb77fWfWYe55pUnY1Ss-bPtdZNgl/edit",
+          "link": "https://learn.commercetools.com/mod/resource/view.php?id=1580",
           "description": [
             {
               "type": "paragraph",
@@ -298,11 +298,11 @@
           "status": "Not Started"
         }
       ],
-      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=???",
+      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1573",
       "case_studies": [
         {
           "title": "Case 2: Advanced Product Modeling",
-          "link": "https://docs.google.com/document/d/1EikDjb77fWfWYe55pUnY1Ss-bPtdZNgl/edit",
+          "link": "https://learn.commercetools.com/mod/resource/view.php?id=1581",
           "description": [
             {
               "type": "paragraph",
@@ -449,11 +449,11 @@
           "status": "Not Started"
         }
       ],
-      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1390",
+      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1574",
       "case_studies": [
         {
           "title": "Case 3: Multi-Region Expansion",
-          "link": "https://docs.google.com/document/d/1EikDjb77fWfWYe55pUnY1Ss-bPtdZNgl/edit",
+          "link": "https://learn.commercetools.com/mod/resource/view.php?id=1582",
           "description": [
             {
               "type": "paragraph",
@@ -596,7 +596,7 @@
       "case_studies": [
         {
           "title": "Case 4: Pricing Strategy",
-          "link": "https://docs.google.com/document/d/1EikDjb77fWfWYe55pUnY1Ss-bPtdZNgl/edit",
+          "link": "https://learn.commercetools.com/mod/resource/view.php?id=1583",
           "description": [
             {
               "type": "paragraph",
@@ -713,7 +713,7 @@
       "case_studies": [
         {
           "title": "Case 5: Promotions and Discounts",
-          "link": "https://docs.google.com/document/d/1EikDjb77fWfWYe55pUnY1Ss-bPtdZNgl/edit",
+          "link": "https://learn.commercetools.com/mod/resource/view.php?id=1584",
           "description": [
             {
               "type": "paragraph",
@@ -857,7 +857,7 @@
       "case_studies": [
         {
           "title": "Case 6: Shipping Modelling",
-          "link": "https://docs.google.com/document/d/1EikDjb77fWfWYe55pUnY1Ss-bPtdZNgl/edit",
+          "link": "https://learn.commercetools.com/mod/resource/view.php?id=1585",
           "description": [
             {
               "type": "paragraph",
