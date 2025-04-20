@@ -469,8 +469,13 @@ window.submitKeyDecision = function (sessionId, decisionId) {
   // Mark the decision as completed.
   decision.status = "Completed";
   
+    // after you’ve got selectedOption and decision…
+const alertClass = selectedOption.isCorrect
+? "alert alert-info"    // correct answers
+: "alert alert-light";    // wrong answers
+
   let feedbackText = selectedOption.feedback;
-  let noteEntry = `<div class="alert alert-info mt-2" id="keyDecision-responses-${decision.decisionId}">
+  let noteEntry = `<div class="${alertClass} mt-2" id="keyDecision-responses-${decision.decisionId}">
                         <strong>Decision ${decision.decisionId}:</strong><br/>
                         <strong>Scenario:</strong> ${decision.scenario}<br/>
                         <strong>Feedback:</strong> ${feedbackText}<br/>
