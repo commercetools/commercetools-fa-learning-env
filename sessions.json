@@ -117,17 +117,17 @@
             {
               "text": "<b>Use multiple product variants</b>: Manage variants as per different colors/materials efficiently within a single product.",
               "isCorrect": true,
-              "feedback": "Correct: Using product variants streamlines management by grouping different attributes under one product, ensuring consistency and efficient operations."
+              "feedback": "Correct: Using product variants streamlines management by grouping them under one product, ensuring consistency, efficient operations and also helps customers to browse all the various options available ."
             },
             {
               "text": "<b>Separate Products</b>: Create standalone products for clear individual SEO and marketing.",
               "isCorrect": false,
-              "feedback": "Although separate products might boost SEO, they lead to redundancy and complicate inventory management. Consider using product variants for a cohesive strategy if it stays withing the limits."
+              "feedback": "Although separate products might boost SEO, they lead to redundancy and might affect how customers expect to browse them together or separately. Consider using product variants for a cohesive strategy if it stays within the limits."
             },
             {
               "text": "<b>Hybrid Approach</b>: Create Variants by color in one product and create another separat product with variants by material to optimize discoverability.",
               "isCorrect": false,
-              "feedback": "Could be overcomplicated: While hybrid strategies sound flexible, they might add unnecessary complexity. A unified product variant approach is usually recommended within the limits or consider creating separate products"
+              "feedback": "Could be a workaround: While hybrid strategies sound flexible, they might add unnecessary complexity. A unified product variant approach is usually recommended within the limits or consider creating separate products"
             }
           ],
           "status": "Not Started"
