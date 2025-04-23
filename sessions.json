@@ -591,8 +591,8 @@
           ],
           "status": "Not Started"
         }
-      ],
-      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=XXXX",
+      ],1
+      "quiz": "https://learn.commercetools.com/mod/resource/view.php?id=1583",
       "case_studies": [
         {
           "title": "Case 4: Pricing Strategy",
@@ -709,7 +709,7 @@
           "status": "Not Started"
         }
       ],
-      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=XXXX",
+      "quiz": "https://learn.commercetools.com/mod/quiz/view.php?id=1576",
       "case_studies": [
         {
           "title": "Case 5: Promotions and Discounts",
